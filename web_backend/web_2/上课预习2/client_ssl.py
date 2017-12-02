@@ -68,9 +68,6 @@ def parsed_url(url):
         # '://' 定位 然后取第一个 / 的位置来切片
         u = url
 
-    # https://g.cn:1234/hello
-    # g.cn:1234/hello
-
     # 检查默认 path
     i = u.find('/')
     if i == -1:
@@ -87,8 +84,7 @@ def parsed_url(url):
     }
     # 默认端口
     port = port_dict[protocol]
-    # if host.find(':') != -1:
-    if ':' in host:
+    if host.find(':') != -1:
         h = host.split(':')
         host = h[0]
         port = int(h[1])
@@ -149,20 +145,19 @@ def get(url):
     用 GET 请求 url 并返回响应
     """
     protocol, host, port, path = parsed_url(url)
-    # 写 what 不写 how
+
     s = socket_by_protocol(protocol)
     s.connect((host, port))
 
-    request = 'GET {} HTTP/1.1\r\nHost: {}\r\nConnection: close\r\n\r\n'.format(path, host)
+    request = 'GET {} HTTP/1.1\r\nhost: {}\r\nConnection: close\r\n\r\n'.format(path, host)
     encoding = 'utf-8'
     s.send(request.encode(encoding))
 
     response = response_by_socket(s)
-    print('get response, ', response)
     r = response.decode(encoding)
 
     status_code, headers, body = parsed_response(r)
-    if status_code in [301, 302]:
+    if status_code == 301:
         url = headers['Location']
         return get(url)
 
@@ -172,9 +167,7 @@ def get(url):
 def main():
     url = 'http://movie.douban.com/top250'
     status_code, headers, body = get(url)
-    print('main', status_code)
-    # print('main headers ({})'.format(headers))
-    # print('main body', body)
+    print(status_code, headers, body)
 
 
 # 以下 test 开头的函数是单元测试
@@ -199,8 +192,7 @@ def test_parsed_url():
         url, expected = t
         u = parsed_url(url)
         # assert 是一个语句, 名字叫 断言
-        # 如果断言成功, 条件成立, 则通过测试
-        # 否则为测试失败, 中断程序报错
+        # 如果断言成功, 条件成立, 则通过测试, 否则为测试失败, 中断程序报错
         e = "parsed_url ERROR, ({}) ({}) ({})".format(url, u, expected)
         assert u == expected, e
 
@@ -239,10 +231,10 @@ def test():
     用于测试的主函数
     """
     test_parsed_url()
-    # test_get()
-    # test_parsed_response()
+    test_get()
+    test_parsed_response()
 
 
 if __name__ == '__main__':
-    # test()
+    test()
     main()

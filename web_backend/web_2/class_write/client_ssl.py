@@ -158,7 +158,7 @@ def get(url):
     s.send(request.encode(encoding))
 
     response = response_by_socket(s)
-    print('get response, ', response)
+    # print('get response, ', response)
     r = response.decode(encoding)
 
     status_code, headers, body = parsed_response(r)
@@ -173,8 +173,8 @@ def main():
     url = 'http://movie.douban.com/top250'
     status_code, headers, body = get(url)
     print('main', status_code)
-    # print('main headers ({})'.format(headers))
-    # print('main body', body)
+    print('main headers ({})'.format(headers))
+    print('main body', body)
 
 
 # 以下 test 开头的函数是单元测试
