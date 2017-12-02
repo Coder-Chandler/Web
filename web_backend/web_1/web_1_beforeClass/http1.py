@@ -30,7 +30,15 @@ while True:
     # recv 可以接收客户端发送过来的数据
     # 参数是要接收的字节数
     # 返回值是一个 bytes 类型
-    request = connection.recv(1024)
+    # 取出所有数据
+    buffer_size = 1000
+    r = ''
+    while True:
+        request = connection.recv(buffer_size)
+        r += request
+        # 取到的数据长度不够recv的参数的时候，说明数据已经取完了
+        if len(request) < buffer_size:
+            break
 
     # bytes 类型调用 decode('utf-8') 来转成一个字符串(str)
     print('ip and request, {}\n{}'.format(address, request.decode('utf-8')))
