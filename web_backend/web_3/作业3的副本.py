@@ -75,4 +75,4 @@ u.save()
 #
 # 该看资料中提及的那本《head first html and css》了
 # 另外请大致阅读下面这篇文章的内容(读读就好 不要求完全掌握)
-http://www.ituring.com.cn/tupubarticle/1204
+# http://www.ituring.com.cn/tupubarticle/1204

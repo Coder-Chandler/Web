@@ -45,7 +45,6 @@ https 的默认端口是 443, 所以你需要在 get 函数中根据协议设置
 
 """
 
-
 def parsed_url(url):
     """
     解析 url 返回 (protocol host port path)
