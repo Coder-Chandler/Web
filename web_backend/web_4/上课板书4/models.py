@@ -37,7 +37,7 @@ class Model(object):
         所以我们可以得到 class 的名字
         """
         classname = cls.__name__
-        path = '/Users/chandler/Documents/Projects/Web/web_backend/web_3/class_write/db/{}.txt'.format(classname)
+        path = '{}.txt'.format(classname)
         return path
 
     @classmethod
@@ -64,11 +64,12 @@ class Model(object):
         用法如下，kwargs 是只有一个元素的 dict
         u = User.find_by(username='gua')
         """
-        log('kwargs, ', kwargs)
+        log('传入的username, ', kwargs)
         k, v = '', ''
         for key, value in kwargs.items():
             k, v = key, value
         all = cls.all()
+        log('注册的用户数据all -> ', all)
         for m in all:
             # getattr(m, k) 等价于 m.__dict__[k]
             if v == m.__dict__[k]:
@@ -157,6 +158,7 @@ class User(Model):
     def validate_login(self):
         # return self.username == 'gua' and self.password == '123'
         u = User.find_by(username=self.username)
+        log('user登录验证之username -> ', u)
         # us = User.all()
         # for u in us:
         #     if u.username == self.username and u.password == self.password:
@@ -200,6 +202,7 @@ def test():
     # u = User.find_by(id=1)
     # u.username = '瓜'
     # u.save()
+
 
 if __name__ == '__main__':
     test()

@@ -62,7 +62,7 @@ message_list = []
 
 
 def route_message(request):
-    log('本次请求的 method', request.method)
+    log('本次请求的 method -> ', (request.method,))
     if request.method == 'POST':
         # message=hello&author=gua --> {'message':'hello', 'author': 'gua'}
         form = request.form()
@@ -70,12 +70,12 @@ def route_message(request):
         # {'message': 'hello', 'author': 'gua'} --> < Message author: (gua) message: (hello) >
         msg = Message.new(form)
 
-        log('post', form, type(form))
-        log('msg', msg, type(msg))
+        log('post表单 -> ', form, type(form))
+        log('messages -> ', msg, type(msg))
 
         # [< Message author: (gua) message: (hello) >]
         message_list.append(msg)
-        log('message_list', message_list)
+        log('message_list -> ', message_list)
         # 应该在这里保存 message_list
 
     header = 'HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n'
@@ -83,7 +83,7 @@ def route_message(request):
     # '#'.join(['a', 'b', 'c']) 的结果是 'a#b#c'
     # [< Message author: (gua) message: (hello) >] -> '< Message author: (gua) message: (hello) >'
     msgs = '<br>'.join([str(m) for m in message_list])
-    log('msgs', msgs, type(msgs))
+    log('messages -> ', msgs, type(msgs))
     body = body.replace('{{messages}}', msgs)
     r = header + '\r\n' + body
     return r.encode(encoding='utf-8')
