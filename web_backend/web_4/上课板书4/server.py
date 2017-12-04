@@ -47,6 +47,13 @@ class Request(object):
         self.add_cookies()
 
     def form(self):
+        """
+        form 函数用于把 body 解析为一个字典并返回
+        body 的格式如下 a=b&c=d&e=1
+        """
+        # username=g+u%26a%3F&password=
+        # username=g u&a?&password=
+        # TODO, 这实际上算是一个 bug，应该在解析出数据后再去 unquote
         body = urllib.parse.unquote(self.body)
         args = body.split('&')
         f = {}

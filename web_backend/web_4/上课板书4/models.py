@@ -29,6 +29,7 @@ class Model(object):
     user = User()
     user.db_path() 返回 User.txt
     """
+
     @classmethod
     def db_path(cls):
         """
@@ -69,8 +70,9 @@ class Model(object):
         for key, value in kwargs.items():
             k, v = key, value
         all = cls.all()
-        log('注册的用户数据all -> ', all)
+        log('注册的用户数据all -> ', all, type(all))
         for m in all:
+            log('遍历所有用户数据', m, type(m))
             # getattr(m, k) 等价于 m.__dict__[k]
             if v == m.__dict__[k]:
                 return m
@@ -116,7 +118,7 @@ class Model(object):
         first_index = 0
         if self.__dict__.get('id') is None:
             # 加上 id
-            if len(models) > 1:
+            if len(models) > 0:
                 log('用 log 可以查看代码执行的走向')
                 # 不是第一个数据
                 self.id = models[-1].id + 1
@@ -130,6 +132,7 @@ class Model(object):
             # 那么就找到这条数据并替换之
             index = -1
             for i, m in enumerate(models):
+                log('i,m', (i, m))
                 if m.id == self.id:
                     index = i
                     break
@@ -148,6 +151,7 @@ class User(Model):
     User 是一个保存用户数据的 model
     现在只有两个属性 username 和 password
     """
+
     def __init__(self, form):
         self.id = form.get('id', None)
         if self.id is not None:
@@ -179,6 +183,7 @@ class Message(Model):
     """
     Message 是用来保存留言的 model
     """
+
     def __init__(self, form):
         self.author = form.get('author', '')
         self.message = form.get('message', '')
@@ -194,14 +199,14 @@ def test():
     )
     u = User(form)
     u.save()
-    # u.save()
-    # u.save()
-    # u.save()
-    # u.save()
-    # u.save()
-    # u = User.find_by(id=1)
-    # u.username = '瓜'
-    # u.save()
+    u.save()
+    u.save()
+    u.save()
+    u.save()
+    u.save()
+    u = User.find_by(id=4)
+    u.username = '瓜'
+    u.save()
 
 
 if __name__ == '__main__':
