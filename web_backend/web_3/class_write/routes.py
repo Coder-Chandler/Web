@@ -46,6 +46,7 @@ def route_register(request):
         u = User.new(form)
         if u.validate_register():
             u.save()
+            log('注册成功后的model -> ', User.all())
             result = '注册成功<br> <pre>{}</pre>'.format(User.all())
         else:
             result = '用户名或者密码长度必须大于2'

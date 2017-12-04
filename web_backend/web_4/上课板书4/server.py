@@ -24,7 +24,7 @@ class Request(object):
         """
         cookies = self.headers.get('Cookie', '')
         kvs = cookies.split('; ')
-        log('增加cookie -> ', kvs)
+        log('为request增加cookie属性 -> ', kvs)
         for kv in kvs:
             if '=' in kv:
                 k, v = kv.split('=')
@@ -41,6 +41,7 @@ class Request(object):
         for line in lines:
             k, v = line.split(': ', 1)
             self.headers[k] = v
+        log('为request增加headers属性 -> ', header)
         # 清除 cookies
         self.cookies = {}
         self.add_cookies()
@@ -143,6 +144,7 @@ def run(host='', port=3000):
             request.body = r.split('\r\n\r\n', 1)[1]
             # 用 response_for_path 函数来得到 path 对应的响应内容
             response = response_for_path(path)
+            # log('response响应 -> ', response)
             log('debug **', 'sendall')
             # 把响应发送给客户端
             connection.sendall(response)

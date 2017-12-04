@@ -46,6 +46,7 @@ class Model(object):
         all 方法(类里面的函数叫方法)使用 load 函数得到所有的 models
         """
         path = cls.db_path()
+        log('数据文件路径 -> ', path)
         models = load(path)
         # 这里用了列表推导生成一个包含所有 实例 的 list
         # m 是 dict, 用 cls.new(m) 可以初始化一个 cls 的实例
@@ -109,19 +110,19 @@ class Model(object):
         用 all 方法读取文件中的所有 model 并生成一个 list
         把 self 添加进去并且保存进文件
         """
-        log('debug save')
+        log('debug save函数是否执行 -> ', '执行')
         models = self.all()
-        log('models', models)
+        log('读取所有model', models)
         first_index = 0
         if self.__dict__.get('id') is None:
             # 加上 id
-            if len(models) > 3:
+            if len(models) > 1:
                 log('用 log 可以查看代码执行的走向')
                 # 不是第一个数据
                 self.id = models[-1].id + 1
             else:
                 # 是第一个数据
-                log('first index', first_index)
+                log('first_index -> ', first_index)
                 self.id = first_index
             models.append(self)
         else:

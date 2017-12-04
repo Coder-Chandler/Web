@@ -110,19 +110,19 @@ class Model(object):
         用 all 方法读取文件中的所有 model 并生成一个 list
         把 self 添加进去并且保存进文件
         """
-        log('debug save')
+        log('debug save函数是否执行 -> ', '执行')
         models = self.all()
-        log('models', models)
+        log('读取所有model -> ', models)
         first_index = 0
         if self.__dict__.get('id') is None:
             # 加上 id
-            if len(models) > 3:
+            if len(models) > 1:
                 log('用 log 可以查看代码执行的走向')
                 # 不是第一个数据
                 self.id = models[-1].id + 1
             else:
                 # 是第一个数据
-                log('first index', first_index)
+                log('first_index -> ', first_index)
                 self.id = first_index
             models.append(self)
         else:
@@ -158,7 +158,7 @@ class User(Model):
     def validate_login(self):
         # return self.username == 'gua' and self.password == '123'
         u = User.find_by(username=self.username)
-        log('user登录验证之username -> ', u)
+        log('user登录验证之username -> ', u, type(u))
         # us = User.all()
         # for u in us:
         #     if u.username == self.username and u.password == self.password:

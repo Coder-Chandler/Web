@@ -112,6 +112,7 @@ def route_register(request):
         u = User.new(form)
         if u.validate_register():
             u.save()
+            log('注册成功后的model -> ', User.all())
             result = '注册成功<br> <pre>{}</pre>'.format(User.all())
         else:
             result = '用户名或者密码长度必须大于2'
@@ -129,7 +130,7 @@ def route_message(request):
     """
     username = current_user(request)
     if username == '【游客】':
-        log("**debug, route msg 未登录")
+        log("**debug, route msg 未登录 -> ", username)
         pass
     log('本次请求的 method', request.method)
     if request.method == 'POST':
