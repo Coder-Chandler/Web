@@ -1,7 +1,6 @@
 import socket
 import ssl
 
-
 """
 作业 1 答案
 ===
@@ -153,7 +152,10 @@ def get(url):
     s = socket_by_protocol(protocol)
     s.connect((host, port))
 
-    request = 'GET {} HTTP/1.1\r\nHost: {}\r\nCookie: user=asaflglfwskrs9rd\r\nConnection: close\r\n\r\n'.format(path, host)
+    request = 'GET {} HTTP/1.1\r\n' \
+              'Host: {}\r\n' \
+              'Cookie: user=d9gjfasf829efgah\r\n' \
+              'Connection: close\r\n\r\n'.format(path, host)
     encoding = 'utf-8'
     s.send(request.encode(encoding))
 
@@ -176,6 +178,7 @@ def main():
     print('main', status_code)
     print('main headers ({})'.format(headers))
     print('main body', body)
+
 
 # 以下 test 开头的函数是单元测试
 def test_parsed_url():
@@ -211,10 +214,10 @@ def test_parsed_response():
     """
     # NOTE, 行末的 \ 表示连接多行字符串
     response = 'HTTP/1.1 301 Moved Permanently\r\n' \
-        'Content-Type: text/html\r\n' \
-        'Location: https://movie.douban.com/top250\r\n' \
-        'Content-Length: 178\r\n\r\n' \
-        'test body'
+               'Content-Type: text/html\r\n' \
+               'Location: https://movie.douban.com/top250\r\n' \
+               'Content-Length: 178\r\n\r\n' \
+               'test body'
     status_code, header, body = parsed_response(response)
     assert status_code == 301
     assert len(list(header.keys())) == 3
@@ -246,4 +249,3 @@ def test():
 if __name__ == '__main__':
     # test()
     main()
-
