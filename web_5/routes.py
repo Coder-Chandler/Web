@@ -165,15 +165,24 @@ def route_message(request):
     return r.encode(encoding='utf-8')
 
 
+# 静态文件/static的路由函数，比如图片就需要用到这个函数
 def route_static(request):
     """
-    静态资源的处理函数, 读取图片并生成响应返回
+    :param request: request实例
+    :return:
     """
+    # 从request实例的query属性中拿到 file 这个字段，如果query是 {'file': 'doge1.gif'}，那么filename等于'doge1.gif'，
+    # 如果没有file就赋值为 'doge.gif'
     filename = request.query.get('file', 'doge.gif')
+    # 把 'static/' 和 filename 拼接 -> 'static/doge1.gif'
     path = 'static/' + filename
+    # 取文件中找 'static/doge1.gif' 这个图片，并以rb（二进制）的方式打开
     with open(path, 'rb') as f:
+        # 设置一个请求头header
         header = b'HTTP/1.1 200 OK\r\nContent-Type: image/gif\r\n\r\n'
+        # 把请求头和读取出来的图片拼接
         img = header + f.read()
+        log('image是什么 -> ', img)
         return img
 
 

@@ -161,15 +161,22 @@ def response_for_path(path):
     根据 path 调用相应的处理函数
     没有处理的 path 会返回 404
     """
+    # 把路由函数全部存入dict
     r = {
         '/static': route_static,
         # '/': route_index,
         # '/login': route_login,
         # '/messages': route_message,
     }
+    # 把route_dict合并到r
     r.update(route_dict)
+    # 把todo_route合并到r
     r.update(todo_route)
+    # 按照path来确定用哪一个路由函数来处理，比如 'todo/edit' 就要用 todo_route 中的 edit 函数来处理，
+    # 那么这里的response就等于edit这个函数
     response = r.get(path, error)
+    # 上面的response就=如果等于edit这个函数，那么 response(request) 就相当于 edit(request)
+    log('现在request是什么 -> ', request)
     return response(request)
 
 
