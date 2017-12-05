@@ -70,9 +70,9 @@ class Model(object):
         for key, value in kwargs.items():
             k, v = key, value
         all = cls.all()
-        log('注册的用户数据all -> ', all, type(all))
+        # log('注册的用户数据all -> ', all, type(all))
         for m in all:
-            log('遍历所有用户数据', m, type(m))
+            # log('遍历所有用户数据', m, type(m))
             # getattr(m, k) 等价于 m.__dict__[k]
             if v == m.__dict__[k]:
                 return m
@@ -114,7 +114,7 @@ class Model(object):
         """
         log('debug save函数是否执行 -> ', '执行')
         models = self.all()
-        log('读取所有model -> ', models)
+        # log('读取所有model -> ', models)
         first_index = 0
         if self.__dict__.get('id') is None:
             # 加上 id
@@ -132,7 +132,7 @@ class Model(object):
             # 那么就找到这条数据并替换之
             index = -1
             for i, m in enumerate(models):
-                log('i,m', (i, m))
+                # log('i,m', (i, m))
                 if m.id == self.id:
                     index = i
                     break

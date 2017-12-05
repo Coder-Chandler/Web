@@ -24,7 +24,7 @@ class Request(object):
         """
         cookies = self.headers.get('Cookie', '')
         kvs = cookies.split('; ')
-        log('为request增加cookie属性 -> ', kvs)
+        # log('为request增加cookie属性 -> ', kvs)
         for kv in kvs:
             if '=' in kv:
                 k, v = kv.split('=')
@@ -41,7 +41,7 @@ class Request(object):
         for line in lines:
             k, v = line.split(': ', 1)
             self.headers[k] = v
-        log('为request增加headers属性 -> ', header)
+        # log('为request增加headers属性 -> ', header)
         # 清除 cookies
         self.cookies = {}
         self.add_cookies()
