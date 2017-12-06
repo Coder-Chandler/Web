@@ -100,26 +100,32 @@ def redirect(url):
     会自动在 HTTP header 里面找 Location 字段并获取一个 url
     然后自动请求新的 url
     """
+    # 这里url是你想要重定向的地址，比如根目录 '/'
     headers = {
         'Location': url,
     }
     # 增加 Location 字段并生成 HTTP 响应返回
     # 注意, 没有 HTTP body 部分
+    # 使用 response_with_headers 函数拿到响应，比如现在重定向到 '/'，那么得到的是，
+    """
+    HTTP/1.1 302 VERY OK\r\n
+    Location: /\r\n\r\n
+    """
     r = response_with_headers(headers, 302) + '\r\n'
+    # log('重定向r是什么 -> ', r)
     return r.encode('utf-8')
-
-
-"""
-HTTP/1.1 302 xxx
-Location: /
-
-"""
 
 
 def route_login(request):
     """
     :param request: request 实例
     :return:
+        HTTP/1.1 200 VERY OK\r\n
+        Content-Type: text/html\r\n
+        Set-Cookie: user=asd23day3vgf33456\r\n\r\n
+        <html>
+            ..........
+        </html>
     """
     # 设置请求头
     headers = {
@@ -182,6 +188,15 @@ def route_login(request):
         Set-Cookie: user=asd23day3vgf33456\r\n
     """
     header = response_with_headers(headers)
+    # 把响应和body拼接起来，比如，
+    """
+        HTTP/1.1 200 VERY OK\r\n
+        Content-Type: text/html\r\n
+        Set-Cookie: user=asd23day3vgf33456\r\n\r\n
+        <html>
+            ..........
+        </html>
+    """
     r = header + '\r\n' + body
     log('login 的响应', r)
     return r.encode(encoding='utf-8')
@@ -227,23 +242,34 @@ def route_message(request):
     """
     消息页面的路由函数
     """
+    # 拿到用户名，可能是username也可能是【游客】
     username = current_user(request)
-    # 如果是未登录的用户, 重定向到 '/'
+    # 如果是未登录的用户, 重定向到 '/'，因为我们不想让用户为登录情况下访问消息页面
     if username == '【游客】':
         log("**debug, route msg 未登录")
+        # 利用重定向 redirect 函数让【游客】回到首页
         return redirect('/')
     log('本次请求的 method', request.method)
+    # 如果用户不是【游客】，那么用户就可以在messages页面post数据
     if request.method == 'POST':
+        # 把用户请求用form函数处理，比如 message=ccc&author=22 -> {'message': 'ccc', 'author': '22'}
         form = request.form()
+        # 实例化msg, 比如< Message author: (22) message: (ccc) >
         msg = Message.new(form)
+        # ('msg是什么 -> ', msg)
         log('post', form)
+        # 把msg保存到 message_list 中
         message_list.append(msg)
         # 应该在这里保存 message_list
+    # 设置请求头header
     header = 'HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n'
     # body = '<h1>消息版</h1>'
+    # 通过 template 读 html_basic.html 页面
     body = template('html_basic.html')
+    # 把post的数据显示到页面{{messages}}标记的位置上
     msgs = '<br>'.join([str(m) for m in message_list])
     body = body.replace('{{messages}}', msgs)
+    # 拼接请求
     r = header + '\r\n' + body
     return r.encode(encoding='utf-8')
 

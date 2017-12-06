@@ -120,7 +120,7 @@ def error(request, code=404):
     根据 code 返回不同的错误响应
     目前只有 404
     """
-    # 之前上课我说过不要用数字来作为字典的 key
+    # 之前说过不要用数字来作为字典的 key
     # 但是在 HTTP 协议中 code 都是数字似乎更方便所以打破了这个原则
     e = {
         404: b'HTTP/1.x 404 NOT FOUND\r\n\r\n<h1>NOT FOUND</h1>',
@@ -159,6 +159,12 @@ def response_for_path(path):
     """
     :param path: '/todo/edit?id=1'
     :return:
+        HTTP/1.1 200 VERY OK\r\n
+        Content-Type: text/html\r\n
+        Set-Cookie: user=asd23day3vgf33456\r\n\r\n
+        <html>
+            ..........
+        </html>
     """
     # 首先利用 parsed_path 函数处理path得到 'todo/edit', {'id': '1'}
     path, query = parsed_path(path)
@@ -186,7 +192,7 @@ def response_for_path(path):
     # 那么这里的response就等于edit这个函数
     response = r.get(path, error)
     # 上面的response如果等于edit这个函数，那么 response(request) 就相当于 edit(request)
-    log('现在request是什么 -> ', request)
+    # log('现在request是什么 -> ', response(request))
     return response(request)
 
 
@@ -244,7 +250,15 @@ def run(host='', port=3000):
             # 那么就分割了最下面的body和上面的请求行以及请求头headers，再切片至第1个，就拿到了body
             # ['username=gua&password=123']
             request.body = r.split('\r\n\r\n', 1)[1]
-            # 用 response_for_path 函数来得到 path 对应的响应内容
+            # 用 response_for_path 函数来得到 path 对应的响应内容,比如，
+            """
+            HTTP/1.1 200 VERY OK\r\n
+            Content-Type: text/html\r\n
+            Set-Cookie: user=asd23day3vgf33456\r\n\r\n
+            <html>
+                ..........
+            </html>
+            """
             response = response_for_path(path)
             # log('4, 服务器给浏览器一个页面响应', response)
             log('debug **', 'sendall')
