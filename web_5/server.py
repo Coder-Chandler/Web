@@ -92,11 +92,21 @@ class Request(object):
         self.add_cookies()
 
     def form(self):
+        """
+        :param: 'username=gua&password=123'
+        :return: {'username': 'gua', 'password': '123'}
+        """
+        # log('self.body 是什么 -> ', self.body)
+        # self.body是post请求的body，比如输入的用户名和密码字段 username=gua&password=123，
+        # 利用unquote函数处理 self.body 例子：unquote('abc%20def') -> 'abc def'
+        # unquote('username=gua&password=123') -> 'username=gua&password=123'
         body = urllib.parse.unquote(self.body)
+        # 分割 'username=gua&password=123' 得到 ['username=gua', 'password=123']
         args = body.split('&')
         f = {}
         for arg in args:
             k, v = arg.split('=')
+            # {'username': 'gua', 'password': '123'}
             f[k] = v
         return f
 
@@ -175,7 +185,7 @@ def response_for_path(path):
     # 按照path来确定用哪一个路由函数来处理，比如 'todo/edit' 就要用 todo_route 中的 edit 函数来处理，
     # 那么这里的response就等于edit这个函数
     response = r.get(path, error)
-    # 上面的response就=如果等于edit这个函数，那么 response(request) 就相当于 edit(request)
+    # 上面的response如果等于edit这个函数，那么 response(request) 就相当于 edit(request)
     log('现在request是什么 -> ', request)
     return response(request)
 
@@ -238,7 +248,7 @@ def run(host='', port=3000):
             response = response_for_path(path)
             # log('4, 服务器给浏览器一个页面响应', response)
             log('debug **', 'sendall')
-            # 把响应发送给客户端
+            # 把响应发送给客户端然后显示给用户看
             connection.sendall(response)
             log('debug ****', 'close')
             # 处理完请求, 关闭连接
