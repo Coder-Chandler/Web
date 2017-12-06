@@ -50,6 +50,7 @@ def login_required(route_function):
         if u is None:
             return redirect('/login')
         return route_function(request)
+
     return f
 
 
