@@ -43,13 +43,13 @@ def redirect(url):
 
 
 def login_required(route_function):
+    # 找到当前登录的用户, 如果没登录, 就 redirect 到 /login
     def f(request):
         uname = current_user(request)
         u = User.find_by(username=uname)
         if u is None:
             return redirect('/login')
         return route_function(request)
-
     return f
 
 
@@ -134,12 +134,24 @@ def edit(request):
     # if todo_id < 1:
     #     return error(404)
     # 如果 t.user_id 和 u.id 相等，先读todo_edit.html 页面
-    # 再替换模板文件todo_edit.html中的标记字符串{{todo_id}}为
+    # 再替换模板文件todo_edit.html中的标记字符串{{todo_id}}为当前被编辑的todo的数据的id，
+    # {{todo_title}}为当前被编辑的todo的数据的title
     body = template('todo_edit.html')
     body = body.replace('{{todo_id}}', str(t.id))
     body = body.replace('{{todo_title}}', str(t.title))
     # 下面 3 行可以改写为一条函数, 还把 headers 也放进函数中
+    # 通过response_with_headers拿到服务器响应，headers上面设置了，headers = {'Content-Type': 'text/html',}
+    # 返回请求头， HTTP/1.1 200 VERY OK\r\nContent-Type: text/html\r\n
     header = response_with_headers(headers)
+    # 把请求头和body拼接
+    """
+    HTTP/1.1 200 VERY OK\r\n
+    Content-Type: text/html\r\n\r\n
+    <html>
+        .........
+    </html>
+
+    """
     r = header + '\r\n' + body
     return r.encode(encoding='utf-8')
 
@@ -151,14 +163,25 @@ def add(request):
     headers = {
         'Content-Type': 'text/html',
     }
+    # 找到当前登录的用户, 如果没登录, 就 redirect 到 /login
     uname = current_user(request)
     u = User.find_by(username=uname)
+    # 判断请求方法是否是POST
     if request.method == 'POST':
         # 'title=aaa'
         # {'title': 'aaa'}
+        # 用form函数处理请求
+        # form的用法
+        """
+        :param: 'username=gua&password=123'
+        :return: {'username': 'gua', 'password': '123'}
+        """
         form = request.form()
+        # 实例化t，把请求的form传给t
         t = Todo.new(form)
+        # 把登录用户的id传给这条新加的todo数据
         t.user_id = u.id
+        # 再把这条数据保存至数据文件
         t.save()
     # 浏览器发送数据过来被处理后, 重定向到首页
     # 浏览器在请求新首页的时候, 就能看到新增的数据了
@@ -169,15 +192,24 @@ def update(request):
     """
     用于增加新 todo 的路由函数
     """
+    # 找到当前登录的用户, 如果没登录, 就 redirect 到 /login
     uname = current_user(request)
     u = User.find_by(username=uname)
     if u is None:
         return redirect('/login')
     if request.method == 'POST':
         # 修改并且保存 todo
+        # 用form函数处理请求
+        # form的用法
+        """
+        :param: 'username=gua&password=123'
+        :return: {'username': 'gua', 'password': '123'}
+        """
         form = request.form()
         print('debug update', form)
+        # 拿到修改的数据的id，有可能用户修改数据的时候也把id改了
         todo_id = int(form.get('id', -1))
+        #
         t = Todo.find_by(id=todo_id)
         t.title = form.get('title', t.title)
         t.save()
@@ -187,17 +219,28 @@ def update(request):
 
 
 def delete_todo(request):
+    # 找到当前登录的用户, 如果没登录, 就 redirect 到 /login
     uname = current_user(request)
     u = User.find_by(username=uname)
     if u is None:
         return redirect('/login')
-    # 得到当前编辑的 todo 的 id
+    # 得到当前删除的 todo 的 id
     todo_id = int(request.query.get('id', -1))
+    # 找到当前被删除的条目的数据，按照当前编辑的 todo 的 id来寻找，
+    # 比如编辑 {"id": 3, "title": "喝水", "user_id": 1}，那么按照"id": 3取数据文件中查询
+    # 比如 t = < Todo id: (3) title: (喝水) user_id: (1) >
     t = Todo.find_by(id=todo_id)
+    # log('找到当前登录用户要编辑的数据的对应id', t)
+    # 判断被删除的这个数据对应的用户id（t.user_id）和编辑这个数据的用户id（u.id）是否一致
+    # 比如 t.user_id = 1， u.id = 1
+    # 如果两者相等说明登录用户在修改自己的数据，不相等说明登录用户在修改别人的数据，那这个是不允许的，就重定向到登录页面
     if t.user_id != u.id:
         return redirect('/login')
+    # 如果t不是None，意思就是说被删除的这个数据是存在的，那么就用remove函数把t删除掉
     if t is not None:
         t.remove()
+    # 浏览器发送数据过来被处理后, 重定向到首页
+    # 浏览器在请求新首页的时候, 就能看到新增的数据了
     return redirect('/todo')
 
 
