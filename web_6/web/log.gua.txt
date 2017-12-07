@@ -1,0 +1,1165 @@
+21:38:02 完整请求
+21:38:02 GET /admin/users HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, sdch, br
+Accept-Language: en-US,en;q=0.8
+Cookie: Pycharm-df207d35=600adc10-1f5d-46ff-b99f-861b091847e7; user=fagsjgdfagsf8klh
+
+
+21:38:02 请求结束
+21:38:02 cookie ['Pycharm-df207d35=600adc10-1f5d-46ff-b99f-861b091847e7', 'user=fagsjgdfagsf8klh']
+21:38:02 path and query /admin/users {}
+21:38:02 kwargs,  {'id': -1} <class 'dict'>
+21:38:02 admin users None
+21:38:02 完整响应
+21:38:02 HTTP/1.1 302 OK
+Content-Type: text/html
+Location: /login
+
+
+21:38:02 响应结束
+21:38:02 完整请求
+21:38:02 GET /login HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, sdch, br
+Accept-Language: en-US,en;q=0.8
+Cookie: Pycharm-df207d35=600adc10-1f5d-46ff-b99f-861b091847e7; user=fagsjgdfagsf8klh
+
+
+21:38:02 请求结束
+21:38:02 cookie ['Pycharm-df207d35=600adc10-1f5d-46ff-b99f-861b091847e7', 'user=fagsjgdfagsf8klh']
+21:38:02 path and query /login {}
+21:38:02 login, cookies {'user': 'fagsjgdfagsf8klh', 'Pycharm-df207d35': '600adc10-1f5d-46ff-b99f-861b091847e7'}
+21:38:02 完整响应
+21:38:02 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 </h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <h3></h3>
+</body>
+</html>
+21:38:02 响应结束
+21:38:26 完整请求
+21:38:26 
+21:38:26 请求结束
+21:38:26 完整请求
+21:38:26 POST /login HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Content-Length: 26
+Cache-Control: max-age=0
+Origin: http://localhost:3000
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Referer: http://localhost:3000/login
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: Pycharm-df207d35=600adc10-1f5d-46ff-b99f-861b091847e7; user=fagsjgdfagsf8klh
+
+username=xiao&password=123
+21:38:26 请求结束
+21:38:26 cookie ['Pycharm-df207d35=600adc10-1f5d-46ff-b99f-861b091847e7', 'user=fagsjgdfagsf8klh']
+21:38:26 path and query /login {}
+21:38:26 login, cookies {'user': 'fagsjgdfagsf8klh', 'Pycharm-df207d35': '600adc10-1f5d-46ff-b99f-861b091847e7'}
+21:38:26 kwargs,  {'username': 'xiao'} <class 'dict'>
+21:38:26 kwargs,  {'username': 'xiao'} <class 'dict'>
+21:38:26 headers response {'Set-Cookie': 'user=k4rrd8aaeaf93ad9'}
+21:38:26 完整响应
+21:38:26 HTTP/1.1 302 OK
+Content-Type: text/html
+Set-Cookie: user=k4rrd8aaeaf93ad9
+Location: /
+
+
+21:38:26 响应结束
+21:38:26 完整请求
+21:38:26 GET / HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Referer: http://localhost:3000/login
+Accept-Encoding: gzip, deflate, sdch, br
+Accept-Language: en-US,en;q=0.8
+Cookie: Pycharm-df207d35=600adc10-1f5d-46ff-b99f-861b091847e7; user=k4rrd8aaeaf93ad9
+
+
+21:38:26 请求结束
+21:38:26 cookie ['Pycharm-df207d35=600adc10-1f5d-46ff-b99f-861b091847e7', 'user=k4rrd8aaeaf93ad9']
+21:38:26 path and query / {}
+21:38:26 完整响应
+21:38:26 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple todo</title>
+</head>
+<body>
+    <form action="/add" method="post">
+        <input name="task">
+        <button>add todo</button>
+    </form>
+
+    
+        <div>
+            1 : 123  @ 20:51:23
+            <a href="/edit?id=1">edit</a>
+            <a href="/delete?id=1">删除</a>
+        </div>
+    
+        <div>
+            2 : asdfas  @ 20:51:26
+            <a href="/edit?id=2">edit</a>
+            <a href="/delete?id=2">删除</a>
+        </div>
+    
+</body>
+</html>
+21:38:26 响应结束
+21:38:33 完整请求
+21:38:33 GET /admin/users HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, sdch, br
+Accept-Language: en-US,en;q=0.8
+Cookie: Pycharm-df207d35=600adc10-1f5d-46ff-b99f-861b091847e7; user=k4rrd8aaeaf93ad9
+
+
+21:38:33 请求结束
+21:38:33 cookie ['Pycharm-df207d35=600adc10-1f5d-46ff-b99f-861b091847e7', 'user=k4rrd8aaeaf93ad9']
+21:38:33 path and query /admin/users {}
+21:38:33 kwargs,  {'id': 2} <class 'dict'>
+21:38:33 admin users < User
+id: (2)
+username: (xiao)
+password: (123) 
+>
+
+21:38:33 完整响应
+21:38:33 HTTP/1.1 302 OK
+Content-Type: text/html
+Location: /login
+
+
+21:38:33 响应结束
+21:38:33 完整请求
+21:38:33 GET /login HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, sdch, br
+Accept-Language: en-US,en;q=0.8
+Cookie: Pycharm-df207d35=600adc10-1f5d-46ff-b99f-861b091847e7; user=k4rrd8aaeaf93ad9
+
+
+21:38:33 请求结束
+21:38:33 cookie ['Pycharm-df207d35=600adc10-1f5d-46ff-b99f-861b091847e7', 'user=k4rrd8aaeaf93ad9']
+21:38:33 path and query /login {}
+21:38:33 login, cookies {'user': 'k4rrd8aaeaf93ad9', 'Pycharm-df207d35': '600adc10-1f5d-46ff-b99f-861b091847e7'}
+21:38:33 完整响应
+21:38:33 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 </h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <h3></h3>
+</body>
+</html>
+21:38:33 响应结束
+15:42:41 start at :3000
+15:43:07 完整请求
+15:43:07 GET / HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:43:07 请求结束
+15:43:07 add cookies ['']
+15:43:07 path and query / {}
+15:43:07 完整响应
+15:43:07 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple todo</title>
+</head>
+<body>
+    <form action="/add" method="post">
+        <input name="task">
+        <button>add todo</button>
+    </form>
+
+    
+        <div>
+            1 : 123  @ 20:51:23
+            <a href="/edit?id=1">edit</a>
+            <a href="/delete?id=1">删除</a>
+        </div>
+    
+        <div>
+            2 : asdfas  @ 20:51:26
+            <a href="/edit?id=2">edit</a>
+            <a href="/delete?id=2">删除</a>
+        </div>
+    
+</body>
+</html>
+15:43:07 响应结束
+15:43:08 完整请求
+15:43:08 GET /favicon.ico HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:43:08 请求结束
+15:43:08 add cookies ['']
+15:43:08 path and query /favicon.ico {}
+15:43:08 完整响应
+15:43:08 HTTP/1.1 404 NOT FOUND
+
+<h1>NOT FOUND</h1>
+15:43:08 响应结束
+15:43:33 完整请求
+15:43:33 GET /delete?id=2 HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:43:33 请求结束
+15:43:33 add cookies ['']
+15:43:33 path and query /delete {'id': '2'}
+15:43:33 完整响应
+15:43:33 HTTP/1.1 302 OK
+Content-Type: text/html
+Location: /
+
+
+15:43:33 响应结束
+15:43:33 完整请求
+15:43:33 GET / HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:43:33 请求结束
+15:43:33 add cookies ['']
+15:43:33 path and query / {}
+15:43:33 完整响应
+15:43:33 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple todo</title>
+</head>
+<body>
+    <form action="/add" method="post">
+        <input name="task">
+        <button>add todo</button>
+    </form>
+
+    
+        <div>
+            1 : 123  @ 20:51:23
+            <a href="/edit?id=1">edit</a>
+            <a href="/delete?id=1">删除</a>
+        </div>
+    
+</body>
+</html>
+15:43:33 响应结束
+15:43:35 完整请求
+15:43:35 GET / HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:43:35 请求结束
+15:43:35 add cookies ['']
+15:43:35 path and query / {}
+15:43:35 完整响应
+15:43:35 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple todo</title>
+</head>
+<body>
+    <form action="/add" method="post">
+        <input name="task">
+        <button>add todo</button>
+    </form>
+
+    
+        <div>
+            1 : 123  @ 20:51:23
+            <a href="/edit?id=1">edit</a>
+            <a href="/delete?id=1">删除</a>
+        </div>
+    
+</body>
+</html>
+15:43:35 响应结束
+15:43:39 完整请求
+15:43:39 GET /login HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:43:39 请求结束
+15:43:39 add cookies ['']
+15:43:39 path and query /login {}
+15:43:39 login, cookies {}
+15:43:39 完整响应
+15:43:39 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 </h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <h3></h3>
+</body>
+</html>
+15:43:39 响应结束
+15:43:46 完整请求
+15:43:46 POST /login HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Content-Length: 25
+Cache-Control: max-age=0
+Origin: http://localhost:3000
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/login
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+username=gua&password=123
+15:43:46 请求结束
+15:43:46 add cookies ['']
+15:43:46 path and query /login {}
+15:43:46 login, cookies {}
+15:43:46 kwargs,  {'username': 'gua'} <class 'dict'>
+15:43:46 kwargs,  {'username': 'gua'} <class 'dict'>
+15:43:46 headers response {'Set-Cookie': 'user=kkedgsakddea4swe'}
+15:43:46 完整响应
+15:43:46 HTTP/1.1 302 OK
+Content-Type: text/html
+Set-Cookie: user=kkedgsakddea4swe
+Location: /
+
+
+15:43:46 响应结束
+15:43:46 完整请求
+15:43:46 GET / HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/login
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+Cookie: user=kkedgsakddea4swe
+
+
+15:43:46 请求结束
+15:43:46 add cookies ['user=kkedgsakddea4swe']
+15:43:46 path and query / {}
+15:43:46 完整响应
+15:43:46 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple todo</title>
+</head>
+<body>
+    <form action="/add" method="post">
+        <input name="task">
+        <button>add todo</button>
+    </form>
+
+    
+        <div>
+            1 : 123  @ 20:51:23
+            <a href="/edit?id=1">edit</a>
+            <a href="/delete?id=1">删除</a>
+        </div>
+    
+</body>
+</html>
+15:43:46 响应结束
+15:44:00 完整请求
+15:44:00 GET /login HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+Cookie: user=kkedgsakddea4swe
+
+
+15:44:00 请求结束
+15:44:00 add cookies ['user=kkedgsakddea4swe']
+15:44:00 path and query /login {}
+15:44:00 login, cookies {'user': 'kkedgsakddea4swe'}
+15:44:00 完整响应
+15:44:00 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 </h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <h3></h3>
+</body>
+</html>
+15:44:00 响应结束
+15:44:05 完整请求
+15:44:05 POST /login HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Content-Length: 26
+Cache-Control: max-age=0
+Origin: http://localhost:3000
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/login
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+Cookie: user=kkedgsakddea4swe
+
+username=xiao&password=123
+15:44:05 请求结束
+15:44:05 add cookies ['user=kkedgsakddea4swe']
+15:44:05 path and query /login {}
+15:44:05 login, cookies {'user': 'kkedgsakddea4swe'}
+15:44:05 kwargs,  {'username': 'xiao'} <class 'dict'>
+15:44:05 kwargs,  {'username': 'xiao'} <class 'dict'>
+15:44:05 headers response {'Set-Cookie': 'user=ja2alfsfss8ssa9s'}
+15:44:05 完整响应
+15:44:05 HTTP/1.1 302 OK
+Content-Type: text/html
+Set-Cookie: user=ja2alfsfss8ssa9s
+Location: /
+
+
+15:44:05 响应结束
+15:44:05 完整请求
+15:44:05 GET / HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/login
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+Cookie: user=ja2alfsfss8ssa9s
+
+
+15:44:05 请求结束
+15:44:05 add cookies ['user=ja2alfsfss8ssa9s']
+15:44:05 path and query / {}
+15:44:05 完整响应
+15:44:05 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple todo</title>
+</head>
+<body>
+    <form action="/add" method="post">
+        <input name="task">
+        <button>add todo</button>
+    </form>
+
+    
+        <div>
+            1 : 123  @ 20:51:23
+            <a href="/edit?id=1">edit</a>
+            <a href="/delete?id=1">删除</a>
+        </div>
+    
+</body>
+</html>
+15:44:05 响应结束
+15:44:08 完整请求
+15:44:08 POST /add HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Content-Length: 11
+Cache-Control: max-age=0
+Origin: http://localhost:3000
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+Cookie: user=ja2alfsfss8ssa9s
+
+task=sdsfdf
+15:44:08 请求结束
+15:44:08 add cookies ['user=ja2alfsfss8ssa9s']
+15:44:08 path and query /add {}
+15:44:08 完整响应
+15:44:08 HTTP/1.1 302 OK
+Content-Type: text/html
+Location: /
+
+
+15:44:08 响应结束
+15:44:08 完整请求
+15:44:08 GET / HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+Cookie: user=ja2alfsfss8ssa9s
+
+
+15:44:08 请求结束
+15:44:08 add cookies ['user=ja2alfsfss8ssa9s']
+15:44:08 path and query / {}
+15:44:08 完整响应
+15:44:08 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple todo</title>
+</head>
+<body>
+    <form action="/add" method="post">
+        <input name="task">
+        <button>add todo</button>
+    </form>
+
+    
+        <div>
+            1 : 123  @ 20:51:23
+            <a href="/edit?id=1">edit</a>
+            <a href="/delete?id=1">删除</a>
+        </div>
+    
+        <div>
+            2 : sdsfdf  @ 15:44:08
+            <a href="/edit?id=2">edit</a>
+            <a href="/delete?id=2">删除</a>
+        </div>
+    
+</body>
+</html>
+15:44:08 响应结束
+15:44:27 完整请求
+15:44:27 GET / HTTP/1.1
+Host: localhost:3000
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+Cookie: username-localhost-8888="2|1:0|10:1512032424|23:username-localhost-8888|44:MTA3N2NhMTg1MzQyNDA1ZDg2YTMwOWQzNGZlOGVkMjY=|b72715b951fce23aa0bb36f757c023a18e51b492766141e127b24d806eb986c1"; username-localhost-8890="2|1:0|10:1511346581|23:username-localhost-8890|44:OTJiYmEwZjQyODM5NGQ5MWFjMmYxMmFiMzFhOGI4YmQ=|abc89822651a3944aa006b37abee51837f08e02e25f943c4b8f946399f081bd4"; username-localhost-8889="2|1:0|10:1511346543|23:username-localhost-8889|44:NTYyZGJjNWY4MzE3NDM0ZWIzMWU4OTFjNTMyM2M4MzM=|7086cc5e1c5944d6b1485d3b8a258d3d693d29b20d748ef51bb6db2c179fe536"; _xsrf=2|c85b0531|51c5bee2d5cacc0359bf2159c5be8f91|1510646596; optimizelyEndUserId=oeu1505997156247r0.5380643215329687; _ga=GA1.1.2112764074.1505997157
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/604.3.5 (KHTML, like Gecko) Version/11.0.1 Safari/604.3.5
+Accept-
+15:44:27 请求结束
+15:44:42 start at :3000
+15:44:48 start at :3000
+15:44:52 start at :3000
+15:44:55 start at :3000
+15:44:58 start at :3000
+15:45:04 start at :3000
+15:45:11 完整请求
+15:45:11 GET / HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:45:11 请求结束
+15:45:11 add cookies ['']
+15:45:11 path and query / {}
+15:45:11 完整响应
+15:45:11 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple todo</title>
+</head>
+<body>
+    <form action="/add" method="post">
+        <input name="task">
+        <button>add todo</button>
+    </form>
+
+    
+        <div>
+            1 : 123  @ 20:51:23
+            <a href="/edit?id=1">edit</a>
+            <a href="/delete?id=1">删除</a>
+        </div>
+    
+        <div>
+            2 : sdsfdf  @ 15:44:08
+            <a href="/edit?id=2">edit</a>
+            <a href="/delete?id=2">删除</a>
+        </div>
+    
+</body>
+</html>
+15:45:11 响应结束
+15:45:12 完整请求
+15:45:12 GET /favicon.ico HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:45:12 请求结束
+15:45:12 add cookies ['']
+15:45:12 path and query /favicon.ico {}
+15:45:12 完整响应
+15:45:12 HTTP/1.1 404 NOT FOUND
+
+<h1>NOT FOUND</h1>
+15:45:12 响应结束
+15:45:48 完整请求
+15:45:48 POST /add HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Content-Length: 5
+Cache-Control: max-age=0
+Origin: http://localhost:3000
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+task=
+15:45:48 请求结束
+15:45:48 add cookies ['']
+15:45:48 path and query /add {}
+15:45:49 完整响应
+15:45:49 HTTP/1.1 302 OK
+Content-Type: text/html
+Location: /
+
+
+15:45:49 响应结束
+15:45:49 完整请求
+15:45:49 GET / HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:45:49 请求结束
+15:45:49 add cookies ['']
+15:45:49 path and query / {}
+15:45:49 完整响应
+15:45:49 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple todo</title>
+</head>
+<body>
+    <form action="/add" method="post">
+        <input name="task">
+        <button>add todo</button>
+    </form>
+
+    
+        <div>
+            1 : 123  @ 20:51:23
+            <a href="/edit?id=1">edit</a>
+            <a href="/delete?id=1">删除</a>
+        </div>
+    
+        <div>
+            2 : sdsfdf  @ 15:44:08
+            <a href="/edit?id=2">edit</a>
+            <a href="/delete?id=2">删除</a>
+        </div>
+    
+        <div>
+            3 :   @ 15:45:48
+            <a href="/edit?id=3">edit</a>
+            <a href="/delete?id=3">删除</a>
+        </div>
+    
+</body>
+</html>
+15:45:49 响应结束
+15:45:53 完整请求
+15:45:53 POST /add HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Content-Length: 16
+Cache-Control: max-age=0
+Origin: http://localhost:3000
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+task=dfsdfdsfxcv
+15:45:53 请求结束
+15:45:53 add cookies ['']
+15:45:53 path and query /add {}
+15:45:53 完整响应
+15:45:53 HTTP/1.1 302 OK
+Content-Type: text/html
+Location: /
+
+
+15:45:53 响应结束
+15:45:53 完整请求
+15:45:53 GET / HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:45:53 请求结束
+15:45:53 add cookies ['']
+15:45:53 path and query / {}
+15:45:53 完整响应
+15:45:53 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple todo</title>
+</head>
+<body>
+    <form action="/add" method="post">
+        <input name="task">
+        <button>add todo</button>
+    </form>
+
+    
+        <div>
+            1 : 123  @ 20:51:23
+            <a href="/edit?id=1">edit</a>
+            <a href="/delete?id=1">删除</a>
+        </div>
+    
+        <div>
+            2 : sdsfdf  @ 15:44:08
+            <a href="/edit?id=2">edit</a>
+            <a href="/delete?id=2">删除</a>
+        </div>
+    
+        <div>
+            3 :   @ 15:45:48
+            <a href="/edit?id=3">edit</a>
+            <a href="/delete?id=3">删除</a>
+        </div>
+    
+        <div>
+            4 : dfsdfdsfxcv  @ 15:45:53
+            <a href="/edit?id=4">edit</a>
+            <a href="/delete?id=4">删除</a>
+        </div>
+    
+</body>
+</html>
+15:45:53 响应结束
+15:46:08 完整请求
+15:46:08 GET /edit?id=1 HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:46:08 请求结束
+15:46:08 add cookies ['']
+15:46:08 path and query /edit {'id': '1'}
+15:46:08 kwargs,  {'id': 1} <class 'dict'>
+15:46:08 完整响应
+15:46:08 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple todo edit</title>
+</head>
+<body>
+    <form action="/update?id=1" method="post">
+        <input name="task" value="123">
+        <button>update todo</button>
+    </form>
+</body>
+</html>
+15:46:08 响应结束
+15:46:13 完整请求
+15:46:13 GET /delete?id=4 HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:46:13 请求结束
+15:46:13 add cookies ['']
+15:46:13 path and query /delete {'id': '4'}
+15:46:13 完整响应
+15:46:13 HTTP/1.1 302 OK
+Content-Type: text/html
+Location: /
+
+
+15:46:13 响应结束
+15:46:13 完整请求
+15:46:13 GET / HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:46:13 请求结束
+15:46:13 add cookies ['']
+15:46:13 path and query / {}
+15:46:13 完整响应
+15:46:13 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple todo</title>
+</head>
+<body>
+    <form action="/add" method="post">
+        <input name="task">
+        <button>add todo</button>
+    </form>
+
+    
+        <div>
+            1 : 123  @ 20:51:23
+            <a href="/edit?id=1">edit</a>
+            <a href="/delete?id=1">删除</a>
+        </div>
+    
+        <div>
+            2 : sdsfdf  @ 15:44:08
+            <a href="/edit?id=2">edit</a>
+            <a href="/delete?id=2">删除</a>
+        </div>
+    
+        <div>
+            3 :   @ 15:45:48
+            <a href="/edit?id=3">edit</a>
+            <a href="/delete?id=3">删除</a>
+        </div>
+    
+</body>
+</html>
+15:46:13 响应结束
+15:46:15 完整请求
+15:46:15 GET /edit?id=2 HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:46:15 请求结束
+15:46:15 add cookies ['']
+15:46:15 path and query /edit {'id': '2'}
+15:46:15 kwargs,  {'id': 2} <class 'dict'>
+15:46:15 完整响应
+15:46:15 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple todo edit</title>
+</head>
+<body>
+    <form action="/update?id=2" method="post">
+        <input name="task" value="sdsfdf">
+        <button>update todo</button>
+    </form>
+</body>
+</html>
+15:46:15 响应结束
+15:46:18 完整请求
+15:46:18 POST /update?id=2 HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Content-Length: 16
+Cache-Control: max-age=0
+Origin: http://localhost:3000
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/edit?id=2
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+task=sdsfdflllll
+15:46:18 请求结束
+15:46:18 add cookies ['']
+15:46:18 path and query /update {'id': '2'}
+15:46:18 kwargs,  {'id': 2} <class 'dict'>
+15:46:18 debug 1
+15:46:18 完整响应
+15:46:18 HTTP/1.1 302 OK
+Content-Type: text/html
+Location: /
+
+
+15:46:18 响应结束
+15:46:18 完整请求
+15:46:18 GET / HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://localhost:3000/edit?id=2
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+15:46:18 请求结束
+15:46:18 add cookies ['']
+15:46:18 path and query / {}
+15:46:18 完整响应
+15:46:18 HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple todo</title>
+</head>
+<body>
+    <form action="/add" method="post">
+        <input name="task">
+        <button>add todo</button>
+    </form>
+
+    
+        <div>
+            1 : 123  @ 20:51:23
+            <a href="/edit?id=1">edit</a>
+            <a href="/delete?id=1">删除</a>
+        </div>
+    
+        <div>
+            2 : sdsfdflllll  @ 15:44:08
+            <a href="/edit?id=2">edit</a>
+            <a href="/delete?id=2">删除</a>
+        </div>
+    
+        <div>
+            3 :   @ 15:45:48
+            <a href="/edit?id=3">edit</a>
+            <a href="/delete?id=3">删除</a>
+        </div>
+    
+</body>
+</html>
+15:46:18 响应结束
