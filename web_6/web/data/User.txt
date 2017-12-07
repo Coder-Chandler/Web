@@ -1,12 +1,20 @@
 [
   {
-    "password": "123",
     "id": 1,
-    "username": "gua"
+    "username": "gua",
+    "password": "123",
+    "role": 10
   },
   {
-    "password": "123",
     "id": 2,
-    "username": "xiao"
+    "username": "xiao",
+    "password": "123",
+    "role": 10
+  },
+  {
+    "id": 3,
+    "username": "gua1",
+    "password": "123",
+    "role": 10
   }
 ]
