@@ -17,6 +17,39 @@ def redirect(location):
     r = header + '\r\n' + ''
     return r.encode(encoding='utf-8')
 
+"""
+POST /messages?user=gua&messages=32424 HTTP 1.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 24
+....
+
+user=gua&messages=32424
+"""
+# request.method = 'POST'
+# request.path = '/messages'
+# request.query = {'user': 'gua', 'messages': '32424'}
+# request.body = 'user=gua&messages=32424'
+# request.headers = {'Accept-Language': 'zh-CN,zh;q=0.8', 'Cookie': 'height=169; user=gua'}
+# request.cookies = {'height': '169', 'user': 'gua'}
+"""
+HTTP 1.1 302 OK
+Location: /messages
+"""
+
+"""
+GET /messages HTTP 1.1
+Host: ....
+"""
+
+"""
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: ...
+
+<html>
+    ....
+</html>
+"""
 
 # 直接写函数名字不写 route 了
 def index(request):

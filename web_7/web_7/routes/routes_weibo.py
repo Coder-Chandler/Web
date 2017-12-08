@@ -18,6 +18,7 @@ def current_user(request):
     user_id = session.get(session_id, -1)
     return user_id
 
+
 # 微博相关页面
 def index(request):
     user_id = request.query.get('user_id', -1)
@@ -102,6 +103,7 @@ def comment_add(request):
     w.save()
     return redirect('/weibo/index?user_id={}'.format(user.id))
 
+
 # 定义一个函数统一检测是否登录
 def login_required(route_function):
     def func(request):
@@ -113,6 +115,7 @@ def login_required(route_function):
         else:
             # 登录了, 正常返回路由函数响应
             return route_function(request)
+
     return func
 
 

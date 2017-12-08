@@ -20,16 +20,20 @@ class Request(object):
         self.headers = {}
         self.cookies = {}
 
+# {'Accept-Language': 'zh-CN,zh;q=0.8', 'Cookie': 'height=169; user=gua'}
     def add_cookies(self):
         """
         height=169; user=gua
         """
+        # 'Cookie': 'height=169; user=gua'
         cookies = self.headers.get('Cookie', '')
+        # kvs = ['height=169', 'user=gua']
         kvs = cookies.split('; ')
         log('cookie', kvs)
         for kv in kvs:
             if '=' in kv:
                 k, v = kv.split('=')
+                # {'height': '169', 'user': 'gua'}
                 self.cookies[k] = v
 
     def add_headers(self, header):
@@ -70,11 +74,13 @@ def error(request, code=404):
 
 def parsed_path(path):
     """
-    message=hello&author=gua
-    {
-        'message': 'hello',
-        'author': 'gua',
-    }
+    :param: /todo/messages?user=gua&messages=32424
+    :return:
+        /todo/messages,
+        {
+            'user': 'gua',
+            'messages': '32424'
+        }
     """
     index = path.find('?')
     if index == -1:
@@ -90,6 +96,14 @@ def parsed_path(path):
 
 
 def response_for_path(path, request):
+    """
+    path: /todo/messages
+    query:
+        {
+            'user': 'gua',
+            'messages': '32424'
+        }
+    """
     path, query = parsed_path(path)
     request.path = path
     request.query = query
