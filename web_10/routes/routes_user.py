@@ -20,9 +20,10 @@ def response_with_headers(headers, status_code=200):
     Content-Type: text/html
     Set-Cookie: user=gua
     """
+    # 拼接响应头和headers
     header = 'HTTP/1.1 {} VERY OK\r\n'.format(status_code)
     header += ''.join(['{}: {}\r\n'.format(k, v)
-                           for k, v in headers.items()])
+                       for k, v in headers.items()])
     return header
 
 
@@ -42,26 +43,36 @@ def route_login(request):
     """
     登录页面的路由函数
     """
+    # 设置headers
     headers = {
         'Content-Type': 'text/html',
     }
     log('login, cookies', request.cookies)
 
     if request.method == 'POST':
+        # 调用 Request 类的 form 方法来处理 request 的 body 得到字典格式的body，
+        # {'messages': 'goo', 'id': '22'}
         form = request.form()
+        # 把 body 传给新实例化的u，这里的body其实就是用户登录输入的名字和密码
         u = User(form)
+        # 验证u的登录是否合法
         if u.validate_login():
+            # 在数据文件中找到登录用户的用户名
             user = User.find_by(username=u.username)
-            # 设置 session
+            # 设置 session（每次登录都会设置新的session给user.id）
             session_id = random_str()
             session[session_id] = user.id
+            # 把代表用户名的session_id传给headers
             headers['Set-Cookie'] = 'user={}'.format(session_id)
             log('headers response', headers)
             # 登录后定向到 /
             return redirect('/', headers)
     # 显示登录页面
+    # template函数接受一个路径和一系列参数，读取模板并渲染返回
     body = template('login.html')
+    # 通过response_with_headers函数拼接响应头和headers
     header = response_with_headers(headers)
+    # 拼接 header 和 body 形成一个完整的HTTP响应
     r = header + '\r\n' + body
     return r.encode(encoding='utf-8')
 
@@ -72,8 +83,12 @@ def route_register(request):
     """
     header = 'HTTP/1.1 210 VERY OK\r\nContent-Type: text/html\r\n'
     if request.method == 'POST':
+        # 调用 Request 类的 form 方法来处理 request 的 body 得到字典格式的body，
+        # {'messages': 'goo', 'id': '22'}
         form = request.form()
+        # 把 body 传给新实例化的u，这里的body其实就是用户注册输入的名字和密码
         u = User(form)
+        # 验证u的注册是否合法
         if u.validate_register() is not None:
             # result = '注册成功<br> <pre>{}</pre>'.format(User.all())
             print('注册成功', u)

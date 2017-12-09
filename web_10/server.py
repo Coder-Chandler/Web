@@ -48,10 +48,15 @@ class Request(object):
         self.add_cookies()
 
     def form(self):
+        # 用法：unquote('abc%20def') -> 'abc def'
+        # 把 body 通过 unquote 处理，去掉body中的 '%' 符号
         body = urllib.parse.unquote(self.body)
+        # 把 body 切分，比如 'messages=goo&id=22' -> ['messages=goo', 'id=22']
         args = body.split('&')
         f = {}
         log('form debug', args, len(args))
+        # 遍历 args 把每一个元素切分放进 f
+        # 比如，f = {'messages': 'goo', 'id': '22'}
         for arg in args:
             k, v = arg.split('=')
             f[k] = v
@@ -67,7 +72,9 @@ class Request(object):
 
 def parsed_path(path):
     """
-    message=hello&author=gua
+    :param: '/messages?message=hello&author=gua'
+    :return:
+    /messages
     {
         'message': 'hello',
         'author': 'gua',
@@ -87,7 +94,9 @@ def parsed_path(path):
 
 
 def response_for_path(path, request):
+    # 把 path 传入 parsed_path 函数得到一个字符串格式的path和一个字典格式的query
     path, query = parsed_path(path)
+    # 把 parsed_path 函数处理过的 path 和 query 给request
     request.path = path
     request.query = query
     log('path and query', path, query, request.body)
@@ -95,6 +104,7 @@ def response_for_path(path, request):
     根据 path 调用相应的处理函数
     没有处理的 path 会返回 404
     """
+    # r 中都是路由函数
     r = {
         '/static': route_static,
     }
@@ -118,13 +128,15 @@ def process_request(connection):
     # 所以这里判断一下防止程序崩溃
     if len(r.split()) < 2:
         connection.close()
+    # 从浏览器的请求数据中获取请求路径（比如，'/' '/index/xxxx'
     path = r.split()[1]
     # 创建一个新的 request 并设置
     request = Request()
-    # 从请求中获取
+    # 从浏览器的请求数据中获取请求方法（GET or POST）
     request.method = r.split()[0]
+    # 从浏览器的请求数据中获取headers并add给request
     request.add_headers(r.split('\r\n\r\n', 1)[0].split('\r\n')[1:])
-    # 把 body 放入 request 中
+    # 从浏览器的请求数据中获取body部分，再把 body 放入 request 中
     request.body = r.split('\r\n\r\n', 1)[1]
     # 用 response_for_path 函数来得到 path 对应的响应内容
     response = response_for_path(path, request)
@@ -168,3 +180,37 @@ if __name__ == '__main__':
     )
     # 如果不了解 **kwargs 的用法, 上过基础课的请复习函数, 新同学自行搜索
     run(**config)
+
+"""
+
+HTTP请求过程
+1.
+POST /messages?messages=goo&id=22 HTTP/1.1
+Content-Type: application/json
+Content-Length: 18
+......
+
+messages=goo&id=22
+
+2.
+HTTP1.1 302 ok
+Location: /messages
+....
+
+3.
+GET /messages HTTP/1.1
+Host: .....
+
+4.
+HTTP 200 ok
+Content-Type: text/html
+Content-Length: ...
+
+<html>
+    ....
+</html>
+
+5.
+浏览器把新的页面显示出来
+"""
+

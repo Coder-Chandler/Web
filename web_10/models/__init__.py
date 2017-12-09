@@ -102,12 +102,15 @@ class Model(object):
         """
         log('kwargs, ', kwargs, type(kwargs))
         k, v = '', ''
+        # 拿到 'username' 和 'gua' 并分别给k, v
         for key, value in kwargs.items():
             k, v = key, value
+        # 通过 all 方法拿到数据文件所有的用户数据
         all = cls.all()
+        # 遍历all里面所有的用户数据
         for m in all:
-            # 也可以用 getattr(m, k) 取值
-            if v == m.__dict__[k]:
+            # 判断传入的username='gua'的 'gua' 是否和all里面某一个用户的username相等
+            if v == m.__dict__[k]:  # 也可以用 getattr(m, k) 取值
                 return m
         return None
 
