@@ -10,7 +10,7 @@
         <div class="login-form">
             <input id="id-input-username" class='gua-input' type="text" value="gua">
             <br>
-            <input id="id-input-password" class='gua-input' type="password" value="123">
+            <input id="id-input-password" class='gua-input' type="text" value="123">
             <br>
             <button id="id-button-login">登录按钮</button>
         </div>
@@ -136,6 +136,8 @@
     var user = document.querySelector('#id-input-username')
     var userValue = user.value
     log('user value', userValue)
+    log('username 的长度',userValue.length)
+    log('username的第一个字符',userValue[0])
     // 不存在的属性会返回 undefined, 它在 js 中代表不存在
     // null 和 undefined 很相似
     log('没有的属性', user.gua)
@@ -143,6 +145,10 @@
     // 设置特定属性值
     user.value = 'set value'
 
+    var psd = document.querySelector('#id-input-password')
+    var psdValue = psd.value
+    log('user password', psdValue)
+    psd.value = 'set password'
 
 
     // 操作元素(创建, 删除, 修改)
