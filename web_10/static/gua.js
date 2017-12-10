@@ -38,6 +38,7 @@ var apiTodoAll = function(callback) {
 
 // 增加一个 todo
 var apiTodoAdd = function(form, callback) {
+    //添加 todo 的路由 path 是 /api/todo/add 对应的路由函数是 add
     var path = '/api/todo/add'
     ajax('POST', path, form, callback)
 }
@@ -62,8 +63,22 @@ var apiWeiboAll = function(callback) {
     ajax('GET', path, '', callback)
 }
 
-// 增加一个 todo
+// 增加一个 weibo
 var apiWeiboAdd = function(form, callback) {
     var path = '/api/weibo/add'
     ajax('POST', path, form, callback)
+}
+
+// 删除一个 weibo
+var apiWeiboDelete = function(id, callback) {
+    var path = '/api/weibo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 weibo
+var apiWeiboUpdate = function(form, callback) {
+    var path = '/api/weibo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
 }

@@ -18,15 +18,19 @@ var commentsTemplate = function(comments) {
     return html
 }
 
-var WeiboTemplate = function(Weibo) {
-    var content = Weibo.content
-    var id = Weibo.id
-    var comments = commentsTemplate(Weibo.comments)
+var WeiboTemplate = function(weibo) {
+    var content = weibo.content
+    var id = weibo.id
+    // log('weibo.ut', weibo.ut)
+    var ut = timeString(weibo.ut)
+    // log('ut', ut)
+    var comments = commentsTemplate(weibo.comments)
     var t = `
-        <div class='weibo-cell' data-id=${id}>
-            <div>
-                [WEIBO]: ${content}
-            </div>
+        <div class='weibo-cell' id='weibo-${id}' data-id=${id}>
+            <span class='weibo-content'>${content}</span>
+            <time class='weibo-ut'>${ut}</time>
+            <button class="weibo-edit">编辑微博</button>
+            <button class="weibo-delete">删除微博</button>
             <div class="comment-list">
                 ${comments}
             </div>
@@ -50,10 +54,11 @@ var WeiboTemplate = function(Weibo) {
     */
 }
 
-var insertWeibo = function(Weibo) {
-    var WeiboCell = WeiboTemplate(Weibo)
+var insertWeibo = function(weibo) {
+    // log('weibo成功获取到？', weibo)
+    var WeiboCell = WeiboTemplate(weibo)
     // 插入 Weibo-list
-    var WeiboList = e('.weibo-list')
+    var WeiboList = e('.weibo-list-gua-auto-list')
     WeiboList.insertAdjacentHTML('beforeend', WeiboCell)
 }
 
@@ -82,34 +87,38 @@ var loadWeibos = function() {
 }
 
 var bindEventWeiboAdd = function() {
-    var b = e('#id-button-add')
+    var b = e('#id-button-add-weibo')
     // 注意, 第二个参数可以直接给出定义函数
     b.addEventListener('click', function(){
-        var input = e('#id-input-Weibo')
-        var title = input.value
-        log('click add', title)
+        var input = e('#id-input-weibo')
+        var content = input.value
+        // log('click add', content)
         var form = {
-            'title': title,
+            'content': content,
         }
+        // log('form表单', form)
         apiWeiboAdd(form, function(r) {
             // 收到返回的数据, 插入到页面中
-            var Weibo = JSON.parse(r)
-            insertWeibo(Weibo)
+            log('添加weibo成功')
+            var weibo = JSON.parse(r)
+            // log('var weibo = JSON.parse(r) 这一步结果？', weibo)
+            insertWeibo(weibo)
         })
     })
 }
 
 var bindEventWeiboDelete = function() {
-    var WeiboList = e('.Weibo-list')
+    var WeiboList = e('.weibo-list-gua-auto-list')
     // 注意, 第二个参数可以直接给出定义函数
     WeiboList.addEventListener('click', function(event){
         var self = event.target
-        if(self.classList.contains('Weibo-delete')){
+        // log('click 删除按钮', self)
+        if(self.classList.contains('weibo-delete')){
             // 删除这个 Weibo
             var WeiboCell = self.parentElement
             var Weibo_id = WeiboCell.dataset.id
             apiWeiboDelete(Weibo_id, function(r){
-                log('删除成功', Weibo_id)
+                log('删除weibo成功', Weibo_id)
                 WeiboCell.remove()
             })
         }
@@ -117,11 +126,12 @@ var bindEventWeiboDelete = function() {
 }
 
 var bindEventWeiboEdit = function() {
-    var WeiboList = e('.Weibo-list')
+    var WeiboList = e('.weibo-list-gua-auto-list')
     // 注意, 第二个参数可以直接给出定义函数
     WeiboList.addEventListener('click', function(event){
         var self = event.target
-        if(self.classList.contains('Weibo-edit')){
+        if(self.classList.contains('weibo-edit')){
+            log('weibo-edit',self)
             // 删除这个 Weibo
             var WeiboCell = self.parentElement
             insertEditForm(WeiboCell)
@@ -131,32 +141,40 @@ var bindEventWeiboEdit = function() {
 
 
 var bindEventWeiboUpdate = function() {
-    var WeiboList = e('.Weibo-list')
+    var WeiboList = e('.weibo-list-gua-auto-list')
     // 注意, 第二个参数可以直接给出定义函数
     WeiboList.addEventListener('click', function(event){
         var self = event.target
         if(self.classList.contains('Weibo-update')){
-            log('点击了 update ')
+            log('点击了 update ', self)
             //
             var editForm = self.parentElement
             // querySelector 是 DOM 元素的方法
             // document.querySelector 中的 document 是所有元素的祖先元素
             var input = editForm.querySelector('.Weibo-edit-input')
-            var title = input.value
+            var content = input.value
             // 用 closest 方法可以找到最近的直系父节点
-            var WeiboCell = self.closest('.Weibo-cell')
+            var WeiboCell = self.closest('.weibo-cell')
+            // log('WeiboCell', WeiboCell)
             var Weibo_id = WeiboCell.dataset.id
+            // log('Weibo_id', Weibo_id)
+            // log('content', content)
             var form = {
                 'id': Weibo_id,
-                'title': title,
+                'content': content,
             }
+            log('form', form)
             apiWeiboUpdate(form, function(r){
-                log('更新成功', Weibo_id)
+                // log('更新成功', Weibo_id)
                 var Weibo = JSON.parse(r)
-                var selector = '#Weibo-' + Weibo.id
+                var selector = '#weibo-' + Weibo.id
+                log('selector', selector)
                 var WeiboCell = e(selector)
-                var titleSpan = WeiboCell.querySelector('.Weibo-title')
-                titleSpan.innerHTML = Weibo.title
+                log('WeiboCell', WeiboCell)
+                var contentSpan = WeiboCell.querySelector('.weibo-content')
+                log('contentSpan', contentSpan)
+                contentSpan.innerHTML = form['content']
+                log('contentSpan', contentSpan)
 //                WeiboCell.remove()
             })
         }
@@ -164,10 +182,10 @@ var bindEventWeiboUpdate = function() {
 }
 
 var bindEvents = function() {
-//    bindEventWeiboAdd()
-//    bindEventWeiboDelete()
-//    bindEventWeiboEdit()
-//    bindEventWeiboUpdate()
+   bindEventWeiboAdd()
+   bindEventWeiboDelete()
+   bindEventWeiboEdit()
+   bindEventWeiboUpdate()
 }
 
 var __main = function() {

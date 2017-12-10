@@ -34,6 +34,8 @@ var todoTemplate = function(todo) {
 }
 
 var insertTodo = function(todo) {
+    log('todo', todo)
+    //
     var todoCell = todoTemplate(todo)
     // 插入 todo-list
     var todoList = e('.todo-list')
@@ -65,18 +67,25 @@ var loadTodos = function() {
 }
 
 var bindEventTodoAdd = function() {
+    //通过函数 e 抓取到 <button id='id-button-add'>add</button> 中的 id-button-add
     var b = e('#id-button-add')
     // 注意, 第二个参数可以直接给出定义函数
     b.addEventListener('click', function(){
+        ////通过函数 e 抓取到 <input id='id-input-todo'> 中的 id-input-todo
         var input = e('#id-input-todo')
+        //拿到input框中用户输入的数据字段
         var title = input.value
+        //打印出用户输入的数据字段
         log('click add', title)
+        //设置form表单
         var form = {
             'title': title,
         }
+        //调用 apiTodoAdd 函数异步加载数据
         apiTodoAdd(form, function(r) {
             // 收到返回的数据, 插入到页面中
             var todo = JSON.parse(r)
+            //调用 insertTodo 函数插入todo数据
             insertTodo(todo)
         })
     })
@@ -133,12 +142,16 @@ var bindEventTodoUpdate = function() {
                 'id': todo_id,
                 'title': title,
             }
+            log('form', form)
             apiTodoUpdate(form, function(r){
                 log('更新成功', todo_id)
                 var todo = JSON.parse(r)
                 var selector = '#todo-' + todo.id
+                log('selector', selector)
                 var todoCell = e(selector)
+                log('todoCell', todoCell)
                 var titleSpan = todoCell.querySelector('.todo-title')
+                log('titleSpan', titleSpan)
                 titleSpan.innerHTML = todo.title
 //                todoCell.remove()
             })
@@ -147,17 +160,24 @@ var bindEventTodoUpdate = function() {
 }
 
 var bindEvents = function() {
+    //增加一条todo
     bindEventTodoAdd()
+    //删除一条todo
     bindEventTodoDelete()
+    //编辑一条tudo
     bindEventTodoEdit()
+    //更新一条todo
     bindEventTodoUpdate()
 }
 
 var __main = function() {
+    //绑定事件的函数
     bindEvents()
+    //加载todo数据的函数
     loadTodos()
 }
 
+//函数主入口
 __main()
 
 

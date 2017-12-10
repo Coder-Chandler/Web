@@ -69,10 +69,27 @@ def delete(request):
     return json_response(t.json())
 
 
+def delete_weibo(request):
+    """
+    通过下面这样的链接来删除一个 todo
+    /api/weibo/delete?id=8
+    """
+    weibo_id = int(request.query.get('id'))
+    t = Weibo.delete(weibo_id)
+    return json_response(t.json())
+
+
 def update(request):
     form = request.json()
     todo_id = int(form.get('id'))
     t = Todo.update(todo_id, form)
+    return json_response(t.json())
+
+
+def update_weibo(request):
+    form = request.json()
+    weibo_id = int(form.get('id'))
+    t = Weibo.update(weibo_id, form)
     return json_response(t.json())
 
 
@@ -84,5 +101,7 @@ route_dict = {
     # weibo api
     '/api/weibo/all': all_weibo,
     '/api/weibo/add': add_weibo,
+    '/api/weibo/delete': delete_weibo,
+    '/api/weibo/update': update_weibo,
 
 }

@@ -158,7 +158,7 @@ def route_static(request):
     filename = request.query.get('file', )
     # 拼接路径静态文件路径和静态文件名
     path = 'static/' + filename
-    # 打开静态文件并返回HTTP响应
+    # 打开静态文件并HTTP响应
     with open(path, 'rb') as f:
         header = b'HTTP/1.1 200 OK\r\n\r\n'
         img = header + f.read()
