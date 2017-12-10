@@ -65,7 +65,7 @@ var insertWeibo = function(weibo) {
 var insertEditForm = function(cell) {
     var form = `
         <div class='Weibo-edit-form'>
-            <input class="Weibo-edit-input" value=''>
+            <input class="Weibo-edit-input" value='12'>
             <button class='Weibo-update'>更新</button>
         </div>
     `
