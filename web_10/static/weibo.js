@@ -33,10 +33,10 @@ var WeiboTemplate = function(weibo) {
             <button class="weibo-delete">删除微博</button>
             <div class="comment-list">
                 ${comments}
-            </div>
+            </div> 
             <div class="comment-form">
                 <input type="hidden" name="weibo_id" value="">
-                <input name="content">
+                <input class='comment-content' name="content" value="">
                 <br>
                 <button class="comment-add">添加评论</button>
             </div>
@@ -54,7 +54,7 @@ var WeiboTemplate = function(weibo) {
     */
 }
 
-var insertWeibo = function(weibo) {
+    var insertWeibo = function(weibo) {
     // log('weibo成功获取到？', weibo)
     var WeiboCell = WeiboTemplate(weibo)
     // 插入 Weibo-list
@@ -181,11 +181,33 @@ var bindEventWeiboUpdate = function() {
     })
 }
 
+var bindEventCommentsAdd = function() {
+    var b = e('.comment-add')
+    // 注意, 第二个参数可以直接给出定义函数
+    b.addEventListener('click', function(){
+        var input = e('.comment-content')
+        var content = input.value
+        log('click add', content)
+        var form = {
+            'content': content,
+        }
+        // log('form表单', form)
+        apiCommentAdd(form, function(r) {
+            // 收到返回的数据, 插入到页面中
+            log('添加comment成功')
+            var comment = JSON.parse(r)
+            // log('var weibo = JSON.parse(r) 这一步结果？', weibo)
+            insertComment(comment)
+        })
+    })
+}
+
 var bindEvents = function() {
    bindEventWeiboAdd()
    bindEventWeiboDelete()
    bindEventWeiboEdit()
    bindEventWeiboUpdate()
+   bindEventCommentsAdd()
 }
 
 var __main = function() {

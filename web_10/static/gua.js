@@ -82,3 +82,9 @@ var apiWeiboUpdate = function(form, callback) {
     ajax('POST', path, form, callback)
     //    post(path, form, callback)
 }
+
+// 增加一个 comment
+var apiCommentAdd = function(form, callback) {
+    var path = '/api/comment/add'
+    ajax('POST', path, form, callback)
+}

@@ -8,6 +8,8 @@ from utils import (
 )
 from models.todo import Todo
 from models.weibo import Weibo
+from models.weibo import Comment
+
 
 
 def all_weibo(request):
@@ -93,6 +95,21 @@ def update_weibo(request):
     return json_response(t.json())
 
 
+def add_comment(request):
+    """
+    接受浏览器发过来的添加 todo 请求
+    添加数据并返回给浏览器
+    """
+    # 得到浏览器发送的 json 格式数据
+    # 浏览器用 ajax 发送 json 格式的数据过来
+    # 所以这里我们用新增加的 json 函数来获取格式化后的 json 数据
+    form = request.json()
+    # 创建一个 todo
+    t = Comment.new(form)
+    # 把创建好的 todo 返回给浏览器
+    return json_response(t.json())
+
+
 route_dict = {
     '/api/todo/all': all,
     '/api/todo/add': add,
@@ -103,5 +120,6 @@ route_dict = {
     '/api/weibo/add': add_weibo,
     '/api/weibo/delete': delete_weibo,
     '/api/weibo/update': update_weibo,
+    '/api/comment/add': add_comment,
 
 }
