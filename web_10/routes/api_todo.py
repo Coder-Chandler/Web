@@ -5,11 +5,17 @@ from utils import (
     redirect,
     http_response,
     json_response,
+    template,
 )
 from models.todo import Todo
 from models.weibo import Weibo
 from models.weibo import Comment
 
+
+def current_user(request):
+    session_id = request.cookies.get('user', '')
+    username = session.get(session_id, '游客')
+    return username
 
 
 def all_weibo(request):
@@ -51,6 +57,11 @@ def add(request):
     接受浏览器发过来的添加 todo 请求
     添加数据并返回给浏览器
     """
+    username = current_user(request)
+    log('username', username)
+    if username == '游客':
+        body = template('login.html')
+        return redirect('/login')
     # 得到浏览器发送的 json 格式数据
     # 浏览器用 ajax 发送 json 格式的数据过来
     # 所以这里我们用新增加的 json 函数来获取格式化后的 json 数据

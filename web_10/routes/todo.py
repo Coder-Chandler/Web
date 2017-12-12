@@ -5,6 +5,7 @@ from utils import (
     template,
     http_response,
 )
+from models.user import User
 
 
 def main_index(request):

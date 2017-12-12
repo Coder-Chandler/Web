@@ -66,7 +66,7 @@ def route_login(request):
             headers['Set-Cookie'] = 'user={}'.format(session_id)
             log('headers response', headers)
             # 登录后定向到 /
-            return redirect('/', headers)
+            return redirect('/todo/index', headers)
     # 显示登录页面
     # template函数接受一个路径和一系列参数，读取模板并渲染返回
     body = template('login.html')

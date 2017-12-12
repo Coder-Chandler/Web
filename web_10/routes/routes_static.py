@@ -56,63 +56,63 @@ def response_with_headers(headers):
     return header
 
 
-def route_login(request):
-    """
-    登录页面的路由函数
-    """
-    headers = {
-        'Content-Type': 'text/html',
-        # 'Set-Cookie': 'height=169; gua=1; pwd=2; Path=/',
-    }
-    # log('login, headers', request.headers)
-    log('login, cookies', request.cookies)
-    username = current_user(request)
-    if request.method == 'POST':
-        form = request.form()
-        u = User(form)
-        if u.validate_login():
-            # session_id = random_str()
-            # session[session_id] = u.username
-            # headers['Set-Cookie'] = 'user={}'.format(session_id)
-            user = User.find_by(username=u.username)
-            session_id = random_str()
-            session[session_id] = user.id
-            headers['Set-Cookie'] = 'user={}'.format(session_id)
-            # headers['Set-Cookie'] = 'user_id={}'.format(user.id)
-            result = '登录成功'
-            log('headers response', headers)
-        else:
-            result = '用户名或者密码错误'
-    else:
-        result = ''
-    body = template('login.html')
-    body = body.replace('{{result}}', result)
-    body = body.replace('{{username}}', username)
-    header = response_with_headers(headers)
-    r = header + '\r\n' + body
-    # log('login', r)
-    return r.encode(encoding='utf-8')
-
-
-def route_register(request):
-    """
-    注册页面的路由函数
-    """
-    header = 'HTTP/1.1 210 VERY OK\r\nContent-Type: text/html\r\n'
-    if request.method == 'POST':
-        form = request.form()
-        u = User(form)
-        if u.validate_register():
-            u.save()
-            result = '注册成功<br> <pre>{}</pre>'.format(User.all())
-        else:
-            result = '用户名或者密码长度必须大于2'
-    else:
-        result = ''
-    body = template('register.html')
-    body = body.replace('{{result}}', result)
-    r = header + '\r\n' + body
-    return r.encode(encoding='utf-8')
+# def route_login(request):
+#     """
+#     登录页面的路由函数
+#     """
+#     headers = {
+#         'Content-Type': 'text/html',
+#         # 'Set-Cookie': 'height=169; gua=1; pwd=2; Path=/',
+#     }
+#     # log('login, headers', request.headers)
+#     log('login, cookies', request.cookies)
+#     username = current_user(request)
+#     if request.method == 'POST':
+#         form = request.form()
+#         u = User(form)
+#         if u.validate_login():
+#             # session_id = random_str()
+#             # session[session_id] = u.username
+#             # headers['Set-Cookie'] = 'user={}'.format(session_id)
+#             user = User.find_by(username=u.username)
+#             session_id = random_str()
+#             session[session_id] = user.id
+#             headers['Set-Cookie'] = 'user={}'.format(session_id)
+#             # headers['Set-Cookie'] = 'user_id={}'.format(user.id)
+#             result = '登录成功'
+#             log('headers response', headers)
+#         else:
+#             result = '用户名或者密码错误'
+#     else:
+#         result = ''
+#     body = template('login.html')
+#     body = body.replace('{{result}}', result)
+#     body = body.replace('{{username}}', username)
+#     header = response_with_headers(headers)
+#     r = header + '\r\n' + body
+#     # log('login', r)
+#     return r.encode(encoding='utf-8')
+#
+#
+# def route_register(request):
+#     """
+#     注册页面的路由函数
+#     """
+#     header = 'HTTP/1.1 210 VERY OK\r\nContent-Type: text/html\r\n'
+#     if request.method == 'POST':
+#         form = request.form()
+#         u = User(form)
+#         if u.validate_register():
+#             u.save()
+#             result = '注册成功<br> <pre>{}</pre>'.format(User.all())
+#         else:
+#             result = '用户名或者密码长度必须大于2'
+#     else:
+#         result = ''
+#     body = template('register.html')
+#     body = body.replace('{{result}}', result)
+#     r = header + '\r\n' + body
+#     return r.encode(encoding='utf-8')
 
 
 # def route_message(request):
@@ -169,9 +169,9 @@ def route_static(request):
 # key 是路由(路由就是 path)
 # value 是路由处理函数(就是响应)
 route_dict = {
-    '/': route_index,
-    '/login': route_login,
-    '/register': route_register,
+    # '/': route_index,
+    # '/login': route_login,
+    # '/register': route_register,
     # '/messages': route_message,
-    '/profile':route_profile,
+    '/profile': route_profile,
 }
