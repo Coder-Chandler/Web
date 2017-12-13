@@ -4,11 +4,14 @@ from utils import (
     redirect,
     template,
     http_response,
+    current_user,
 )
-from models.user import User
 
 
 def main_index(request):
+    username = current_user(request)
+    if username == '游客':
+        return redirect('/login')
     return redirect('/todo/index')
 
 

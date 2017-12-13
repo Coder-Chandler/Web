@@ -59,9 +59,20 @@ class Todo(Model):
     def __init__(self, form):
         self.id = None
         self.title = form.get('title', '')
+        self.user_id = int(form.get('user_id', -1))
         # 下面的是默认的数据
         self.completed = False
         # ct ut 分别是 created_time  updated_time
         # 创建时间 和 更新时间
         self.ct = int(time.time())
         self.ut = self.ct
+
+
+# 评论类
+class Comment(Model):
+    def __init__(self, form):
+        self.id = None
+        self.user_id = int(form.get('user_id', -1))
+        self.content = form.get('content', '')
+        # 和别的数据关联的方式, 用 user_id 表明拥有它的 user 实例
+        self.todo_id = int(form.get('todo_id', -1))

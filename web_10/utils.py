@@ -1,7 +1,8 @@
-from jinja2 import Environment, FileSystemLoader
 import os.path
 import time
 import json
+import random
+from routes.session import session
 
 
 def log(*args, **kwargs):
@@ -17,38 +18,55 @@ def log(*args, **kwargs):
 # __file__ 就是本文件的名字
 # 得到用于加载模板的目录
 path = '{}/templates/'.format(os.path.dirname(__file__))
-# 创建一个加载器, jinja2 会从这个目录中加载模板
-loader = FileSystemLoader(path)
-# 用加载器创建一个环境, 有了它才能读取模板文件
-env = Environment(loader=loader)
 
 
-def template(path, **kwargs):
+def random_str():
+    seed = 'abcdefjsad89234hdsfkljasdkjghigaksldf89weru'
+    s = ''
+    for i in range(16):
+        random_index = random.randint(0, len(seed) - 2)
+        s += seed[random_index]
+    return s
+
+
+def template(name):
     """
-    本函数接受一个路径和一系列参数
-    读取模板并渲染返回
+    根据名字读取 templates 文件夹里的一个文件并返回
     """
-    t = env.get_template(path)
-    return t.render(**kwargs)
+    path = 'templates/' + name
+    with open(path, 'r', encoding='utf-8') as f:
+        return f.read()
 
 
-def response_with_headers(headers, status_code=200):
-    header = 'HTTP/1.1 {} OK\r\n'.format(status_code)
+def current_user(request):
+    session_id = request.cookies.get('user', '')
+    username = session.get(session_id, '游客')
+    return username
+
+
+def response_with_headers(headers, code=200):
+    """
+    Content-Type: text/html
+    Set-Cookie: user=gua
+    """
+    header = 'HTTP/1.1 {} VERY OK\r\n'.format(code)
     header += ''.join(['{}: {}\r\n'.format(k, v)
                            for k, v in headers.items()])
     return header
 
 
-def redirect(location):
-    headers = {
-        'Content-Type': 'text/html',
-    }
-    headers['Location'] = location
-    # 301 永久重定向 302 普通定向
+def redirect(location, headers=None):
+    print('未登录不能add')
+    if headers is None:
+        headers = {
+            'location': location,
+            'Content-Type': 'text/html',
+        }
     # 302 状态码的含义, Location 的作用
     header = response_with_headers(headers, 302)
-    r = header + '\r\n' + ''
-    return r.encode(encoding='utf-8')
+    r = header + '\r\n'
+    print('重定向的header', r)
+    return r.encode('utf-8')
 
 
 def error(request, code=404):

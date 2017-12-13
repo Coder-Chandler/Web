@@ -4,7 +4,6 @@ import _thread
 
 from routes.routes_static import route_static
 from routes.routes_user import route_dict as user_routes
-from routes.routes_weibo import route_dict as weibo_routes
 from routes.todo import route_dict as todo_routes
 from routes.api_todo import route_dict as api_todo
 from utils import (
@@ -62,7 +61,7 @@ class Request(object):
             f[k] = v
         return f
 
-    def json(self):
+    def json_loads(self):
         """
         把 body 中的 json 格式字符串解析成 dict 或者 list 并返回
         """
@@ -112,7 +111,6 @@ def response_for_path(path, request):
     r.update(api_todo)
     r.update(user_routes)
     r.update(todo_routes)
-    r.update(weibo_routes)
     #
     response = r.get(path, error)
     return response(request)
@@ -121,6 +119,8 @@ def response_for_path(path, request):
 def process_request(connection):
     r = connection.recv(1100)
     r = r.decode('utf-8')
+    print('r --> ', r)
+    print(' <----------------------------- ')
     log('完整请求')
     log('请求结束')
     # log('ip and request, {}\n{}'.format(address, r))

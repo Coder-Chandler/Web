@@ -1,42 +1,13 @@
-import random
-
 from models.user import User
 from routes.session import session
-from utils import log
-from utils import template
-
-
-def random_str():
-    seed = 'abcdefjsad89234hdsfkljasdkjghigaksldf89weru'
-    s = ''
-    for i in range(16):
-        random_index = random.randint(0, len(seed) - 2)
-        s += seed[random_index]
-    return s
-
-
-def response_with_headers(headers, status_code=200):
-    """
-    Content-Type: text/html
-    Set-Cookie: user=gua
-    """
-    # 拼接响应头和headers
-    header = 'HTTP/1.1 {} VERY OK\r\n'.format(status_code)
-    header += ''.join(['{}: {}\r\n'.format(k, v)
-                       for k, v in headers.items()])
-    return header
-
-
-def redirect(location, headers=None):
-    if headers is None:
-        headers = {
-            'Content-Type': 'text/html',
-        }
-    headers['Location'] = location
-    # 302 状态码的含义, Location 的作用
-    header = response_with_headers(headers, 302)
-    r = header + '\r\n' + ''
-    return r.encode(encoding='utf-8')
+from utils import (
+    log,
+    template,
+    random_str,
+    redirect,
+    response_with_headers,
+    current_user,
+)
 
 
 def route_login(request):
@@ -48,7 +19,7 @@ def route_login(request):
         'Content-Type': 'text/html',
     }
     log('login, cookies', request.cookies)
-
+    username = current_user(request)
     if request.method == 'POST':
         # 调用 Request 类的 form 方法来处理 request 的 body 得到字典格式的body，
         # {'messages': 'goo', 'id': '22'}
@@ -66,12 +37,18 @@ def route_login(request):
             headers['Set-Cookie'] = 'user={}'.format(session_id)
             log('headers response', headers)
             # 登录后定向到 /
-            return redirect('/todo/index', headers)
+            return redirect('/', headers)
+        else:
+            result = '用户名或者密码错误'
+    else:
+        result = ''
     # 显示登录页面
     # template函数接受一个路径和一系列参数，读取模板并渲染返回
     body = template('login.html')
+    body = body.replace('{{result}}', result)
+    body = body.replace('{{username}}', username)
     # 通过response_with_headers函数拼接响应头和headers
-    header = response_with_headers(headers)
+    header = response_with_headers(headers, code=200)
     # 拼接 header 和 body 形成一个完整的HTTP响应
     r = header + '\r\n' + body
     return r.encode(encoding='utf-8')
@@ -101,18 +78,6 @@ def route_register(request):
     body = template('register.html')
     r = header + '\r\n' + body
     return r.encode(encoding='utf-8')
-
-
-def route_static(request):
-    """
-    静态资源的处理函数, 读取图片并生成响应返回
-    """
-    filename = request.query.get('file', 'doge.gif')
-    path = 'static/' + filename
-    with open(path, 'rb') as f:
-        header = b'HTTP/1.1 200 OK\r\nContent-Type: image/gif\r\n\r\n'
-        img = header + f.read()
-        return img
 
 
 # 路由字典

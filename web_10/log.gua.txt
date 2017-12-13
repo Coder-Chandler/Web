@@ -1,20 +1,22 @@
-19:58:46 完整请求
-19:58:46 请求结束
-19:58:46 cookie ['']
-19:58:46 path and query /api/todo/add {} {"title":"sadsad"}
-19:58:46 username 游客
-19:58:46 响应
- HTTP/1.1 302 OK
+20:56:50 完整请求
+20:56:50 请求结束
+20:56:50 完整请求
+20:56:50 请求结束
+20:56:50 cookie ['']
+20:56:50 path and query /api/todo/add {} {"title":"阿斯顿撒的"}
+20:56:50 **debug, route msg 未登录
+20:56:50 响应
+ HTTP/1.1 302 VERY OK
 Content-Type: text/html
 Location: /login
 
 
-19:58:46 完整请求
-19:58:46 请求结束
-19:58:46 cookie ['']
-19:58:46 path and query /login {} 
-19:58:46 login, cookies {}
-19:58:46 响应
+20:56:51 完整请求
+20:56:51 请求结束
+20:56:51 cookie ['']
+20:56:51 path and query /login {} 
+20:56:51 login, cookies {}
+20:56:51 响应
  HTTP/1.1 200 VERY OK
 Content-Type: text/html
 
@@ -26,7 +28,7 @@ Content-Type: text/html
 </head>
 <body>
     <h1>登录</h1>
-    <h2>你好 </h2>
+    <h2>你好 游客</h2>
     <form action="/login" method="post">
         <input type="text" name="username" placeholder="请输入用户名">
         <br>
@@ -34,85 +36,27 @@ Content-Type: text/html
         <br>
         <button type="submit">登录</button>
     </form>
-    <h3></h3>
-</body>
-</html>
-20:03:58 完整请求
-20:03:58 请求结束
-20:09:28 完整请求
-20:09:28 请求结束
-20:09:28 cookie ['']
-20:09:28 path and query /api/todo/add {} 
-20:09:28 username 游客
-20:09:28 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:09:29 完整请求
-20:09:29 请求结束
-20:09:29 cookie ['']
-20:09:29 path and query /login {} 
-20:09:29 login, cookies {}
-20:09:29 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
     </form>
     <h3></h3>
 </body>
 </html>
-20:09:47 完整请求
-20:09:47 请求结束
-20:09:47 cookie ['username-localhost-8890="2|1:0|10:1512912278|23:username-localhost-8890|44:MmVlNjIwMGIwZDQwNGUyODllOTliODJiZTYzNmE3OTc=|9839d95a8c65c6ac8854acf33310123bb10a51ee0eafc6d90ecae6c71c885178"', 'username-localhost-8889="2|1:0|10:1512911365|23:username-localhost-8889|44:ODkxMTQ2NzdiY2JjNGI4OTliNWRmN2YyMThhOTc2ZTE=|750dff8f4a548d62ada300a87194269d731365440f6ec43e9242a639aa2c0e38"', 'username-localhost-8888="2|1:0|10:1512871658|23:username-localhost-8888|44:MTQyNWRjMmQxOWVjNGI1MDllODY5OWY5Nzg5ZTUwMzk=|68dc12f7e0b349f747ab8ce5c8f297b71d16b7f28de58f675a85e3f573ec340d"', '_xsrf=2|c85b0531|51c5bee2d5cacc0359bf2159c5be8f91|1510646596', 'optimizelyEndUserId=oeu1505997156247r0.5380643215329687', '_ga=GA1.1.2112764074.1505997157']
-20:09:57 完整请求
-20:09:57 请求结束
-20:09:57 cookie ['username-localhost-8890="2|1:0|10:1512912278|23:username-localhost-8890|44:MmVlNjIwMGIwZDQwNGUyODllOTliODJiZTYzNmE3OTc=|9839d95a8c65c6ac8854acf33310123bb10a51ee0eafc6d90ecae6c71c885178"', 'username-localhost-8889="2|1:0|10:1512911365|23:username-localhost-8889|44:ODkxMTQ2NzdiY2JjNGI4OTliNWRmN2YyMThhOTc2ZTE=|750dff8f4a548d62ada300a87194269d731365440f6ec43e9242a639aa2c0e38"', 'username-localhost-8888="2|1:0|10:1512871658|23:username-localhost-8888|44:MTQyNWRjMmQxOWVjNGI1MDllODY5OWY5Nzg5ZTUwMzk=|68dc12f7e0b349f747ab8ce5c8f297b71d16b7f28de58f675a85e3f573ec340d"', '_xsrf=2|c85b0531|51c5bee2d5cacc0359bf2159c5be8f91|1510646596', 'optimizelyEndUserId=oeu1505997156247r0.5380643215329687', '_ga=GA1.1.2112764074.1505997157']
-20:10:01 完整请求
-20:10:01 请求结束
-20:10:03 完整请求
-20:10:03 请求结束
-20:10:03 cookie ['username-localhost-8890="2|1:0|10:1512912278|23:username-localhost-8890|44:MmVlNjIwMGIwZDQwNGUyODllOTliODJiZTYzNmE3OTc=|9839d95a8c65c6ac8854acf33310123bb10a51ee0eafc6d90ecae6c71c885178"', 'username-localhost-8889="2|1:0|10:1512911365|23:username-localhost-8889|44:ODkxMTQ2NzdiY2JjNGI4OTliNWRmN2YyMThhOTc2ZTE=|750dff8f4a548d62ada300a87194269d731365440f6ec43e9242a639aa2c0e38"', 'username-localhost-8888="2|1:0|10:1512871658|23:username-localhost-8888|44:MTQyNWRjMmQxOWVjNGI1MDllODY5OWY5Nzg5ZTUwMzk=|68dc12f7e0b349f747ab8ce5c8f297b71d16b7f28de58f675a85e3f573ec340d"', '_xsrf=2|c85b0531|51c5bee2d5cacc0359bf2159c5be8f91|1510646596', 'optimizelyEndUserId=oeu1505997156247r0.5380643215329687', '_ga=GA1.1.2112764074.1505997157']
-20:10:45 完整请求
-20:10:45 请求结束
-20:10:45 cookie ['username-localhost-8890="2|1:0|10:1512912278|23:username-localhost-8890|44:MmVlNjIwMGIwZDQwNGUyODllOTliODJiZTYzNmE3OTc=|9839d95a8c65c6ac8854acf33310123bb10a51ee0eafc6d90ecae6c71c885178"', 'username-localhost-8889="2|1:0|10:1512911365|23:username-localhost-8889|44:ODkxMTQ2NzdiY2JjNGI4OTliNWRmN2YyMThhOTc2ZTE=|750dff8f4a548d62ada300a87194269d731365440f6ec43e9242a639aa2c0e38"', 'username-localhost-8888="2|1:0|10:1512871658|23:username-localhost-8888|44:MTQyNWRjMmQxOWVjNGI1MDllODY5OWY5Nzg5ZTUwMzk=|68dc12f7e0b349f747ab8ce5c8f297b71d16b7f28de58f675a85e3f573ec340d"', '_xsrf=2|c85b0531|51c5bee2d5cacc0359bf2159c5be8f91|1510646596', 'optimizelyEndUserId=oeu1505997156247r0.5380643215329687', '_ga=GA1.1.2112764074.1505997157']
-20:11:05 完整请求
-20:11:05 请求结束
-20:11:05 cookie ['username-localhost-8890="2|1:0|10:1512912278|23:username-localhost-8890|44:MmVlNjIwMGIwZDQwNGUyODllOTliODJiZTYzNmE3OTc=|9839d95a8c65c6ac8854acf33310123bb10a51ee0eafc6d90ecae6c71c885178"', 'username-localhost-8889="2|1:0|10:1512911365|23:username-localhost-8889|44:ODkxMTQ2NzdiY2JjNGI4OTliNWRmN2YyMThhOTc2ZTE=|750dff8f4a548d62ada300a87194269d731365440f6ec43e9242a639aa2c0e38"', 'username-localhost-8888="2|1:0|10:1512871658|23:username-localhost-8888|44:MTQyNWRjMmQxOWVjNGI1MDllODY5OWY5Nzg5ZTUwMzk=|68dc12f7e0b349f747ab8ce5c8f297b71d16b7f28de58f675a85e3f573ec340d"', '_xsrf=2|c85b0531|51c5bee2d5cacc0359bf2159c5be8f91|1510646596', 'optimizelyEndUserId=oeu1505997156247r0.5380643215329687', '_ga=GA1.1.2112764074.1505997157']
-20:12:57 完整请求
-20:12:57 请求结束
-20:12:57 cookie ['username-localhost-8890="2|1:0|10:1512912278|23:username-localhost-8890|44:MmVlNjIwMGIwZDQwNGUyODllOTliODJiZTYzNmE3OTc=|9839d95a8c65c6ac8854acf33310123bb10a51ee0eafc6d90ecae6c71c885178"', 'username-localhost-8889="2|1:0|10:1512911365|23:username-localhost-8889|44:ODkxMTQ2NzdiY2JjNGI4OTliNWRmN2YyMThhOTc2ZTE=|750dff8f4a548d62ada300a87194269d731365440f6ec43e9242a639aa2c0e38"', 'username-localhost-8888="2|1:0|10:1512871658|23:username-localhost-8888|44:MTQyNWRjMmQxOWVjNGI1MDllODY5OWY5Nzg5ZTUwMzk=|68dc12f7e0b349f747ab8ce5c8f297b71d16b7f28de58f675a85e3f573ec340d"', '_xsrf=2|c85b0531|51c5bee2d5cacc0359bf2159c5be8f91|1510646596', 'optimizelyEndUserId=oeu1505997156247r0.5380643215329687', '_ga=GA1.1.2112764074.1505997157']
-20:13:03 完整请求
-20:13:03 请求结束
-20:13:03 cookie ['']
-20:13:03 path and query / {} 
-20:13:03 响应
- HTTP/1.1 302 OK
+20:58:14 完整请求
+20:58:14 请求结束
+20:58:14 cookie ['']
+20:58:14 path and query / {} 
+20:58:14 响应
+ HTTP/1.1 302 VERY OK
 Content-Type: text/html
 Location: /todo/index
 
 
-20:13:03 完整请求
-20:13:03 请求结束
-20:13:03 cookie ['']
-20:13:03 path and query /todo/index {} 
-20:13:03 响应
+20:58:14 完整请求
+20:58:14 请求结束
+20:58:14 cookie ['']
+20:58:14 path and query /todo/index {} 
+20:58:14 响应
  HTTP/1.1 200 OK
 Content-Type: text/html
 
@@ -134,15 +78,109 @@ Content-Type: text/html
         <script src='/static?file=todo.js'></script>
     </body>
 </html>
-20:13:03 完整请求
-20:13:03 完整请求
-20:13:03 请求结束
-20:13:03 请求结束
-20:13:03 cookie ['']
-20:13:03 cookie ['']
-20:13:03 path and query /static {'file': 'todo.js'} 
-20:13:03 path and query /static {'file': 'gua.js'} 
-20:13:03 响应
+
+20:58:14 完整请求
+20:58:14 完整请求
+20:58:14 请求结束
+20:58:14 请求结束
+20:58:14 cookie ['']
+20:58:14 cookie ['']
+20:58:14 path and query /static {'file': 'gua.js'} 
+20:58:14 path and query /static {'file': 'todo.js'} 
+20:58:14 响应
+ HTTP/1.1 200 OK
+
+var log = function() {
+    console.log.apply(console, arguments)
+}
+
+var e = function(sel) {
+    return document.querySelector(sel)
+}
+
+/*
+ ajax 函数
+*/
+var ajax = function(method, path, data, responseCallback) {
+    var r = new XMLHttpRequest()
+    // 设置请求方法和请求地址
+    r.open(method, path, true)
+    // 设置发送的数据的格式为 application/json
+    // 这个不是必须的
+    r.setRequestHeader('Content-Type', 'application/json')
+    // 注册响应函数
+    r.onreadystatechange = function() {
+        if(r.readyState === 4) {
+            // r.response 存的就是服务器发过来的放在 HTTP BODY 中的数据
+            responseCallback(r.response)
+        }
+    }
+    // 把数据转换为 json 格式字符串
+    data = JSON.stringify(data)
+    // 发送请求
+    r.send(data)
+}
+
+// TODO API
+// 获取所有 todo
+var apiTodoAll = function(callback) {
+    var path = '/api/todo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 todo
+var apiTodoAdd = function(form, callback) {
+    //添加 todo 的路由 path 是 /api/todo/add 对应的路由函数是 add
+    var path = '/api/todo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 todo
+var apiTodoDelete = function(id, callback) {
+    var path = '/api/todo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 todo
+var apiTodoUpdate = function(form, callback) {
+    var path = '/api/todo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// load weibo all
+var apiWeiboAll = function(callback) {
+    var path = '/api/weibo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 weibo
+var apiWeiboAdd = function(form, callback) {
+    var path = '/api/weibo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 weibo
+var apiWeiboDelete = function(id, callback) {
+    var path = '/api/weibo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 weibo
+var apiWeiboUpdate = function(form, callback) {
+    var path = '/api/weibo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// 增加一个 comment
+var apiCommentAdd = function(form, callback) {
+    var path = '/api/comment/add'
+    ajax('POST', path, form, callback)
+}
+20:58:14 响应
  HTTP/1.1 200 OK
 
 var timeString = function(timestamp) {
@@ -358,203 +396,81 @@ __main()
 //         // log('点击的不是删除按钮******')
 //     }
 // })
-20:13:03 响应
- HTTP/1.1 200 OK
-
-var log = function() {
-    console.log.apply(console, arguments)
-}
-
-var e = function(sel) {
-    return document.querySelector(sel)
-}
-
-/*
- ajax 函数
-*/
-var ajax = function(method, path, data, responseCallback) {
-    var r = new XMLHttpRequest()
-    // 设置请求方法和请求地址
-    r.open(method, path, true)
-    // 设置发送的数据的格式为 application/json
-    // 这个不是必须的
-    r.setRequestHeader('Content-Type', 'application/json')
-    // 注册响应函数
-    r.onreadystatechange = function() {
-        if(r.readyState === 4) {
-            // r.response 存的就是服务器发过来的放在 HTTP BODY 中的数据
-            responseCallback(r.response)
-        }
-    }
-    // 把数据转换为 json 格式字符串
-    data = JSON.stringify(data)
-    // 发送请求
-    r.send(data)
-}
-
-// TODO API
-// 获取所有 todo
-var apiTodoAll = function(callback) {
-    var path = '/api/todo/all'
-    ajax('GET', path, '', callback)
-}
-
-// 增加一个 todo
-var apiTodoAdd = function(form, callback) {
-    //添加 todo 的路由 path 是 /api/todo/add 对应的路由函数是 add
-    var path = '/api/todo/add'
-    ajax('POST', path, form, callback)
-}
-
-// 删除一个 todo
-var apiTodoDelete = function(id, callback) {
-    var path = '/api/todo/delete?id=' + id
-    ajax('GET', path, '', callback)
-    //    get(path, callback)
-}
-
-// 更新一个 todo
-var apiTodoUpdate = function(form, callback) {
-    var path = '/api/todo/update'
-    ajax('POST', path, form, callback)
-    //    post(path, form, callback)
-}
-
-// load weibo all
-var apiWeiboAll = function(callback) {
-    var path = '/api/weibo/all'
-    ajax('GET', path, '', callback)
-}
-
-// 增加一个 weibo
-var apiWeiboAdd = function(form, callback) {
-    var path = '/api/weibo/add'
-    ajax('POST', path, form, callback)
-}
-
-// 删除一个 weibo
-var apiWeiboDelete = function(id, callback) {
-    var path = '/api/weibo/delete?id=' + id
-    ajax('GET', path, '', callback)
-    //    get(path, callback)
-}
-
-// 更新一个 weibo
-var apiWeiboUpdate = function(form, callback) {
-    var path = '/api/weibo/update'
-    ajax('POST', path, form, callback)
-    //    post(path, form, callback)
-}
-
-// 增加一个 comment
-var apiCommentAdd = function(form, callback) {
-    var path = '/api/comment/add'
-    ajax('POST', path, form, callback)
-}
-20:13:04 完整请求
-20:13:04 请求结束
-20:13:04 cookie ['']
-20:13:04 path and query /api/todo/all {} 
-20:13:04 响应
+20:58:14 完整请求
+20:58:14 请求结束
+20:58:14 cookie ['']
+20:58:14 path and query /api/todo/all {} 
+20:58:14 响应
  HTTP/1.1 200 OK
 Content-Type: application/json
 
 [
   {
-    "id": 5,
-    "title": "asa",
-    "completed": false,
-    "ct": 1512837151,
-    "ut": 1513052067
-  },
-  {
-    "id": 6,
-    "title": "asd",
-    "completed": false,
-    "ct": 1512837305,
-    "ut": 1512837305
-  },
-  {
-    "id": 7,
-    "title": "",
-    "completed": false,
-    "ct": 1513048866,
-    "ut": 1513048866
-  },
-  {
-    "id": 8,
-    "title": "",
-    "completed": false,
-    "ct": 1513048868,
-    "ut": 1513048868
-  },
-  {
-    "id": 9,
-    "title": "",
-    "completed": false,
-    "ct": 1513048868,
-    "ut": 1513048868
-  },
-  {
-    "id": 10,
-    "title": "",
-    "completed": false,
-    "ct": 1513048869,
-    "ut": 1513048869
-  },
-  {
-    "id": 11,
-    "title": "",
-    "completed": false,
-    "ct": 1513048869,
-    "ut": 1513048869
-  },
-  {
-    "id": 12,
-    "title": "dasda",
-    "completed": false,
-    "ct": 1513050563,
-    "ut": 1513050563
-  },
-  {
     "id": 13,
-    "title": "dsa",
+    "title": "sadasd",
+    "user_id": -1,
     "completed": false,
     "ct": 1513051075,
-    "ut": 1513051075
+    "ut": 1513155403
+  },
+  {
+    "id": 14,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135841,
+    "ut": 1513135841
+  },
+  {
+    "id": 15,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135843,
+    "ut": 1513135843
+  },
+  {
+    "id": 18,
+    "title": "",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513150649,
+    "ut": 1513150649
+  },
+  {
+    "id": 19,
+    "title": "asdasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513157048,
+    "ut": 1513157048
   }
 ]
-20:13:04 完整请求
-20:13:04 请求结束
-20:13:04 cookie ['username-localhost-8890="2|1:0|10:1512912278|23:username-localhost-8890|44:MmVlNjIwMGIwZDQwNGUyODllOTliODJiZTYzNmE3OTc=|9839d95a8c65c6ac8854acf33310123bb10a51ee0eafc6d90ecae6c71c885178"', 'username-localhost-8889="2|1:0|10:1512911365|23:username-localhost-8889|44:ODkxMTQ2NzdiY2JjNGI4OTliNWRmN2YyMThhOTc2ZTE=|750dff8f4a548d62ada300a87194269d731365440f6ec43e9242a639aa2c0e38"', 'username-localhost-8888="2|1:0|10:1512871658|23:username-localhost-8888|44:MTQyNWRjMmQxOWVjNGI1MDllODY5OWY5Nzg5ZTUwMzk=|68dc12f7e0b349f747ab8ce5c8f297b71d16b7f28de58f675a85e3f573ec340d"', '_xsrf=2|c85b0531|51c5bee2d5cacc0359bf2159c5be8f91|1510646596', 'optimizelyEndUserId=oeu1505997156247r0.5380643215329687', '_ga=GA1.1.2112764074.1505997157']
-20:13:04 完整请求
-20:13:04 请求结束
-20:13:04 cookie ['']
-20:13:04 path and query /favicon.ico {} 
-20:13:04 响应
+20:58:14 完整请求
+20:58:14 请求结束
+20:58:14 cookie ['']
+20:58:14 path and query /favicon.ico {} 
+20:58:14 响应
  HTTP/1.1 404 NOT FOUND
 
 <h1>NOT FOUND</h1>
-20:13:04 完整请求
-20:13:04 请求结束
-20:13:04 cookie ['username-localhost-8890="2|1:0|10:1512912278|23:username-localhost-8890|44:MmVlNjIwMGIwZDQwNGUyODllOTliODJiZTYzNmE3OTc=|9839d95a8c65c6ac8854acf33310123bb10a51ee0eafc6d90ecae6c71c885178"', 'username-localhost-8889="2|1:0|10:1512911365|23:username-localhost-8889|44:ODkxMTQ2NzdiY2JjNGI4OTliNWRmN2YyMThhOTc2ZTE=|750dff8f4a548d62ada300a87194269d731365440f6ec43e9242a639aa2c0e38"', 'username-localhost-8888="2|1:0|10:1512871658|23:username-localhost-8888|44:MTQyNWRjMmQxOWVjNGI1MDllODY5OWY5Nzg5ZTUwMzk=|68dc12f7e0b349f747ab8ce5c8f297b71d16b7f28de58f675a85e3f573ec340d"', '_xsrf=2|c85b0531|51c5bee2d5cacc0359bf2159c5be8f91|1510646596', 'optimizelyEndUserId=oeu1505997156247r0.5380643215329687', '_ga=GA1.1.2112764074.1505997157']
-20:13:08 完整请求
-20:13:08 请求结束
-20:13:08 cookie ['']
-20:13:08 path and query /api/todo/add {} {"title":""}
-20:13:08 username 游客
-20:13:08 响应
- HTTP/1.1 302 OK
+20:58:50 完整请求
+20:58:50 请求结束
+20:58:50 cookie ['']
+20:58:50 path and query /api/todo/add {} {"title":"asda"}
+20:58:50 **debug, route msg 未登录
+20:58:50 响应
+ HTTP/1.1 302 VERY OK
 Content-Type: text/html
 Location: /login
 
 
-20:13:08 完整请求
-20:13:08 请求结束
-20:13:08 cookie ['']
-20:13:08 path and query /login {} 
-20:13:08 login, cookies {}
-20:13:08 响应
+20:58:50 完整请求
+20:58:50 请求结束
+20:58:50 cookie ['']
+20:58:50 path and query /login {} 
+20:58:50 login, cookies {}
+20:58:50 响应
  HTTP/1.1 200 VERY OK
 Content-Type: text/html
 
@@ -566,7 +482,7 @@ Content-Type: text/html
 </head>
 <body>
     <h1>登录</h1>
-    <h2>你好 </h2>
+    <h2>你好 游客</h2>
     <form action="/login" method="post">
         <input type="text" name="username" placeholder="请输入用户名">
         <br>
@@ -574,648 +490,29 @@ Content-Type: text/html
         <br>
         <button type="submit">登录</button>
     </form>
-    <h3></h3>
-</body>
-</html>
-20:13:10 完整请求
-20:13:10 请求结束
-20:13:10 cookie ['']
-20:13:10 path and query /api/todo/delete {'id': '6'} 
-20:13:10 响应
- HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "id": 6,
-  "title": "asd",
-  "completed": false,
-  "ct": 1512837305,
-  "ut": 1512837305
-}
-20:13:11 完整请求
-20:13:11 请求结束
-20:13:11 cookie ['']
-20:13:11 path and query /api/todo/delete {'id': '7'} 
-20:13:11 响应
- HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "id": 7,
-  "title": "",
-  "completed": false,
-  "ct": 1513048866,
-  "ut": 1513048866
-}
-20:13:11 完整请求
-20:13:11 请求结束
-20:13:11 cookie ['']
-20:13:11 path and query /api/todo/delete {'id': '8'} 
-20:13:11 响应
- HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "id": 8,
-  "title": "",
-  "completed": false,
-  "ct": 1513048868,
-  "ut": 1513048868
-}
-20:13:11 完整请求
-20:13:11 请求结束
-20:13:11 cookie ['']
-20:13:11 path and query /api/todo/delete {'id': '9'} 
-20:13:11 响应
- HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "id": 9,
-  "title": "",
-  "completed": false,
-  "ct": 1513048868,
-  "ut": 1513048868
-}
-20:13:12 完整请求
-20:13:12 请求结束
-20:13:12 cookie ['']
-20:13:12 path and query /api/todo/delete {'id': '10'} 
-20:13:12 响应
- HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "id": 10,
-  "title": "",
-  "completed": false,
-  "ct": 1513048869,
-  "ut": 1513048869
-}
-20:13:14 完整请求
-20:13:14 请求结束
-20:13:14 cookie ['']
-20:13:14 path and query /api/todo/add {} {"title":"sdsada"}
-20:13:14 username 游客
-20:13:14 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:13:14 完整请求
-20:13:14 请求结束
-20:13:14 cookie ['']
-20:13:14 path and query /login {} 
-20:13:14 login, cookies {}
-20:13:14 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
     </form>
     <h3></h3>
 </body>
 </html>
-20:13:15 完整请求
-20:13:15 请求结束
-20:13:15 cookie ['']
-20:13:15 path and query /api/todo/add {} {"title":"sdsada"}
-20:13:15 username 游客
-20:13:15 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:13:15 完整请求
-20:13:15 请求结束
-20:13:15 cookie ['']
-20:13:15 path and query /api/todo/add {} {"title":"sdsada"}
-20:13:15 username 游客
-20:13:15 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:13:15 完整请求
-20:13:15 请求结束
-20:13:15 cookie ['']
-20:13:15 path and query /api/todo/add {} {"title":"sdsada"}
-20:13:15 username 游客
-20:13:15 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:13:15 完整请求
-20:13:15 请求结束
-20:13:15 cookie ['']
-20:13:15 path and query /login {} 
-20:13:15 login, cookies {}
-20:13:15 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
-    </form>
-    <h3></h3>
-</body>
-</html>
-20:13:15 完整请求
-20:13:15 请求结束
-20:13:15 cookie ['']
-20:13:15 path and query /api/todo/add {} {"title":"sdsada"}
-20:13:15 username 游客
-20:13:15 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:13:15 完整请求
-20:13:15 请求结束
-20:13:15 cookie ['']
-20:13:15 path and query /api/todo/add {} {"title":"sdsada"}
-20:13:15 username 游客
-20:13:15 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:13:15 完整请求
-20:13:15 请求结束
-20:13:15 cookie ['']
-20:13:15 path and query /login {} 
-20:13:15 login, cookies {}
-20:13:15 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
-    </form>
-    <h3></h3>
-</body>
-</html>
-20:13:15 完整请求
-20:13:15 请求结束
-20:13:15 cookie ['']
-20:13:15 path and query /api/todo/add {} {"title":"sdsada"}
-20:13:15 username 游客
-20:13:15 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:13:15 完整请求
-20:13:15 请求结束
-20:13:15 cookie ['']
-20:13:15 path and query /api/todo/add {} {"title":"sdsada"}
-20:13:15 username 游客
-20:13:15 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:13:15 完整请求
-20:13:15 请求结束
-20:13:15 cookie ['']
-20:13:15 path and query /login {} 
-20:13:15 login, cookies {}
-20:13:15 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
-    </form>
-    <h3></h3>
-</body>
-</html>
-20:13:15 完整请求
-20:13:15 请求结束
-20:13:15 cookie ['']
-20:13:15 path and query /api/todo/add {} {"title":"sdsada"}
-20:13:15 username 游客
-20:13:15 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:13:15 完整请求
-20:13:15 请求结束
-20:13:15 cookie ['']
-20:13:15 path and query /api/todo/add {} {"title":"sdsada"}
-20:13:15 username 游客
-20:13:15 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:13:16 完整请求
-20:13:16 请求结束
-20:13:16 cookie ['']
-20:13:16 path and query /login {} 
-20:13:16 login, cookies {}
-20:13:16 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
-    </form>
-    <h3></h3>
-</body>
-</html>
-20:13:16 完整请求
-20:13:16 请求结束
-20:13:16 cookie ['']
-20:13:16 path and query /api/todo/add {} {"title":"sdsada"}
-20:13:16 username 游客
-20:13:16 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:13:16 完整请求
-20:13:16 请求结束
-20:13:16 cookie ['']
-20:13:16 path and query /api/todo/add {} {"title":"sdsada"}
-20:13:16 username 游客
-20:13:16 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:13:16 完整请求
-20:13:16 请求结束
-20:13:16 cookie ['']
-20:13:16 path and query /login {} 
-20:13:16 login, cookies {}
-20:13:16 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
-    </form>
-    <h3></h3>
-</body>
-</html>
-20:13:16 完整请求
-20:13:16 请求结束
-20:13:16 cookie ['']
-20:13:16 path and query /api/todo/add {} {"title":"sdsada"}
-20:13:16 username 游客
-20:13:16 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:13:16 完整请求
-20:13:16 请求结束
-20:13:16 cookie ['']
-20:13:16 path and query /api/todo/add {} {"title":"sdsada"}
-20:13:16 username 游客
-20:13:16 响应
- HTTP/1.1 302 OK
-Content-Type: text/html
-Location: /login
-
-
-20:13:16 完整请求
-20:13:16 请求结束
-20:13:16 cookie ['']
-20:13:16 path and query /login {} 
-20:13:16 login, cookies {}
-20:13:16 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
-    </form>
-    <h3></h3>
-</body>
-</html>
-20:13:16 完整请求
-20:13:16 请求结束
-20:13:16 cookie ['']
-20:13:16 path and query /login {} 
-20:13:16 login, cookies {}
-20:13:16 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
-    </form>
-    <h3></h3>
-</body>
-</html>
-20:13:16 完整请求
-20:13:16 请求结束
-20:13:16 cookie ['']
-20:13:17 path and query /login {} 
-20:13:17 login, cookies {}
-20:13:17 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
-    </form>
-    <h3></h3>
-</body>
-</html>
-20:13:17 完整请求
-20:13:17 请求结束
-20:13:17 cookie ['']
-20:13:17 path and query /login {} 
-20:13:17 login, cookies {}
-20:13:17 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
-    </form>
-    <h3></h3>
-</body>
-</html>
-20:13:17 完整请求
-20:13:17 请求结束
-20:13:17 cookie ['']
-20:13:17 path and query /login {} 
-20:13:17 login, cookies {}
-20:13:17 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
-    </form>
-    <h3></h3>
-</body>
-</html>
-20:13:17 完整请求
-20:13:17 请求结束
-20:13:17 cookie ['']
-20:13:17 path and query /login {} 
-20:13:17 login, cookies {}
-20:13:17 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
-    </form>
-    <h3></h3>
-</body>
-</html>
-20:13:17 完整请求
-20:13:17 请求结束
-20:13:17 cookie ['']
-20:13:17 path and query /login {} 
-20:13:17 login, cookies {}
-20:13:17 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
-    </form>
-    <h3></h3>
-</body>
-</html>
-20:13:17 完整请求
-20:13:17 请求结束
-20:13:17 cookie ['']
-20:13:17 path and query /login {} 
-20:13:17 login, cookies {}
-20:13:17 响应
- HTTP/1.1 200 VERY OK
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册登录页面</title>
-</head>
-<body>
-    <h1>登录</h1>
-    <h2>你好 </h2>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
-        <br>
-        <input type="text" name="password" placeholder="请输入密码">
-        <br>
-        <button type="submit">登录</button>
-    </form>
-    <h3></h3>
-</body>
-</html>
-20:14:57 完整请求
-20:14:57 请求结束
-20:14:57 cookie ['username-localhost-8890="2|1:0|10:1512912278|23:username-localhost-8890|44:MmVlNjIwMGIwZDQwNGUyODllOTliODJiZTYzNmE3OTc=|9839d95a8c65c6ac8854acf33310123bb10a51ee0eafc6d90ecae6c71c885178"', 'username-localhost-8889="2|1:0|10:1512911365|23:username-localhost-8889|44:ODkxMTQ2NzdiY2JjNGI4OTliNWRmN2YyMThhOTc2ZTE=|750dff8f4a548d62ada300a87194269d731365440f6ec43e9242a639aa2c0e38"', 'username-localhost-8888="2|1:0|10:1512871658|23:username-localhost-8888|44:MTQyNWRjMmQxOWVjNGI1MDllODY5OWY5Nzg5ZTUwMzk=|68dc12f7e0b349f747ab8ce5c8f297b71d16b7f28de58f675a85e3f573ec340d"', '_xsrf=2|c85b0531|51c5bee2d5cacc0359bf2159c5be8f91|1510646596', 'optimizelyEndUserId=oeu1505997156247r0.5380643215329687', '_ga=GA1.1.2112764074.1505997157']
-20:15:04 完整请求
-20:15:04 请求结束
-20:15:04 cookie ['']
-20:15:04 path and query / {} 
-20:15:04 响应
- HTTP/1.1 302 OK
+20:59:43 完整请求
+20:59:43 请求结束
+20:59:44 完整请求
+20:59:44 请求结束
+20:59:44 cookie ['']
+20:59:44 path and query / {} 
+20:59:44 响应
+ HTTP/1.1 302 VERY OK
 Content-Type: text/html
 Location: /todo/index
 
 
-20:15:04 完整请求
-20:15:04 请求结束
-20:15:04 cookie ['']
-20:15:04 path and query /todo/index {} 
-20:15:04 响应
+20:59:44 完整请求
+20:59:44 请求结束
+20:59:44 cookie ['']
+20:59:44 path and query /todo/index {} 
+20:59:44 响应
  HTTP/1.1 200 OK
 Content-Type: text/html
 
@@ -1237,108 +534,14 @@ Content-Type: text/html
         <script src='/static?file=todo.js'></script>
     </body>
 </html>
-20:15:04 完整请求
-20:15:04 完整请求
-20:15:04 请求结束
-20:15:04 请求结束
-20:15:04 cookie ['']
-20:15:04 cookie ['']
-20:15:04 path and query /static {'file': 'gua.js'} 
-20:15:04 path and query /static {'file': 'todo.js'} 
-20:15:04 响应
- HTTP/1.1 200 OK
 
-var log = function() {
-    console.log.apply(console, arguments)
-}
-
-var e = function(sel) {
-    return document.querySelector(sel)
-}
-
-/*
- ajax 函数
-*/
-var ajax = function(method, path, data, responseCallback) {
-    var r = new XMLHttpRequest()
-    // 设置请求方法和请求地址
-    r.open(method, path, true)
-    // 设置发送的数据的格式为 application/json
-    // 这个不是必须的
-    r.setRequestHeader('Content-Type', 'application/json')
-    // 注册响应函数
-    r.onreadystatechange = function() {
-        if(r.readyState === 4) {
-            // r.response 存的就是服务器发过来的放在 HTTP BODY 中的数据
-            responseCallback(r.response)
-        }
-    }
-    // 把数据转换为 json 格式字符串
-    data = JSON.stringify(data)
-    // 发送请求
-    r.send(data)
-}
-
-// TODO API
-// 获取所有 todo
-var apiTodoAll = function(callback) {
-    var path = '/api/todo/all'
-    ajax('GET', path, '', callback)
-}
-
-// 增加一个 todo
-var apiTodoAdd = function(form, callback) {
-    //添加 todo 的路由 path 是 /api/todo/add 对应的路由函数是 add
-    var path = '/api/todo/add'
-    ajax('POST', path, form, callback)
-}
-
-// 删除一个 todo
-var apiTodoDelete = function(id, callback) {
-    var path = '/api/todo/delete?id=' + id
-    ajax('GET', path, '', callback)
-    //    get(path, callback)
-}
-
-// 更新一个 todo
-var apiTodoUpdate = function(form, callback) {
-    var path = '/api/todo/update'
-    ajax('POST', path, form, callback)
-    //    post(path, form, callback)
-}
-
-// load weibo all
-var apiWeiboAll = function(callback) {
-    var path = '/api/weibo/all'
-    ajax('GET', path, '', callback)
-}
-
-// 增加一个 weibo
-var apiWeiboAdd = function(form, callback) {
-    var path = '/api/weibo/add'
-    ajax('POST', path, form, callback)
-}
-
-// 删除一个 weibo
-var apiWeiboDelete = function(id, callback) {
-    var path = '/api/weibo/delete?id=' + id
-    ajax('GET', path, '', callback)
-    //    get(path, callback)
-}
-
-// 更新一个 weibo
-var apiWeiboUpdate = function(form, callback) {
-    var path = '/api/weibo/update'
-    ajax('POST', path, form, callback)
-    //    post(path, form, callback)
-}
-
-// 增加一个 comment
-var apiCommentAdd = function(form, callback) {
-    var path = '/api/comment/add'
-    ajax('POST', path, form, callback)
-}
-20:15:04 响应
+20:59:44 完整请求
+20:59:44 完整请求
+20:59:44 请求结束
+20:59:44 请求结束
+20:59:44 cookie ['']
+20:59:44 path and query /static {'file': 'todo.js'} 
+20:59:44 响应
  HTTP/1.1 200 OK
 
 var timeString = function(timestamp) {
@@ -1554,59 +757,1031 @@ __main()
 //         // log('点击的不是删除按钮******')
 //     }
 // })
-20:15:04 完整请求
-20:15:04 请求结束
-20:15:04 cookie ['']
-20:15:04 path and query /api/todo/all {} 
-20:15:04 响应
+20:59:44 cookie ['']
+20:59:44 path and query /static {'file': 'gua.js'} 
+20:59:44 响应
+ HTTP/1.1 200 OK
+
+var log = function() {
+    console.log.apply(console, arguments)
+}
+
+var e = function(sel) {
+    return document.querySelector(sel)
+}
+
+/*
+ ajax 函数
+*/
+var ajax = function(method, path, data, responseCallback) {
+    var r = new XMLHttpRequest()
+    // 设置请求方法和请求地址
+    r.open(method, path, true)
+    // 设置发送的数据的格式为 application/json
+    // 这个不是必须的
+    r.setRequestHeader('Content-Type', 'application/json')
+    // 注册响应函数
+    r.onreadystatechange = function() {
+        if(r.readyState === 4) {
+            // r.response 存的就是服务器发过来的放在 HTTP BODY 中的数据
+            responseCallback(r.response)
+        }
+    }
+    // 把数据转换为 json 格式字符串
+    data = JSON.stringify(data)
+    // 发送请求
+    r.send(data)
+}
+
+// TODO API
+// 获取所有 todo
+var apiTodoAll = function(callback) {
+    var path = '/api/todo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 todo
+var apiTodoAdd = function(form, callback) {
+    //添加 todo 的路由 path 是 /api/todo/add 对应的路由函数是 add
+    var path = '/api/todo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 todo
+var apiTodoDelete = function(id, callback) {
+    var path = '/api/todo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 todo
+var apiTodoUpdate = function(form, callback) {
+    var path = '/api/todo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// load weibo all
+var apiWeiboAll = function(callback) {
+    var path = '/api/weibo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 weibo
+var apiWeiboAdd = function(form, callback) {
+    var path = '/api/weibo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 weibo
+var apiWeiboDelete = function(id, callback) {
+    var path = '/api/weibo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 weibo
+var apiWeiboUpdate = function(form, callback) {
+    var path = '/api/weibo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// 增加一个 comment
+var apiCommentAdd = function(form, callback) {
+    var path = '/api/comment/add'
+    ajax('POST', path, form, callback)
+}
+20:59:44 完整请求
+20:59:44 请求结束
+20:59:44 cookie ['']
+20:59:44 path and query /api/todo/all {} 
+20:59:44 响应
  HTTP/1.1 200 OK
 Content-Type: application/json
 
 [
   {
-    "id": 5,
-    "title": "asa",
-    "completed": false,
-    "ct": 1512837151,
-    "ut": 1513052067
-  },
-  {
-    "id": 11,
-    "title": "",
-    "completed": false,
-    "ct": 1513048869,
-    "ut": 1513048869
-  },
-  {
-    "id": 12,
-    "title": "dasda",
-    "completed": false,
-    "ct": 1513050563,
-    "ut": 1513050563
-  },
-  {
     "id": 13,
-    "title": "dsa",
+    "title": "sadasd",
+    "user_id": -1,
     "completed": false,
     "ct": 1513051075,
-    "ut": 1513051075
+    "ut": 1513155403
+  },
+  {
+    "id": 14,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135841,
+    "ut": 1513135841
+  },
+  {
+    "id": 15,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135843,
+    "ut": 1513135843
+  },
+  {
+    "id": 18,
+    "title": "",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513150649,
+    "ut": 1513150649
+  },
+  {
+    "id": 19,
+    "title": "asdasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513157048,
+    "ut": 1513157048
   }
 ]
-20:15:04 完整请求
-20:15:04 请求结束
-20:15:04 cookie ['']
-20:15:04 path and query /favicon.ico {} 
-20:15:04 响应
+20:59:54 完整请求
+20:59:54 请求结束
+20:59:54 完整请求
+20:59:54 请求结束
+20:59:54 cookie ['']
+20:59:54 path and query / {} 
+20:59:54 响应
+ HTTP/1.1 302 VERY OK
+Content-Type: text/html
+Location: /todo/index
+
+
+20:59:54 完整请求
+20:59:54 请求结束
+20:59:54 cookie ['']
+20:59:54 path and query /todo/index {} 
+20:59:54 响应
+ HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web10 todo ajax</title>
+    </head>
+    <body>
+        <input id='id-input-todo'>
+        <button id='id-button-add'>add</button>
+        <div class="todo-list">
+        </div>
+        <!-- 这是我们处理静态文件的套路 -->
+        <!-- gua.js 放了公共的函数 -->
+        <!-- 按顺序引入 2 个 js 文件, 后面的 js 文件就能使用前面的文件中的函数了 -->
+        <script src='/static?file=gua.js'></script>
+        <script src='/static?file=todo.js'></script>
+    </body>
+</html>
+
+20:59:54 完整请求
+20:59:54 完整请求
+20:59:54 请求结束
+20:59:54 请求结束
+20:59:54 cookie ['']
+20:59:54 cookie ['']
+20:59:54 path and query /static {'file': 'gua.js'} 
+20:59:54 path and query /static {'file': 'todo.js'} 
+20:59:54 响应
+ HTTP/1.1 200 OK
+
+var log = function() {
+    console.log.apply(console, arguments)
+}
+
+var e = function(sel) {
+    return document.querySelector(sel)
+}
+
+/*
+ ajax 函数
+*/
+var ajax = function(method, path, data, responseCallback) {
+    var r = new XMLHttpRequest()
+    // 设置请求方法和请求地址
+    r.open(method, path, true)
+    // 设置发送的数据的格式为 application/json
+    // 这个不是必须的
+    r.setRequestHeader('Content-Type', 'application/json')
+    // 注册响应函数
+    r.onreadystatechange = function() {
+        if(r.readyState === 4) {
+            // r.response 存的就是服务器发过来的放在 HTTP BODY 中的数据
+            responseCallback(r.response)
+        }
+    }
+    // 把数据转换为 json 格式字符串
+    data = JSON.stringify(data)
+    // 发送请求
+    r.send(data)
+}
+
+// TODO API
+// 获取所有 todo
+var apiTodoAll = function(callback) {
+    var path = '/api/todo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 todo
+var apiTodoAdd = function(form, callback) {
+    //添加 todo 的路由 path 是 /api/todo/add 对应的路由函数是 add
+    var path = '/api/todo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 todo
+var apiTodoDelete = function(id, callback) {
+    var path = '/api/todo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 todo
+var apiTodoUpdate = function(form, callback) {
+    var path = '/api/todo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// load weibo all
+var apiWeiboAll = function(callback) {
+    var path = '/api/weibo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 weibo
+var apiWeiboAdd = function(form, callback) {
+    var path = '/api/weibo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 weibo
+var apiWeiboDelete = function(id, callback) {
+    var path = '/api/weibo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 weibo
+var apiWeiboUpdate = function(form, callback) {
+    var path = '/api/weibo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// 增加一个 comment
+var apiCommentAdd = function(form, callback) {
+    var path = '/api/comment/add'
+    ajax('POST', path, form, callback)
+}
+20:59:54 响应
+ HTTP/1.1 200 OK
+
+var timeString = function(timestamp) {
+    t = new Date(timestamp * 1000)
+    t = t.toLocaleTimeString()
+    return t
+}
+
+var todoTemplate = function(todo) {
+    var title = todo.title
+    var id = todo.id
+    var ut = timeString(todo.ut)
+    // data-xx 是自定义标签属性的语法
+    // 通过这样的方式可以给任意标签添加任意属性
+    // 假设 d 是 这个 div 的引用
+    // 这样的自定义属性通过  d.dataset.xx 来获取
+    // 在这个例子里面, 是 d.dataset.id
+    var t = `
+        <div class="todo-cell" id='todo-${id}' data-id="${id}">
+            <button class="todo-edit">编辑</button>
+            <button class="todo-delete">删除</button>
+            <span class='todo-title'>${title}</span>
+            <time class='todo-ut'>${ut}</time>
+        </div>
+    `
+    return t
+    /*
+    上面的写法在 python 中是这样的
+    t = """
+    <div class="todo-cell">
+        <button class="todo-delete">删除</button>
+        <span>{}</span>
+    </div>
+    """.format(todo)
+    */
+}
+
+var insertTodo = function(todo) {
+    log('todo', todo)
+    //
+    var todoCell = todoTemplate(todo)
+    // 插入 todo-list
+    var todoList = e('.todo-list')
+    todoList.insertAdjacentHTML('beforeend', todoCell)
+}
+
+var insertEditForm = function(cell) {
+    var form = `
+        <div class='todo-edit-form'>
+            <input class="todo-edit-input">
+            <button class='todo-update'>更新</button>
+        </div>
+    `
+    cell.insertAdjacentHTML('beforeend', form)
+}
+
+var loadTodos = function() {
+    // 调用 ajax api 来载入数据
+    apiTodoAll(function(r) {
+        // console.log('load all', r)
+        // 解析为 数组
+        var todos = JSON.parse(r)
+        // 循环添加到页面中
+        for(var i = 0; i < todos.length; i++) {
+            var todo = todos[i]
+            insertTodo(todo)
+        }
+    })
+}
+
+var bindEventTodoAdd = function() {
+    //通过函数 e 抓取到 <button id='id-button-add'>add</button> 中的 id-button-add
+    var b = e('#id-button-add')
+    // 注意, 第二个参数可以直接给出定义函数
+    b.addEventListener('click', function(){
+        ////通过函数 e 抓取到 <input id='id-input-todo'> 中的 id-input-todo
+        var input = e('#id-input-todo')
+        //拿到input框中用户输入的数据字段
+        var title = input.value
+        //打印出用户输入的数据字段
+        log('click add', title)
+        //设置form表单
+        var form = {
+            'title': title,
+        }
+        //调用 apiTodoAdd 函数异步加载数据
+        apiTodoAdd(form, function(r) {
+            // 收到返回的数据, 插入到页面中
+            var todo = JSON.parse(r)
+            //调用 insertTodo 函数插入todo数据
+            insertTodo(todo)
+        })
+    })
+}
+
+var bindEventTodoDelete = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-delete')){
+            // 删除这个 todo
+            var todoCell = self.parentElement
+            var todo_id = todoCell.dataset.id
+            apiTodoDelete(todo_id, function(r){
+                log('删除成功', todo_id)
+                todoCell.remove()
+            })
+        }
+    })
+}
+
+var bindEventTodoEdit = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-edit')){
+            // 删除这个 todo
+            var todoCell = self.parentElement
+            insertEditForm(todoCell)
+        }
+    })
+}
+
+
+var bindEventTodoUpdate = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-update')){
+            log('点击了 update ')
+            //
+            var editForm = self.parentElement
+            // querySelector 是 DOM 元素的方法
+            // document.querySelector 中的 document 是所有元素的祖先元素
+            var input = editForm.querySelector('.todo-edit-input')
+            var title = input.value
+            // 用 closest 方法可以找到最近的直系父节点
+            var todoCell = self.closest('.todo-cell')
+            var todo_id = todoCell.dataset.id
+            var form = {
+                'id': todo_id,
+                'title': title,
+            }
+            log('form', form)
+            apiTodoUpdate(form, function(r){
+                log('更新成功', todo_id)
+                var todo = JSON.parse(r)
+                var selector = '#todo-' + todo.id
+                log('selector', selector)
+                var todoCell = e(selector)
+                log('todoCell', todoCell)
+                var titleSpan = todoCell.querySelector('.todo-title')
+                log('titleSpan', titleSpan)
+                titleSpan.innerHTML = todo.title
+//                todoCell.remove()
+            })
+        }
+    })
+}
+
+var bindEvents = function() {
+    //增加一条todo
+    bindEventTodoAdd()
+    //删除一条todo
+    bindEventTodoDelete()
+    //编辑一条tudo
+    bindEventTodoEdit()
+    //更新一条todo
+    bindEventTodoUpdate()
+}
+
+var __main = function() {
+    //绑定事件的函数
+    bindEvents()
+    //加载todo数据的函数
+    loadTodos()
+}
+
+//函数主入口
+__main()
+
+
+
+
+
+
+/*
+给 删除 按钮绑定删除的事件
+1, 绑定事件
+2, 删除整个 todo-cell 元素
+*/
+// var todoList = e('.todo-list')
+// // 事件响应函数会被传入一个参数, 就是事件本身
+// todoList.addEventListener('click', function(event){
+//     // log('click todolist', event)
+//     // 我们可以通过 event.target 来得到被点击的元素
+//     var self = event.target
+//     // log('被点击的元素是', self)
+//     // 通过比较被点击元素的 class 来判断元素是否是我们想要的
+//     // classList 属性保存了元素的所有 class
+//     // 在 HTML 中, 一个元素可以有多个 class, 用空格分开
+//     // log(self.classList)
+//     // 判断是否拥有某个 class 的方法如下
+//     if (self.classList.contains('todo-delete')) {
+//         log('点到了 删除按钮')
+//         // 删除 self 的父节点
+//         // parentElement 可以访问到元素的父节点
+//         self.parentElement.remove()
+//     } else {
+//         // log('点击的不是删除按钮******')
+//     }
+// })
+20:59:54 完整请求
+20:59:54 请求结束
+20:59:54 cookie ['']
+20:59:54 path and query /api/todo/all {} 
+20:59:54 响应
+ HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 13,
+    "title": "sadasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513051075,
+    "ut": 1513155403
+  },
+  {
+    "id": 14,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135841,
+    "ut": 1513135841
+  },
+  {
+    "id": 15,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135843,
+    "ut": 1513135843
+  },
+  {
+    "id": 18,
+    "title": "",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513150649,
+    "ut": 1513150649
+  },
+  {
+    "id": 19,
+    "title": "asdasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513157048,
+    "ut": 1513157048
+  }
+]
+21:00:24 完整请求
+21:00:24 请求结束
+21:00:25 完整请求
+21:00:25 请求结束
+21:00:25 cookie ['']
+21:00:25 path and query /api/todo/add {} {"title":"sad"}
+21:00:25 **debug, route msg 未登录
+21:00:25 响应
+ HTTP/1.1 302 VERY OK
+Content-Type: text/html
+Location: /login
+
+
+21:00:25 完整请求
+21:00:25 请求结束
+21:00:25 cookie ['']
+21:00:25 path and query /login {} 
+21:00:25 login, cookies {}
+21:00:25 响应
+ HTTP/1.1 200 VERY OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 游客</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
+    </form>
+    <h3></h3>
+</body>
+</html>
+21:02:09 完整请求
+21:02:09 请求结束
+21:02:09 cookie ['']
+21:02:09 path and query / {} 
+21:02:09 响应
+ HTTP/1.1 302 VERY OK
+Content-Type: text/html
+Location: /todo/index
+
+
+21:02:09 完整请求
+21:02:09 请求结束
+21:02:09 cookie ['']
+21:02:09 path and query /todo/index {} 
+21:02:09 响应
+ HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web10 todo ajax</title>
+    </head>
+    <body>
+        <input id='id-input-todo'>
+        <button id='id-button-add'>add</button>
+        <div class="todo-list">
+        </div>
+        <!-- 这是我们处理静态文件的套路 -->
+        <!-- gua.js 放了公共的函数 -->
+        <!-- 按顺序引入 2 个 js 文件, 后面的 js 文件就能使用前面的文件中的函数了 -->
+        <script src='/static?file=gua.js'></script>
+        <script src='/static?file=todo.js'></script>
+    </body>
+</html>
+
+21:02:09 完整请求
+21:02:09 完整请求
+21:02:09 请求结束
+21:02:09 请求结束
+21:02:09 cookie ['']
+21:02:09 cookie ['']
+21:02:09 path and query /static {'file': 'gua.js'} 
+21:02:09 path and query /static {'file': 'todo.js'} 
+21:02:09 响应
+ HTTP/1.1 200 OK
+
+var log = function() {
+    console.log.apply(console, arguments)
+}
+
+var e = function(sel) {
+    return document.querySelector(sel)
+}
+
+/*
+ ajax 函数
+*/
+var ajax = function(method, path, data, responseCallback) {
+    var r = new XMLHttpRequest()
+    // 设置请求方法和请求地址
+    r.open(method, path, true)
+    // 设置发送的数据的格式为 application/json
+    // 这个不是必须的
+    r.setRequestHeader('Content-Type', 'application/json')
+    // 注册响应函数
+    r.onreadystatechange = function() {
+        if(r.readyState === 4) {
+            // r.response 存的就是服务器发过来的放在 HTTP BODY 中的数据
+            responseCallback(r.response)
+        }
+    }
+    // 把数据转换为 json 格式字符串
+    data = JSON.stringify(data)
+    // 发送请求
+    r.send(data)
+}
+
+// TODO API
+// 获取所有 todo
+var apiTodoAll = function(callback) {
+    var path = '/api/todo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 todo
+var apiTodoAdd = function(form, callback) {
+    //添加 todo 的路由 path 是 /api/todo/add 对应的路由函数是 add
+    var path = '/api/todo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 todo
+var apiTodoDelete = function(id, callback) {
+    var path = '/api/todo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 todo
+var apiTodoUpdate = function(form, callback) {
+    var path = '/api/todo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// load weibo all
+var apiWeiboAll = function(callback) {
+    var path = '/api/weibo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 weibo
+var apiWeiboAdd = function(form, callback) {
+    var path = '/api/weibo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 weibo
+var apiWeiboDelete = function(id, callback) {
+    var path = '/api/weibo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 weibo
+var apiWeiboUpdate = function(form, callback) {
+    var path = '/api/weibo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// 增加一个 comment
+var apiCommentAdd = function(form, callback) {
+    var path = '/api/comment/add'
+    ajax('POST', path, form, callback)
+}
+21:02:09 响应
+ HTTP/1.1 200 OK
+
+var timeString = function(timestamp) {
+    t = new Date(timestamp * 1000)
+    t = t.toLocaleTimeString()
+    return t
+}
+
+var todoTemplate = function(todo) {
+    var title = todo.title
+    var id = todo.id
+    var ut = timeString(todo.ut)
+    // data-xx 是自定义标签属性的语法
+    // 通过这样的方式可以给任意标签添加任意属性
+    // 假设 d 是 这个 div 的引用
+    // 这样的自定义属性通过  d.dataset.xx 来获取
+    // 在这个例子里面, 是 d.dataset.id
+    var t = `
+        <div class="todo-cell" id='todo-${id}' data-id="${id}">
+            <button class="todo-edit">编辑</button>
+            <button class="todo-delete">删除</button>
+            <span class='todo-title'>${title}</span>
+            <time class='todo-ut'>${ut}</time>
+        </div>
+    `
+    return t
+    /*
+    上面的写法在 python 中是这样的
+    t = """
+    <div class="todo-cell">
+        <button class="todo-delete">删除</button>
+        <span>{}</span>
+    </div>
+    """.format(todo)
+    */
+}
+
+var insertTodo = function(todo) {
+    log('todo', todo)
+    //
+    var todoCell = todoTemplate(todo)
+    // 插入 todo-list
+    var todoList = e('.todo-list')
+    todoList.insertAdjacentHTML('beforeend', todoCell)
+}
+
+var insertEditForm = function(cell) {
+    var form = `
+        <div class='todo-edit-form'>
+            <input class="todo-edit-input">
+            <button class='todo-update'>更新</button>
+        </div>
+    `
+    cell.insertAdjacentHTML('beforeend', form)
+}
+
+var loadTodos = function() {
+    // 调用 ajax api 来载入数据
+    apiTodoAll(function(r) {
+        // console.log('load all', r)
+        // 解析为 数组
+        var todos = JSON.parse(r)
+        // 循环添加到页面中
+        for(var i = 0; i < todos.length; i++) {
+            var todo = todos[i]
+            insertTodo(todo)
+        }
+    })
+}
+
+var bindEventTodoAdd = function() {
+    //通过函数 e 抓取到 <button id='id-button-add'>add</button> 中的 id-button-add
+    var b = e('#id-button-add')
+    // 注意, 第二个参数可以直接给出定义函数
+    b.addEventListener('click', function(){
+        ////通过函数 e 抓取到 <input id='id-input-todo'> 中的 id-input-todo
+        var input = e('#id-input-todo')
+        //拿到input框中用户输入的数据字段
+        var title = input.value
+        //打印出用户输入的数据字段
+        log('click add', title)
+        //设置form表单
+        var form = {
+            'title': title,
+        }
+        //调用 apiTodoAdd 函数异步加载数据
+        apiTodoAdd(form, function(r) {
+            // 收到返回的数据, 插入到页面中
+            var todo = JSON.parse(r)
+            //调用 insertTodo 函数插入todo数据
+            insertTodo(todo)
+        })
+    })
+}
+
+var bindEventTodoDelete = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-delete')){
+            // 删除这个 todo
+            var todoCell = self.parentElement
+            var todo_id = todoCell.dataset.id
+            apiTodoDelete(todo_id, function(r){
+                log('删除成功', todo_id)
+                todoCell.remove()
+            })
+        }
+    })
+}
+
+var bindEventTodoEdit = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-edit')){
+            // 删除这个 todo
+            var todoCell = self.parentElement
+            insertEditForm(todoCell)
+        }
+    })
+}
+
+
+var bindEventTodoUpdate = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-update')){
+            log('点击了 update ')
+            //
+            var editForm = self.parentElement
+            // querySelector 是 DOM 元素的方法
+            // document.querySelector 中的 document 是所有元素的祖先元素
+            var input = editForm.querySelector('.todo-edit-input')
+            var title = input.value
+            // 用 closest 方法可以找到最近的直系父节点
+            var todoCell = self.closest('.todo-cell')
+            var todo_id = todoCell.dataset.id
+            var form = {
+                'id': todo_id,
+                'title': title,
+            }
+            log('form', form)
+            apiTodoUpdate(form, function(r){
+                log('更新成功', todo_id)
+                var todo = JSON.parse(r)
+                var selector = '#todo-' + todo.id
+                log('selector', selector)
+                var todoCell = e(selector)
+                log('todoCell', todoCell)
+                var titleSpan = todoCell.querySelector('.todo-title')
+                log('titleSpan', titleSpan)
+                titleSpan.innerHTML = todo.title
+//                todoCell.remove()
+            })
+        }
+    })
+}
+
+var bindEvents = function() {
+    //增加一条todo
+    bindEventTodoAdd()
+    //删除一条todo
+    bindEventTodoDelete()
+    //编辑一条tudo
+    bindEventTodoEdit()
+    //更新一条todo
+    bindEventTodoUpdate()
+}
+
+var __main = function() {
+    //绑定事件的函数
+    bindEvents()
+    //加载todo数据的函数
+    loadTodos()
+}
+
+//函数主入口
+__main()
+
+
+
+
+
+
+/*
+给 删除 按钮绑定删除的事件
+1, 绑定事件
+2, 删除整个 todo-cell 元素
+*/
+// var todoList = e('.todo-list')
+// // 事件响应函数会被传入一个参数, 就是事件本身
+// todoList.addEventListener('click', function(event){
+//     // log('click todolist', event)
+//     // 我们可以通过 event.target 来得到被点击的元素
+//     var self = event.target
+//     // log('被点击的元素是', self)
+//     // 通过比较被点击元素的 class 来判断元素是否是我们想要的
+//     // classList 属性保存了元素的所有 class
+//     // 在 HTML 中, 一个元素可以有多个 class, 用空格分开
+//     // log(self.classList)
+//     // 判断是否拥有某个 class 的方法如下
+//     if (self.classList.contains('todo-delete')) {
+//         log('点到了 删除按钮')
+//         // 删除 self 的父节点
+//         // parentElement 可以访问到元素的父节点
+//         self.parentElement.remove()
+//     } else {
+//         // log('点击的不是删除按钮******')
+//     }
+// })
+21:02:09 完整请求
+21:02:09 请求结束
+21:02:09 cookie ['']
+21:02:09 path and query /api/todo/all {} 
+21:02:09 响应
+ HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 13,
+    "title": "sadasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513051075,
+    "ut": 1513155403
+  },
+  {
+    "id": 14,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135841,
+    "ut": 1513135841
+  },
+  {
+    "id": 15,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135843,
+    "ut": 1513135843
+  },
+  {
+    "id": 18,
+    "title": "",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513150649,
+    "ut": 1513150649
+  },
+  {
+    "id": 19,
+    "title": "asdasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513157048,
+    "ut": 1513157048
+  }
+]
+21:02:09 完整请求
+21:02:09 请求结束
+21:02:09 cookie ['']
+21:02:09 path and query /favicon.ico {} 
+21:02:09 响应
  HTTP/1.1 404 NOT FOUND
 
 <h1>NOT FOUND</h1>
-20:15:06 完整请求
-20:15:06 请求结束
-20:15:06 cookie ['']
-20:15:06 path and query /api/todo/add {} {"title":"sadasd"}
-20:15:06 username 游客
-20:15:06 响应
- HTTP/1.1 200 OK
+21:06:13 完整请求
+21:06:13 请求结束
+21:06:13 cookie ['']
+21:06:13 path and query /api/todo/add {} {"title":"dsf"}
+21:06:13 **debug, route msg 未登录
+21:06:13 响应
+ HTTP/1.1 302 VERY OK
+Content-Type: text/html
+Location: /login
+
+
+21:06:13 完整请求
+21:06:13 请求结束
+21:06:13 cookie ['']
+21:06:13 path and query /login {} 
+21:06:13 login, cookies {}
+21:06:13 响应
+ HTTP/1.1 200 VERY OK
 Content-Type: text/html
 
 <!DOCTYPE html>
@@ -1617,7 +1792,7 @@ Content-Type: text/html
 </head>
 <body>
     <h1>登录</h1>
-    <h2>你好 </h2>
+    <h2>你好 游客</h2>
     <form action="/login" method="post">
         <input type="text" name="username" placeholder="请输入用户名">
         <br>
@@ -1625,18 +1800,438 @@ Content-Type: text/html
         <br>
         <button type="submit">登录</button>
     </form>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
+    </form>
     <h3></h3>
 </body>
 </html>
-20:15:19 完整请求
-20:15:19 请求结束
-20:15:19 完整请求
-20:15:19 请求结束
-20:15:19 cookie ['']
-20:15:19 path and query /api/todo/add {} {"title":"sadasd"}
-20:15:19 username 游客
-20:15:19 响应
+21:06:45 完整请求
+21:06:45 请求结束
+21:16:58 完整请求
+21:16:58 请求结束
+21:16:58 cookie ['']
+21:16:58 path and query / {} 
+21:16:58 响应
+ HTTP/1.1 302 VERY OK
+Content-Type: text/html
+Location: /todo/index
+
+
+21:16:58 完整请求
+21:16:58 请求结束
+21:16:58 cookie ['']
+21:16:58 path and query /todo/index {} 
+21:16:58 响应
  HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web10 todo ajax</title>
+    </head>
+    <body>
+        <input id='id-input-todo'>
+        <button id='id-button-add'>add</button>
+        <div class="todo-list">
+        </div>
+        <!-- 这是我们处理静态文件的套路 -->
+        <!-- gua.js 放了公共的函数 -->
+        <!-- 按顺序引入 2 个 js 文件, 后面的 js 文件就能使用前面的文件中的函数了 -->
+        <script src='/static?file=gua.js'></script>
+        <script src='/static?file=todo.js'></script>
+    </body>
+</html>
+
+21:16:58 完整请求
+21:16:58 请求结束
+21:16:58 cookie ['']
+21:16:58 path and query /static {'file': 'gua.js'} 
+21:16:58 响应
+ HTTP/1.1 200 OK
+
+var log = function() {
+    console.log.apply(console, arguments)
+}
+
+var e = function(sel) {
+    return document.querySelector(sel)
+}
+
+/*
+ ajax 函数
+*/
+var ajax = function(method, path, data, responseCallback) {
+    var r = new XMLHttpRequest()
+    // 设置请求方法和请求地址
+    r.open(method, path, true)
+    // 设置发送的数据的格式为 application/json
+    // 这个不是必须的
+    r.setRequestHeader('Content-Type', 'application/json')
+    // 注册响应函数
+    r.onreadystatechange = function() {
+        if(r.readyState === 4) {
+            // r.response 存的就是服务器发过来的放在 HTTP BODY 中的数据
+            responseCallback(r.response)
+        }
+    }
+    // 把数据转换为 json 格式字符串
+    data = JSON.stringify(data)
+    // 发送请求
+    r.send(data)
+}
+
+// TODO API
+// 获取所有 todo
+var apiTodoAll = function(callback) {
+    var path = '/api/todo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 todo
+var apiTodoAdd = function(form, callback) {
+    //添加 todo 的路由 path 是 /api/todo/add 对应的路由函数是 add
+    var path = '/api/todo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 todo
+var apiTodoDelete = function(id, callback) {
+    var path = '/api/todo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 todo
+var apiTodoUpdate = function(form, callback) {
+    var path = '/api/todo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// load weibo all
+var apiWeiboAll = function(callback) {
+    var path = '/api/weibo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 weibo
+var apiWeiboAdd = function(form, callback) {
+    var path = '/api/weibo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 weibo
+var apiWeiboDelete = function(id, callback) {
+    var path = '/api/weibo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 weibo
+var apiWeiboUpdate = function(form, callback) {
+    var path = '/api/weibo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// 增加一个 comment
+var apiCommentAdd = function(form, callback) {
+    var path = '/api/comment/add'
+    ajax('POST', path, form, callback)
+}
+21:16:58 完整请求
+21:16:58 请求结束
+21:16:58 cookie ['']
+21:16:58 path and query /static {'file': 'todo.js'} 
+21:16:58 响应
+ HTTP/1.1 200 OK
+
+var timeString = function(timestamp) {
+    t = new Date(timestamp * 1000)
+    t = t.toLocaleTimeString()
+    return t
+}
+
+var todoTemplate = function(todo) {
+    var title = todo.title
+    var id = todo.id
+    var ut = timeString(todo.ut)
+    // data-xx 是自定义标签属性的语法
+    // 通过这样的方式可以给任意标签添加任意属性
+    // 假设 d 是 这个 div 的引用
+    // 这样的自定义属性通过  d.dataset.xx 来获取
+    // 在这个例子里面, 是 d.dataset.id
+    var t = `
+        <div class="todo-cell" id='todo-${id}' data-id="${id}">
+            <button class="todo-edit">编辑</button>
+            <button class="todo-delete">删除</button>
+            <span class='todo-title'>${title}</span>
+            <time class='todo-ut'>${ut}</time>
+        </div>
+    `
+    return t
+    /*
+    上面的写法在 python 中是这样的
+    t = """
+    <div class="todo-cell">
+        <button class="todo-delete">删除</button>
+        <span>{}</span>
+    </div>
+    """.format(todo)
+    */
+}
+
+var insertTodo = function(todo) {
+    log('todo', todo)
+    //
+    var todoCell = todoTemplate(todo)
+    // 插入 todo-list
+    var todoList = e('.todo-list')
+    todoList.insertAdjacentHTML('beforeend', todoCell)
+}
+
+var insertEditForm = function(cell) {
+    var form = `
+        <div class='todo-edit-form'>
+            <input class="todo-edit-input">
+            <button class='todo-update'>更新</button>
+        </div>
+    `
+    cell.insertAdjacentHTML('beforeend', form)
+}
+
+var loadTodos = function() {
+    // 调用 ajax api 来载入数据
+    apiTodoAll(function(r) {
+        // console.log('load all', r)
+        // 解析为 数组
+        var todos = JSON.parse(r)
+        // 循环添加到页面中
+        for(var i = 0; i < todos.length; i++) {
+            var todo = todos[i]
+            insertTodo(todo)
+        }
+    })
+}
+
+var bindEventTodoAdd = function() {
+    //通过函数 e 抓取到 <button id='id-button-add'>add</button> 中的 id-button-add
+    var b = e('#id-button-add')
+    // 注意, 第二个参数可以直接给出定义函数
+    b.addEventListener('click', function(){
+        ////通过函数 e 抓取到 <input id='id-input-todo'> 中的 id-input-todo
+        var input = e('#id-input-todo')
+        //拿到input框中用户输入的数据字段
+        var title = input.value
+        //打印出用户输入的数据字段
+        log('click add', title)
+        //设置form表单
+        var form = {
+            'title': title,
+        }
+        //调用 apiTodoAdd 函数异步加载数据
+        apiTodoAdd(form, function(r) {
+            // 收到返回的数据, 插入到页面中
+            var todo = JSON.parse(r)
+            //调用 insertTodo 函数插入todo数据
+            insertTodo(todo)
+        })
+    })
+}
+
+var bindEventTodoDelete = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-delete')){
+            // 删除这个 todo
+            var todoCell = self.parentElement
+            var todo_id = todoCell.dataset.id
+            apiTodoDelete(todo_id, function(r){
+                log('删除成功', todo_id)
+                todoCell.remove()
+            })
+        }
+    })
+}
+
+var bindEventTodoEdit = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-edit')){
+            // 删除这个 todo
+            var todoCell = self.parentElement
+            insertEditForm(todoCell)
+        }
+    })
+}
+
+
+var bindEventTodoUpdate = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-update')){
+            log('点击了 update ')
+            //
+            var editForm = self.parentElement
+            // querySelector 是 DOM 元素的方法
+            // document.querySelector 中的 document 是所有元素的祖先元素
+            var input = editForm.querySelector('.todo-edit-input')
+            var title = input.value
+            // 用 closest 方法可以找到最近的直系父节点
+            var todoCell = self.closest('.todo-cell')
+            var todo_id = todoCell.dataset.id
+            var form = {
+                'id': todo_id,
+                'title': title,
+            }
+            log('form', form)
+            apiTodoUpdate(form, function(r){
+                log('更新成功', todo_id)
+                var todo = JSON.parse(r)
+                var selector = '#todo-' + todo.id
+                log('selector', selector)
+                var todoCell = e(selector)
+                log('todoCell', todoCell)
+                var titleSpan = todoCell.querySelector('.todo-title')
+                log('titleSpan', titleSpan)
+                titleSpan.innerHTML = todo.title
+//                todoCell.remove()
+            })
+        }
+    })
+}
+
+var bindEvents = function() {
+    //增加一条todo
+    bindEventTodoAdd()
+    //删除一条todo
+    bindEventTodoDelete()
+    //编辑一条tudo
+    bindEventTodoEdit()
+    //更新一条todo
+    bindEventTodoUpdate()
+}
+
+var __main = function() {
+    //绑定事件的函数
+    bindEvents()
+    //加载todo数据的函数
+    loadTodos()
+}
+
+//函数主入口
+__main()
+
+
+
+
+
+
+/*
+给 删除 按钮绑定删除的事件
+1, 绑定事件
+2, 删除整个 todo-cell 元素
+*/
+// var todoList = e('.todo-list')
+// // 事件响应函数会被传入一个参数, 就是事件本身
+// todoList.addEventListener('click', function(event){
+//     // log('click todolist', event)
+//     // 我们可以通过 event.target 来得到被点击的元素
+//     var self = event.target
+//     // log('被点击的元素是', self)
+//     // 通过比较被点击元素的 class 来判断元素是否是我们想要的
+//     // classList 属性保存了元素的所有 class
+//     // 在 HTML 中, 一个元素可以有多个 class, 用空格分开
+//     // log(self.classList)
+//     // 判断是否拥有某个 class 的方法如下
+//     if (self.classList.contains('todo-delete')) {
+//         log('点到了 删除按钮')
+//         // 删除 self 的父节点
+//         // parentElement 可以访问到元素的父节点
+//         self.parentElement.remove()
+//     } else {
+//         // log('点击的不是删除按钮******')
+//     }
+// })
+21:16:59 完整请求
+21:16:59 请求结束
+21:16:59 cookie ['']
+21:16:59 path and query /api/todo/all {} 
+21:16:59 响应
+ HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 13,
+    "title": "sadasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513051075,
+    "ut": 1513155403
+  },
+  {
+    "id": 14,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135841,
+    "ut": 1513135841
+  },
+  {
+    "id": 15,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135843,
+    "ut": 1513135843
+  },
+  {
+    "id": 18,
+    "title": "",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513150649,
+    "ut": 1513150649
+  },
+  {
+    "id": 19,
+    "title": "asdasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513157048,
+    "ut": 1513157048
+  }
+]
+21:17:12 完整请求
+21:17:12 请求结束
+21:17:12 完整请求
+21:17:12 请求结束
+21:17:12 cookie ['']
+21:17:12 path and query /api/todo/add {} {"title":"d"}
+21:17:12 **debug, route msg 未登录
+21:17:12 响应
+ HTTP/1.1 302 VERY OK
+Content-Type: text/html
+Location: /login
+
+
+21:17:13 完整请求
+21:17:13 请求结束
+21:17:13 cookie ['']
+21:17:13 path and query /login {} 
+21:17:13 login, cookies {}
+21:17:13 响应
+ HTTP/1.1 200 VERY OK
 Content-Type: text/html
 
 <!DOCTYPE html>
@@ -1647,7 +2242,7 @@ Content-Type: text/html
 </head>
 <body>
     <h1>登录</h1>
-    <h2>你好 </h2>
+    <h2>你好 游客</h2>
     <form action="/login" method="post">
         <input type="text" name="username" placeholder="请输入用户名">
         <br>
@@ -1655,16 +2250,484 @@ Content-Type: text/html
         <br>
         <button type="submit">登录</button>
     </form>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
+    </form>
     <h3></h3>
 </body>
 </html>
-20:15:29 完整请求
-20:15:29 请求结束
-20:15:29 cookie ['']
-20:15:29 path and query /api/todo/add {} {"title":"sadasd"}
-20:15:29 username 游客
-20:15:29 响应
+21:28:54 完整请求
+21:28:54 请求结束
+21:28:54 cookie ['']
+21:28:54 path and query / {} 
+21:28:54 响应
+ HTTP/1.1 302 VERY OK
+Content-Type: text/html
+Location: /todo/index
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 {{username}}</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
+    </form>
+    <h3>{{result}}</h3>
+</body>
+</html>
+21:28:55 完整请求
+21:28:55 请求结束
+21:28:55 cookie ['']
+21:28:55 path and query /todo/index {} 
+21:28:55 响应
  HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web10 todo ajax</title>
+    </head>
+    <body>
+        <input id='id-input-todo'>
+        <button id='id-button-add'>add</button>
+        <div class="todo-list">
+        </div>
+        <!-- 这是我们处理静态文件的套路 -->
+        <!-- gua.js 放了公共的函数 -->
+        <!-- 按顺序引入 2 个 js 文件, 后面的 js 文件就能使用前面的文件中的函数了 -->
+        <script src='/static?file=gua.js'></script>
+        <script src='/static?file=todo.js'></script>
+    </body>
+</html>
+
+21:28:55 完整请求
+21:28:55 请求结束
+21:28:55 cookie ['']
+21:28:55 完整请求
+21:28:55 path and query /static {'file': 'gua.js'} 
+21:28:55 请求结束
+21:28:55 响应
+ HTTP/1.1 200 OK
+
+var log = function() {
+    console.log.apply(console, arguments)
+}
+
+var e = function(sel) {
+    return document.querySelector(sel)
+}
+
+/*
+ ajax 函数
+*/
+var ajax = function(method, path, data, responseCallback) {
+    var r = new XMLHttpRequest()
+    // 设置请求方法和请求地址
+    r.open(method, path, true)
+    // 设置发送的数据的格式为 application/json
+    // 这个不是必须的
+    r.setRequestHeader('Content-Type', 'application/json')
+    // 注册响应函数
+    r.onreadystatechange = function() {
+        if(r.readyState === 4) {
+            // r.response 存的就是服务器发过来的放在 HTTP BODY 中的数据
+            responseCallback(r.response)
+        }
+    }
+    // 把数据转换为 json 格式字符串
+    data = JSON.stringify(data)
+    // 发送请求
+    r.send(data)
+}
+
+// TODO API
+// 获取所有 todo
+var apiTodoAll = function(callback) {
+    var path = '/api/todo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 todo
+var apiTodoAdd = function(form, callback) {
+    //添加 todo 的路由 path 是 /api/todo/add 对应的路由函数是 add
+    var path = '/api/todo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 todo
+var apiTodoDelete = function(id, callback) {
+    var path = '/api/todo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 todo
+var apiTodoUpdate = function(form, callback) {
+    var path = '/api/todo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// load weibo all
+var apiWeiboAll = function(callback) {
+    var path = '/api/weibo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 weibo
+var apiWeiboAdd = function(form, callback) {
+    var path = '/api/weibo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 weibo
+var apiWeiboDelete = function(id, callback) {
+    var path = '/api/weibo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 weibo
+var apiWeiboUpdate = function(form, callback) {
+    var path = '/api/weibo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// 增加一个 comment
+var apiCommentAdd = function(form, callback) {
+    var path = '/api/comment/add'
+    ajax('POST', path, form, callback)
+}
+21:28:55 cookie ['']
+21:28:55 path and query /static {'file': 'todo.js'} 
+21:28:55 响应
+ HTTP/1.1 200 OK
+
+var timeString = function(timestamp) {
+    t = new Date(timestamp * 1000)
+    t = t.toLocaleTimeString()
+    return t
+}
+
+var todoTemplate = function(todo) {
+    var title = todo.title
+    var id = todo.id
+    var ut = timeString(todo.ut)
+    // data-xx 是自定义标签属性的语法
+    // 通过这样的方式可以给任意标签添加任意属性
+    // 假设 d 是 这个 div 的引用
+    // 这样的自定义属性通过  d.dataset.xx 来获取
+    // 在这个例子里面, 是 d.dataset.id
+    var t = `
+        <div class="todo-cell" id='todo-${id}' data-id="${id}">
+            <button class="todo-edit">编辑</button>
+            <button class="todo-delete">删除</button>
+            <span class='todo-title'>${title}</span>
+            <time class='todo-ut'>${ut}</time>
+        </div>
+    `
+    return t
+    /*
+    上面的写法在 python 中是这样的
+    t = """
+    <div class="todo-cell">
+        <button class="todo-delete">删除</button>
+        <span>{}</span>
+    </div>
+    """.format(todo)
+    */
+}
+
+var insertTodo = function(todo) {
+    log('todo', todo)
+    //
+    var todoCell = todoTemplate(todo)
+    // 插入 todo-list
+    var todoList = e('.todo-list')
+    todoList.insertAdjacentHTML('beforeend', todoCell)
+}
+
+var insertEditForm = function(cell) {
+    var form = `
+        <div class='todo-edit-form'>
+            <input class="todo-edit-input">
+            <button class='todo-update'>更新</button>
+        </div>
+    `
+    cell.insertAdjacentHTML('beforeend', form)
+}
+
+var loadTodos = function() {
+    // 调用 ajax api 来载入数据
+    apiTodoAll(function(r) {
+        // console.log('load all', r)
+        // 解析为 数组
+        var todos = JSON.parse(r)
+        // 循环添加到页面中
+        for(var i = 0; i < todos.length; i++) {
+            var todo = todos[i]
+            insertTodo(todo)
+        }
+    })
+}
+
+var bindEventTodoAdd = function() {
+    //通过函数 e 抓取到 <button id='id-button-add'>add</button> 中的 id-button-add
+    var b = e('#id-button-add')
+    // 注意, 第二个参数可以直接给出定义函数
+    b.addEventListener('click', function(){
+        ////通过函数 e 抓取到 <input id='id-input-todo'> 中的 id-input-todo
+        var input = e('#id-input-todo')
+        //拿到input框中用户输入的数据字段
+        var title = input.value
+        //打印出用户输入的数据字段
+        log('click add', title)
+        //设置form表单
+        var form = {
+            'title': title,
+        }
+        //调用 apiTodoAdd 函数异步加载数据
+        apiTodoAdd(form, function(r) {
+            // 收到返回的数据, 插入到页面中
+            var todo = JSON.parse(r)
+            //调用 insertTodo 函数插入todo数据
+            insertTodo(todo)
+        })
+    })
+}
+
+var bindEventTodoDelete = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-delete')){
+            // 删除这个 todo
+            var todoCell = self.parentElement
+            var todo_id = todoCell.dataset.id
+            apiTodoDelete(todo_id, function(r){
+                log('删除成功', todo_id)
+                todoCell.remove()
+            })
+        }
+    })
+}
+
+var bindEventTodoEdit = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-edit')){
+            // 删除这个 todo
+            var todoCell = self.parentElement
+            insertEditForm(todoCell)
+        }
+    })
+}
+
+
+var bindEventTodoUpdate = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-update')){
+            log('点击了 update ')
+            //
+            var editForm = self.parentElement
+            // querySelector 是 DOM 元素的方法
+            // document.querySelector 中的 document 是所有元素的祖先元素
+            var input = editForm.querySelector('.todo-edit-input')
+            var title = input.value
+            // 用 closest 方法可以找到最近的直系父节点
+            var todoCell = self.closest('.todo-cell')
+            var todo_id = todoCell.dataset.id
+            var form = {
+                'id': todo_id,
+                'title': title,
+            }
+            log('form', form)
+            apiTodoUpdate(form, function(r){
+                log('更新成功', todo_id)
+                var todo = JSON.parse(r)
+                var selector = '#todo-' + todo.id
+                log('selector', selector)
+                var todoCell = e(selector)
+                log('todoCell', todoCell)
+                var titleSpan = todoCell.querySelector('.todo-title')
+                log('titleSpan', titleSpan)
+                titleSpan.innerHTML = todo.title
+//                todoCell.remove()
+            })
+        }
+    })
+}
+
+var bindEvents = function() {
+    //增加一条todo
+    bindEventTodoAdd()
+    //删除一条todo
+    bindEventTodoDelete()
+    //编辑一条tudo
+    bindEventTodoEdit()
+    //更新一条todo
+    bindEventTodoUpdate()
+}
+
+var __main = function() {
+    //绑定事件的函数
+    bindEvents()
+    //加载todo数据的函数
+    loadTodos()
+}
+
+//函数主入口
+__main()
+
+
+
+
+
+
+/*
+给 删除 按钮绑定删除的事件
+1, 绑定事件
+2, 删除整个 todo-cell 元素
+*/
+// var todoList = e('.todo-list')
+// // 事件响应函数会被传入一个参数, 就是事件本身
+// todoList.addEventListener('click', function(event){
+//     // log('click todolist', event)
+//     // 我们可以通过 event.target 来得到被点击的元素
+//     var self = event.target
+//     // log('被点击的元素是', self)
+//     // 通过比较被点击元素的 class 来判断元素是否是我们想要的
+//     // classList 属性保存了元素的所有 class
+//     // 在 HTML 中, 一个元素可以有多个 class, 用空格分开
+//     // log(self.classList)
+//     // 判断是否拥有某个 class 的方法如下
+//     if (self.classList.contains('todo-delete')) {
+//         log('点到了 删除按钮')
+//         // 删除 self 的父节点
+//         // parentElement 可以访问到元素的父节点
+//         self.parentElement.remove()
+//     } else {
+//         // log('点击的不是删除按钮******')
+//     }
+// })
+21:28:55 完整请求
+21:28:55 请求结束
+21:28:55 cookie ['']
+21:28:55 path and query /api/todo/all {} 
+21:28:55 响应
+ HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 13,
+    "title": "sadasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513051075,
+    "ut": 1513155403
+  },
+  {
+    "id": 14,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135841,
+    "ut": 1513135841
+  },
+  {
+    "id": 15,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135843,
+    "ut": 1513135843
+  },
+  {
+    "id": 18,
+    "title": "",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513150649,
+    "ut": 1513150649
+  },
+  {
+    "id": 19,
+    "title": "asdasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513157048,
+    "ut": 1513157048
+  }
+]
+21:28:55 完整请求
+21:28:55 请求结束
+21:28:55 cookie ['']
+21:28:55 path and query /favicon.ico {} 
+21:28:55 响应
+ HTTP/1.1 404 NOT FOUND
+
+<h1>NOT FOUND</h1>
+21:28:59 完整请求
+21:28:59 请求结束
+21:28:59 cookie ['']
+21:28:59 path and query /api/todo/add {} {"title":"dssf"}
+21:28:59 **debug, route msg 未登录
+21:28:59 响应
+ HTTP/1.1 302 VERY OK
+Content-Type: text/html
+Location: /login
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 {{username}}</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
+    </form>
+    <h3>{{result}}</h3>
+</body>
+</html>
+21:28:59 完整请求
+21:28:59 请求结束
+21:28:59 cookie ['']
+21:28:59 path and query /login {} 
+21:28:59 login, cookies {}
+21:28:59 响应
+ HTTP/1.1 200 VERY OK
 Content-Type: text/html
 
 <!DOCTYPE html>
@@ -1675,7 +2738,7 @@ Content-Type: text/html
 </head>
 <body>
     <h1>登录</h1>
-    <h2>你好 </h2>
+    <h2>你好 游客</h2>
     <form action="/login" method="post">
         <input type="text" name="username" placeholder="请输入用户名">
         <br>
@@ -1683,16 +2746,484 @@ Content-Type: text/html
         <br>
         <button type="submit">登录</button>
     </form>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
+    </form>
     <h3></h3>
 </body>
 </html>
-20:15:48 完整请求
-20:15:48 请求结束
-20:15:48 cookie ['']
-20:15:48 path and query /api/todo/add {} {"title":"sadasd"}
-20:15:48 username 游客
-20:15:48 响应
+21:43:08 完整请求
+21:43:08 请求结束
+21:43:08 cookie ['']
+21:43:08 path and query / {} 
+21:43:08 响应
+ HTTP/1.1 302 VERY OK
+Content-Type: text/html
+Location: /todo/index
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 {{username}}</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
+    </form>
+    <h3>{{result}}</h3>
+</body>
+</html>
+21:43:08 完整请求
+21:43:08 请求结束
+21:43:08 cookie ['']
+21:43:08 path and query /todo/index {} 
+21:43:08 响应
  HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web10 todo ajax</title>
+    </head>
+    <body>
+        <input id='id-input-todo'>
+        <button id='id-button-add'>add</button>
+        <div class="todo-list">
+        </div>
+        <!-- 这是我们处理静态文件的套路 -->
+        <!-- gua.js 放了公共的函数 -->
+        <!-- 按顺序引入 2 个 js 文件, 后面的 js 文件就能使用前面的文件中的函数了 -->
+        <script src='/static?file=gua.js'></script>
+        <script src='/static?file=todo.js'></script>
+    </body>
+</html>
+
+21:43:08 完整请求
+21:43:08 完整请求
+21:43:08 请求结束
+21:43:08 请求结束
+21:43:08 cookie ['']
+21:43:08 cookie ['']
+21:43:08 path and query /static {'file': 'todo.js'} 
+21:43:08 path and query /static {'file': 'gua.js'} 
+21:43:08 响应
+ HTTP/1.1 200 OK
+
+var log = function() {
+    console.log.apply(console, arguments)
+}
+
+var e = function(sel) {
+    return document.querySelector(sel)
+}
+
+/*
+ ajax 函数
+*/
+var ajax = function(method, path, data, responseCallback) {
+    var r = new XMLHttpRequest()
+    // 设置请求方法和请求地址
+    r.open(method, path, true)
+    // 设置发送的数据的格式为 application/json
+    // 这个不是必须的
+    r.setRequestHeader('Content-Type', 'application/json')
+    // 注册响应函数
+    r.onreadystatechange = function() {
+        if(r.readyState === 4) {
+            // r.response 存的就是服务器发过来的放在 HTTP BODY 中的数据
+            responseCallback(r.response)
+        }
+    }
+    // 把数据转换为 json 格式字符串
+    data = JSON.stringify(data)
+    // 发送请求
+    r.send(data)
+}
+
+// TODO API
+// 获取所有 todo
+var apiTodoAll = function(callback) {
+    var path = '/api/todo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 todo
+var apiTodoAdd = function(form, callback) {
+    //添加 todo 的路由 path 是 /api/todo/add 对应的路由函数是 add
+    var path = '/api/todo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 todo
+var apiTodoDelete = function(id, callback) {
+    var path = '/api/todo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 todo
+var apiTodoUpdate = function(form, callback) {
+    var path = '/api/todo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// load weibo all
+var apiWeiboAll = function(callback) {
+    var path = '/api/weibo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 weibo
+var apiWeiboAdd = function(form, callback) {
+    var path = '/api/weibo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 weibo
+var apiWeiboDelete = function(id, callback) {
+    var path = '/api/weibo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 weibo
+var apiWeiboUpdate = function(form, callback) {
+    var path = '/api/weibo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// 增加一个 comment
+var apiCommentAdd = function(form, callback) {
+    var path = '/api/comment/add'
+    ajax('POST', path, form, callback)
+}
+21:43:08 响应
+ HTTP/1.1 200 OK
+
+var timeString = function(timestamp) {
+    t = new Date(timestamp * 1000)
+    t = t.toLocaleTimeString()
+    return t
+}
+
+var todoTemplate = function(todo) {
+    var title = todo.title
+    var id = todo.id
+    var ut = timeString(todo.ut)
+    // data-xx 是自定义标签属性的语法
+    // 通过这样的方式可以给任意标签添加任意属性
+    // 假设 d 是 这个 div 的引用
+    // 这样的自定义属性通过  d.dataset.xx 来获取
+    // 在这个例子里面, 是 d.dataset.id
+    var t = `
+        <div class="todo-cell" id='todo-${id}' data-id="${id}">
+            <button class="todo-edit">编辑</button>
+            <button class="todo-delete">删除</button>
+            <span class='todo-title'>${title}</span>
+            <time class='todo-ut'>${ut}</time>
+        </div>
+    `
+    return t
+    /*
+    上面的写法在 python 中是这样的
+    t = """
+    <div class="todo-cell">
+        <button class="todo-delete">删除</button>
+        <span>{}</span>
+    </div>
+    """.format(todo)
+    */
+}
+
+var insertTodo = function(todo) {
+    log('todo', todo)
+    //
+    var todoCell = todoTemplate(todo)
+    // 插入 todo-list
+    var todoList = e('.todo-list')
+    todoList.insertAdjacentHTML('beforeend', todoCell)
+}
+
+var insertEditForm = function(cell) {
+    var form = `
+        <div class='todo-edit-form'>
+            <input class="todo-edit-input">
+            <button class='todo-update'>更新</button>
+        </div>
+    `
+    cell.insertAdjacentHTML('beforeend', form)
+}
+
+var loadTodos = function() {
+    // 调用 ajax api 来载入数据
+    apiTodoAll(function(r) {
+        // console.log('load all', r)
+        // 解析为 数组
+        var todos = JSON.parse(r)
+        // 循环添加到页面中
+        for(var i = 0; i < todos.length; i++) {
+            var todo = todos[i]
+            insertTodo(todo)
+        }
+    })
+}
+
+var bindEventTodoAdd = function() {
+    //通过函数 e 抓取到 <button id='id-button-add'>add</button> 中的 id-button-add
+    var b = e('#id-button-add')
+    // 注意, 第二个参数可以直接给出定义函数
+    b.addEventListener('click', function(){
+        ////通过函数 e 抓取到 <input id='id-input-todo'> 中的 id-input-todo
+        var input = e('#id-input-todo')
+        //拿到input框中用户输入的数据字段
+        var title = input.value
+        //打印出用户输入的数据字段
+        log('click add', title)
+        //设置form表单
+        var form = {
+            'title': title,
+        }
+        //调用 apiTodoAdd 函数异步加载数据
+        apiTodoAdd(form, function(r) {
+            // 收到返回的数据, 插入到页面中
+            var todo = JSON.parse(r)
+            //调用 insertTodo 函数插入todo数据
+            insertTodo(todo)
+        })
+    })
+}
+
+var bindEventTodoDelete = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-delete')){
+            // 删除这个 todo
+            var todoCell = self.parentElement
+            var todo_id = todoCell.dataset.id
+            apiTodoDelete(todo_id, function(r){
+                log('删除成功', todo_id)
+                todoCell.remove()
+            })
+        }
+    })
+}
+
+var bindEventTodoEdit = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-edit')){
+            // 删除这个 todo
+            var todoCell = self.parentElement
+            insertEditForm(todoCell)
+        }
+    })
+}
+
+
+var bindEventTodoUpdate = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-update')){
+            log('点击了 update ')
+            //
+            var editForm = self.parentElement
+            // querySelector 是 DOM 元素的方法
+            // document.querySelector 中的 document 是所有元素的祖先元素
+            var input = editForm.querySelector('.todo-edit-input')
+            var title = input.value
+            // 用 closest 方法可以找到最近的直系父节点
+            var todoCell = self.closest('.todo-cell')
+            var todo_id = todoCell.dataset.id
+            var form = {
+                'id': todo_id,
+                'title': title,
+            }
+            log('form', form)
+            apiTodoUpdate(form, function(r){
+                log('更新成功', todo_id)
+                var todo = JSON.parse(r)
+                var selector = '#todo-' + todo.id
+                log('selector', selector)
+                var todoCell = e(selector)
+                log('todoCell', todoCell)
+                var titleSpan = todoCell.querySelector('.todo-title')
+                log('titleSpan', titleSpan)
+                titleSpan.innerHTML = todo.title
+//                todoCell.remove()
+            })
+        }
+    })
+}
+
+var bindEvents = function() {
+    //增加一条todo
+    bindEventTodoAdd()
+    //删除一条todo
+    bindEventTodoDelete()
+    //编辑一条tudo
+    bindEventTodoEdit()
+    //更新一条todo
+    bindEventTodoUpdate()
+}
+
+var __main = function() {
+    //绑定事件的函数
+    bindEvents()
+    //加载todo数据的函数
+    loadTodos()
+}
+
+//函数主入口
+__main()
+
+
+
+
+
+
+/*
+给 删除 按钮绑定删除的事件
+1, 绑定事件
+2, 删除整个 todo-cell 元素
+*/
+// var todoList = e('.todo-list')
+// // 事件响应函数会被传入一个参数, 就是事件本身
+// todoList.addEventListener('click', function(event){
+//     // log('click todolist', event)
+//     // 我们可以通过 event.target 来得到被点击的元素
+//     var self = event.target
+//     // log('被点击的元素是', self)
+//     // 通过比较被点击元素的 class 来判断元素是否是我们想要的
+//     // classList 属性保存了元素的所有 class
+//     // 在 HTML 中, 一个元素可以有多个 class, 用空格分开
+//     // log(self.classList)
+//     // 判断是否拥有某个 class 的方法如下
+//     if (self.classList.contains('todo-delete')) {
+//         log('点到了 删除按钮')
+//         // 删除 self 的父节点
+//         // parentElement 可以访问到元素的父节点
+//         self.parentElement.remove()
+//     } else {
+//         // log('点击的不是删除按钮******')
+//     }
+// })
+21:43:08 完整请求
+21:43:08 请求结束
+21:43:08 cookie ['']
+21:43:08 path and query /api/todo/all {} 
+21:43:08 响应
+ HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 13,
+    "title": "sadasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513051075,
+    "ut": 1513155403
+  },
+  {
+    "id": 14,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135841,
+    "ut": 1513135841
+  },
+  {
+    "id": 15,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135843,
+    "ut": 1513135843
+  },
+  {
+    "id": 18,
+    "title": "",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513150649,
+    "ut": 1513150649
+  },
+  {
+    "id": 19,
+    "title": "asdasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513157048,
+    "ut": 1513157048
+  }
+]
+21:43:08 完整请求
+21:43:08 请求结束
+21:43:08 cookie ['']
+21:43:08 path and query /favicon.ico {} 
+21:43:08 响应
+ HTTP/1.1 404 NOT FOUND
+
+<h1>NOT FOUND</h1>
+21:43:12 完整请求
+21:43:12 请求结束
+21:43:12 cookie ['']
+21:43:12 path and query /api/todo/add {} {"title":"dsfs"}
+21:43:12 kwargs,  {'username': '游客'} <class 'dict'>
+21:43:12 响应
+ HTTP/1.1 302 VERY OK
+Content-Type: text/html
+Location: /login
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 {{username}}</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
+    </form>
+    <h3>{{result}}</h3>
+</body>
+</html>
+21:43:12 完整请求
+21:43:12 请求结束
+21:43:12 cookie ['']
+21:43:12 path and query /login {} 
+21:43:12 login, cookies {}
+21:43:12 响应
+ HTTP/1.1 200 VERY OK
 Content-Type: text/html
 
 <!DOCTYPE html>
@@ -1703,7 +3234,7 @@ Content-Type: text/html
 </head>
 <body>
     <h1>登录</h1>
-    <h2>你好 </h2>
+    <h2>你好 游客</h2>
     <form action="/login" method="post">
         <input type="text" name="username" placeholder="请输入用户名">
         <br>
@@ -1711,8 +3242,1206 @@ Content-Type: text/html
         <br>
         <button type="submit">登录</button>
     </form>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
+    </form>
     <h3></h3>
 </body>
 </html>
-20:16:18 完整请求
-20:16:18 请求结束
+21:58:56 完整请求
+21:58:56 请求结束
+21:58:56 cookie ['']
+21:58:56 path and query /register {} 
+21:58:56 响应
+ HTTP/1.1 210 VERY OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+</head>
+<body>
+    <h1>注册</h1>
+    <form action="/register" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">注册</button>
+    </form>
+</body>
+</html>
+21:58:56 完整请求
+21:58:56 请求结束
+21:58:56 cookie ['']
+21:58:56 path and query /favicon.ico {} 
+21:58:56 响应
+ HTTP/1.1 404 NOT FOUND
+
+<h1>NOT FOUND</h1>
+21:59:02 完整请求
+21:59:02 请求结束
+21:59:02 cookie ['']
+21:59:02 path and query /register {} username=xia&password=xia
+21:59:02 form debug ['username=xia', 'password=xia'] 2
+21:59:02 kwargs,  {'username': 'xia'} <class 'dict'>
+21:59:02 响应
+ HTTP/1.1 302 VERY OK
+location: /login
+Content-Type: text/html
+
+
+21:59:02 完整请求
+21:59:02 请求结束
+21:59:02 cookie ['']
+21:59:02 path and query /login {} 
+21:59:02 login, cookies {}
+21:59:02 响应
+ HTTP/1.1 200 VERY OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 游客</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
+    </form>
+    <h3></h3>
+</body>
+</html>
+21:59:08 完整请求
+21:59:08 请求结束
+21:59:09 完整请求
+21:59:09 请求结束
+21:59:09 cookie ['']
+21:59:09 path and query /login {} username=xia&password=xia
+21:59:09 login, cookies {}
+21:59:09 form debug ['username=xia', 'password=xia'] 2
+21:59:09 kwargs,  {'username': 'xia'} <class 'dict'>
+21:59:09 kwargs,  {'username': 'xia'} <class 'dict'>
+21:59:09 headers response {'Content-Type': 'text/html', 'Set-Cookie': 'user=2d3a9efhsdgfa2jk'}
+21:59:09 响应
+ HTTP/1.1 302 VERY OK
+Content-Type: text/html
+Set-Cookie: user=2d3a9efhsdgfa2jk
+
+
+22:06:51 完整请求
+22:06:51 请求结束
+22:06:51 cookie ['']
+22:06:51 path and query /login {} 
+22:06:51 login, cookies {}
+22:06:51 响应
+ HTTP/1.1 200 VERY OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 游客</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
+    </form>
+    <h3></h3>
+</body>
+</html>
+22:06:51 完整请求
+22:06:51 请求结束
+22:06:51 cookie ['']
+22:06:51 path and query /favicon.ico {} 
+22:06:51 响应
+ HTTP/1.1 404 NOT FOUND
+
+<h1>NOT FOUND</h1>
+22:07:01 完整请求
+22:07:01 完整请求
+22:07:01 完整请求
+22:07:01 请求结束
+22:07:01 请求结束
+22:07:01 请求结束
+22:07:01 cookie ['']
+22:07:01 path and query /login {} username=xia&password=xia
+22:07:01 login, cookies {}
+22:07:01 form debug ['username=xia', 'password=xia'] 2
+22:07:01 kwargs,  {'username': 'xia'} <class 'dict'>
+22:07:01 kwargs,  {'username': 'xia'} <class 'dict'>
+22:07:01 headers response {'Content-Type': 'text/html', 'Set-Cookie': 'user=fj2d9agawdleswjd'}
+22:07:01 响应
+ HTTP/1.1 302 VERY OK
+Content-Type: text/html
+Set-Cookie: user=fj2d9agawdleswjd
+
+
+22:08:43 完整请求
+22:08:43 请求结束
+22:08:43 cookie ['user=fj2d9agawdleswjd']
+22:08:43 path and query /login {} 
+22:08:43 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:08:43 完整请求
+22:08:43 请求结束
+22:08:43 cookie ['user=fj2d9agawdleswjd']
+22:08:43 path and query /login {} 
+22:08:43 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:08:43 完整请求
+22:08:43 请求结束
+22:08:43 cookie ['user=fj2d9agawdleswjd']
+22:08:43 path and query /login {} 
+22:08:43 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:08:43 完整请求
+22:08:43 请求结束
+22:08:43 cookie ['user=fj2d9agawdleswjd']
+22:08:43 path and query /login {} 
+22:08:43 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:08:45 完整请求
+22:08:45 请求结束
+22:08:45 cookie ['user=fj2d9agawdleswjd']
+22:08:45 path and query /login {} 
+22:08:45 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:08:50 完整请求
+22:08:50 请求结束
+22:08:50 cookie ['user=fj2d9agawdleswjd']
+22:08:50 path and query /login {} 
+22:08:50 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:08:50 完整请求
+22:08:50 请求结束
+22:08:50 cookie ['user=fj2d9agawdleswjd']
+22:08:50 path and query /login {} 
+22:08:50 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:08:50 完整请求
+22:08:50 请求结束
+22:08:50 cookie ['user=fj2d9agawdleswjd']
+22:08:50 path and query /login {} 
+22:08:50 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:08:57 完整请求
+22:08:57 请求结束
+22:08:57 cookie ['user=fj2d9agawdleswjd']
+22:08:57 path and query /login {} 
+22:08:57 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:09:01 完整请求
+22:09:01 请求结束
+22:09:01 cookie ['user=fj2d9agawdleswjd']
+22:09:01 path and query / {} 
+22:09:01 响应
+ HTTP/1.1 302 VERY OK
+location: /todo/index
+Content-Type: text/html
+
+
+22:09:02 完整请求
+22:09:02 请求结束
+22:09:02 cookie ['user=fj2d9agawdleswjd']
+22:09:02 path and query /todo/index {} 
+22:09:02 响应
+ HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web10 todo ajax</title>
+    </head>
+    <body>
+        <input id='id-input-todo'>
+        <button id='id-button-add'>add</button>
+        <div class="todo-list">
+        </div>
+        <!-- 这是我们处理静态文件的套路 -->
+        <!-- gua.js 放了公共的函数 -->
+        <!-- 按顺序引入 2 个 js 文件, 后面的 js 文件就能使用前面的文件中的函数了 -->
+        <script src='/static?file=gua.js'></script>
+        <script src='/static?file=todo.js'></script>
+    </body>
+</html>
+
+22:09:02 完整请求
+22:09:02 请求结束
+22:09:02 cookie ['user=fj2d9agawdleswjd']
+22:09:02 path and query /static {'file': 'gua.js'} 
+22:09:02 响应
+ HTTP/1.1 200 OK
+
+var log = function() {
+    console.log.apply(console, arguments)
+}
+
+var e = function(sel) {
+    return document.querySelector(sel)
+}
+
+/*
+ ajax 函数
+*/
+var ajax = function(method, path, data, responseCallback) {
+    var r = new XMLHttpRequest()
+    // 设置请求方法和请求地址
+    r.open(method, path, true)
+    // 设置发送的数据的格式为 application/json
+    // 这个不是必须的
+    r.setRequestHeader('Content-Type', 'application/json')
+    // 注册响应函数
+    r.onreadystatechange = function() {
+        if(r.readyState === 4) {
+            // r.response 存的就是服务器发过来的放在 HTTP BODY 中的数据
+            responseCallback(r.response)
+        }
+    }
+    // 把数据转换为 json 格式字符串
+    data = JSON.stringify(data)
+    // 发送请求
+    r.send(data)
+}
+
+// TODO API
+// 获取所有 todo
+var apiTodoAll = function(callback) {
+    var path = '/api/todo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 todo
+var apiTodoAdd = function(form, callback) {
+    //添加 todo 的路由 path 是 /api/todo/add 对应的路由函数是 add
+    var path = '/api/todo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 todo
+var apiTodoDelete = function(id, callback) {
+    var path = '/api/todo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 todo
+var apiTodoUpdate = function(form, callback) {
+    var path = '/api/todo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// load weibo all
+var apiWeiboAll = function(callback) {
+    var path = '/api/weibo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 weibo
+var apiWeiboAdd = function(form, callback) {
+    var path = '/api/weibo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 weibo
+var apiWeiboDelete = function(id, callback) {
+    var path = '/api/weibo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 weibo
+var apiWeiboUpdate = function(form, callback) {
+    var path = '/api/weibo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// 增加一个 comment
+var apiCommentAdd = function(form, callback) {
+    var path = '/api/comment/add'
+    ajax('POST', path, form, callback)
+}
+22:09:02 完整请求
+22:09:02 请求结束
+22:09:02 cookie ['user=fj2d9agawdleswjd']
+22:09:02 path and query /static {'file': 'todo.js'} 
+22:09:02 响应
+ HTTP/1.1 200 OK
+
+var timeString = function(timestamp) {
+    t = new Date(timestamp * 1000)
+    t = t.toLocaleTimeString()
+    return t
+}
+
+var todoTemplate = function(todo) {
+    var title = todo.title
+    var id = todo.id
+    var ut = timeString(todo.ut)
+    // data-xx 是自定义标签属性的语法
+    // 通过这样的方式可以给任意标签添加任意属性
+    // 假设 d 是 这个 div 的引用
+    // 这样的自定义属性通过  d.dataset.xx 来获取
+    // 在这个例子里面, 是 d.dataset.id
+    var t = `
+        <div class="todo-cell" id='todo-${id}' data-id="${id}">
+            <button class="todo-edit">编辑</button>
+            <button class="todo-delete">删除</button>
+            <span class='todo-title'>${title}</span>
+            <time class='todo-ut'>${ut}</time>
+        </div>
+    `
+    return t
+    /*
+    上面的写法在 python 中是这样的
+    t = """
+    <div class="todo-cell">
+        <button class="todo-delete">删除</button>
+        <span>{}</span>
+    </div>
+    """.format(todo)
+    */
+}
+
+var insertTodo = function(todo) {
+    log('todo', todo)
+    //
+    var todoCell = todoTemplate(todo)
+    // 插入 todo-list
+    var todoList = e('.todo-list')
+    todoList.insertAdjacentHTML('beforeend', todoCell)
+}
+
+var insertEditForm = function(cell) {
+    var form = `
+        <div class='todo-edit-form'>
+            <input class="todo-edit-input">
+            <button class='todo-update'>更新</button>
+        </div>
+    `
+    cell.insertAdjacentHTML('beforeend', form)
+}
+
+var loadTodos = function() {
+    // 调用 ajax api 来载入数据
+    apiTodoAll(function(r) {
+        // console.log('load all', r)
+        // 解析为 数组
+        var todos = JSON.parse(r)
+        // 循环添加到页面中
+        for(var i = 0; i < todos.length; i++) {
+            var todo = todos[i]
+            insertTodo(todo)
+        }
+    })
+}
+
+var bindEventTodoAdd = function() {
+    //通过函数 e 抓取到 <button id='id-button-add'>add</button> 中的 id-button-add
+    var b = e('#id-button-add')
+    // 注意, 第二个参数可以直接给出定义函数
+    b.addEventListener('click', function(){
+        ////通过函数 e 抓取到 <input id='id-input-todo'> 中的 id-input-todo
+        var input = e('#id-input-todo')
+        //拿到input框中用户输入的数据字段
+        var title = input.value
+        //打印出用户输入的数据字段
+        log('click add', title)
+        //设置form表单
+        var form = {
+            'title': title,
+        }
+        //调用 apiTodoAdd 函数异步加载数据
+        apiTodoAdd(form, function(r) {
+            // 收到返回的数据, 插入到页面中
+            var todo = JSON.parse(r)
+            //调用 insertTodo 函数插入todo数据
+            insertTodo(todo)
+        })
+    })
+}
+
+var bindEventTodoDelete = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-delete')){
+            // 删除这个 todo
+            var todoCell = self.parentElement
+            var todo_id = todoCell.dataset.id
+            apiTodoDelete(todo_id, function(r){
+                log('删除成功', todo_id)
+                todoCell.remove()
+            })
+        }
+    })
+}
+
+var bindEventTodoEdit = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-edit')){
+            // 删除这个 todo
+            var todoCell = self.parentElement
+            insertEditForm(todoCell)
+        }
+    })
+}
+
+
+var bindEventTodoUpdate = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-update')){
+            log('点击了 update ')
+            //
+            var editForm = self.parentElement
+            // querySelector 是 DOM 元素的方法
+            // document.querySelector 中的 document 是所有元素的祖先元素
+            var input = editForm.querySelector('.todo-edit-input')
+            var title = input.value
+            // 用 closest 方法可以找到最近的直系父节点
+            var todoCell = self.closest('.todo-cell')
+            var todo_id = todoCell.dataset.id
+            var form = {
+                'id': todo_id,
+                'title': title,
+            }
+            log('form', form)
+            apiTodoUpdate(form, function(r){
+                log('更新成功', todo_id)
+                var todo = JSON.parse(r)
+                var selector = '#todo-' + todo.id
+                log('selector', selector)
+                var todoCell = e(selector)
+                log('todoCell', todoCell)
+                var titleSpan = todoCell.querySelector('.todo-title')
+                log('titleSpan', titleSpan)
+                titleSpan.innerHTML = todo.title
+//                todoCell.remove()
+            })
+        }
+    })
+}
+
+var bindEvents = function() {
+    //增加一条todo
+    bindEventTodoAdd()
+    //删除一条todo
+    bindEventTodoDelete()
+    //编辑一条tudo
+    bindEventTodoEdit()
+    //更新一条todo
+    bindEventTodoUpdate()
+}
+
+var __main = function() {
+    //绑定事件的函数
+    bindEvents()
+    //加载todo数据的函数
+    loadTodos()
+}
+
+//函数主入口
+__main()
+
+
+
+
+
+
+/*
+给 删除 按钮绑定删除的事件
+1, 绑定事件
+2, 删除整个 todo-cell 元素
+*/
+// var todoList = e('.todo-list')
+// // 事件响应函数会被传入一个参数, 就是事件本身
+// todoList.addEventListener('click', function(event){
+//     // log('click todolist', event)
+//     // 我们可以通过 event.target 来得到被点击的元素
+//     var self = event.target
+//     // log('被点击的元素是', self)
+//     // 通过比较被点击元素的 class 来判断元素是否是我们想要的
+//     // classList 属性保存了元素的所有 class
+//     // 在 HTML 中, 一个元素可以有多个 class, 用空格分开
+//     // log(self.classList)
+//     // 判断是否拥有某个 class 的方法如下
+//     if (self.classList.contains('todo-delete')) {
+//         log('点到了 删除按钮')
+//         // 删除 self 的父节点
+//         // parentElement 可以访问到元素的父节点
+//         self.parentElement.remove()
+//     } else {
+//         // log('点击的不是删除按钮******')
+//     }
+// })
+22:09:02 完整请求
+22:09:02 请求结束
+22:09:02 cookie ['user=fj2d9agawdleswjd']
+22:09:02 path and query /api/todo/all {} 
+22:09:02 响应
+ HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 13,
+    "title": "sadasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513051075,
+    "ut": 1513155403
+  },
+  {
+    "id": 14,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135841,
+    "ut": 1513135841
+  },
+  {
+    "id": 15,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135843,
+    "ut": 1513135843
+  },
+  {
+    "id": 18,
+    "title": "",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513150649,
+    "ut": 1513150649
+  },
+  {
+    "id": 19,
+    "title": "asdasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513157048,
+    "ut": 1513157048
+  }
+]
+22:09:07 完整请求
+22:09:07 请求结束
+22:09:07 cookie ['user=fj2d9agawdleswjd']
+22:09:07 path and query /login {} 
+22:09:07 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:09:07 完整请求
+22:09:07 请求结束
+22:09:07 cookie ['user=fj2d9agawdleswjd']
+22:09:07 path and query /login {} 
+22:09:07 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:09:07 完整请求
+22:09:07 请求结束
+22:09:07 cookie ['user=fj2d9agawdleswjd']
+22:09:07 path and query /login {} 
+22:09:07 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:09:07 完整请求
+22:09:07 请求结束
+22:09:07 cookie ['user=fj2d9agawdleswjd']
+22:09:07 path and query /login {} 
+22:09:07 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:11:16 完整请求
+22:11:16 请求结束
+22:11:16 cookie ['user=fj2d9agawdleswjd']
+22:11:16 path and query / {} 
+22:11:16 响应
+ HTTP/1.1 302 VERY OK
+location: /login
+Content-Type: text/html
+
+
+22:11:16 完整请求
+22:11:16 请求结束
+22:11:16 cookie ['user=fj2d9agawdleswjd']
+22:11:16 path and query /login {} 
+22:11:16 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:11:16 响应
+ HTTP/1.1 200 VERY OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 游客</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
+    </form>
+    <h3></h3>
+</body>
+</html>
+22:11:43 完整请求
+22:11:43 请求结束
+22:11:44 完整请求
+22:11:44 请求结束
+22:11:44 cookie ['user=fj2d9agawdleswjd']
+22:11:44 path and query /login {} username=xia&password=xia
+22:11:44 login, cookies {'user': 'fj2d9agawdleswjd'}
+22:11:44 form debug ['username=xia', 'password=xia'] 2
+22:11:44 kwargs,  {'username': 'xia'} <class 'dict'>
+22:11:44 kwargs,  {'username': 'xia'} <class 'dict'>
+22:11:44 headers response {'Content-Type': 'text/html', 'Set-Cookie': 'user=9dr2le3kaskef8gr'}
+22:11:44 响应
+ HTTP/1.1 302 VERY OK
+Content-Type: text/html
+Set-Cookie: user=9dr2le3kaskef8gr
+
+
+22:11:51 完整请求
+22:11:51 请求结束
+22:11:51 cookie ['user=9dr2le3kaskef8gr']
+22:11:51 path and query / {} 
+22:11:51 响应
+ HTTP/1.1 302 VERY OK
+location: /todo/index
+Content-Type: text/html
+
+
+22:11:51 完整请求
+22:11:51 请求结束
+22:11:51 cookie ['user=9dr2le3kaskef8gr']
+22:11:51 path and query /todo/index {} 
+22:11:51 响应
+ HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web10 todo ajax</title>
+    </head>
+    <body>
+        <input id='id-input-todo'>
+        <button id='id-button-add'>add</button>
+        <div class="todo-list">
+        </div>
+        <!-- 这是我们处理静态文件的套路 -->
+        <!-- gua.js 放了公共的函数 -->
+        <!-- 按顺序引入 2 个 js 文件, 后面的 js 文件就能使用前面的文件中的函数了 -->
+        <script src='/static?file=gua.js'></script>
+        <script src='/static?file=todo.js'></script>
+    </body>
+</html>
+
+22:11:51 完整请求
+22:11:51 请求结束
+22:11:51 cookie ['user=9dr2le3kaskef8gr']
+22:11:51 path and query /static {'file': 'gua.js'} 
+22:11:51 响应
+ HTTP/1.1 200 OK
+
+var log = function() {
+    console.log.apply(console, arguments)
+}
+
+var e = function(sel) {
+    return document.querySelector(sel)
+}
+
+/*
+ ajax 函数
+*/
+var ajax = function(method, path, data, responseCallback) {
+    var r = new XMLHttpRequest()
+    // 设置请求方法和请求地址
+    r.open(method, path, true)
+    // 设置发送的数据的格式为 application/json
+    // 这个不是必须的
+    r.setRequestHeader('Content-Type', 'application/json')
+    // 注册响应函数
+    r.onreadystatechange = function() {
+        if(r.readyState === 4) {
+            // r.response 存的就是服务器发过来的放在 HTTP BODY 中的数据
+            responseCallback(r.response)
+        }
+    }
+    // 把数据转换为 json 格式字符串
+    data = JSON.stringify(data)
+    // 发送请求
+    r.send(data)
+}
+
+// TODO API
+// 获取所有 todo
+var apiTodoAll = function(callback) {
+    var path = '/api/todo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 todo
+var apiTodoAdd = function(form, callback) {
+    //添加 todo 的路由 path 是 /api/todo/add 对应的路由函数是 add
+    var path = '/api/todo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 todo
+var apiTodoDelete = function(id, callback) {
+    var path = '/api/todo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 todo
+var apiTodoUpdate = function(form, callback) {
+    var path = '/api/todo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// load weibo all
+var apiWeiboAll = function(callback) {
+    var path = '/api/weibo/all'
+    ajax('GET', path, '', callback)
+}
+
+// 增加一个 weibo
+var apiWeiboAdd = function(form, callback) {
+    var path = '/api/weibo/add'
+    ajax('POST', path, form, callback)
+}
+
+// 删除一个 weibo
+var apiWeiboDelete = function(id, callback) {
+    var path = '/api/weibo/delete?id=' + id
+    ajax('GET', path, '', callback)
+    //    get(path, callback)
+}
+
+// 更新一个 weibo
+var apiWeiboUpdate = function(form, callback) {
+    var path = '/api/weibo/update'
+    ajax('POST', path, form, callback)
+    //    post(path, form, callback)
+}
+
+// 增加一个 comment
+var apiCommentAdd = function(form, callback) {
+    var path = '/api/comment/add'
+    ajax('POST', path, form, callback)
+}
+22:11:51 完整请求
+22:11:51 请求结束
+22:11:51 cookie ['user=9dr2le3kaskef8gr']
+22:11:51 path and query /static {'file': 'todo.js'} 
+22:11:51 响应
+ HTTP/1.1 200 OK
+
+var timeString = function(timestamp) {
+    t = new Date(timestamp * 1000)
+    t = t.toLocaleTimeString()
+    return t
+}
+
+var todoTemplate = function(todo) {
+    var title = todo.title
+    var id = todo.id
+    var ut = timeString(todo.ut)
+    // data-xx 是自定义标签属性的语法
+    // 通过这样的方式可以给任意标签添加任意属性
+    // 假设 d 是 这个 div 的引用
+    // 这样的自定义属性通过  d.dataset.xx 来获取
+    // 在这个例子里面, 是 d.dataset.id
+    var t = `
+        <div class="todo-cell" id='todo-${id}' data-id="${id}">
+            <button class="todo-edit">编辑</button>
+            <button class="todo-delete">删除</button>
+            <span class='todo-title'>${title}</span>
+            <time class='todo-ut'>${ut}</time>
+        </div>
+    `
+    return t
+    /*
+    上面的写法在 python 中是这样的
+    t = """
+    <div class="todo-cell">
+        <button class="todo-delete">删除</button>
+        <span>{}</span>
+    </div>
+    """.format(todo)
+    */
+}
+
+var insertTodo = function(todo) {
+    log('todo', todo)
+    //
+    var todoCell = todoTemplate(todo)
+    // 插入 todo-list
+    var todoList = e('.todo-list')
+    todoList.insertAdjacentHTML('beforeend', todoCell)
+}
+
+var insertEditForm = function(cell) {
+    var form = `
+        <div class='todo-edit-form'>
+            <input class="todo-edit-input">
+            <button class='todo-update'>更新</button>
+        </div>
+    `
+    cell.insertAdjacentHTML('beforeend', form)
+}
+
+var loadTodos = function() {
+    // 调用 ajax api 来载入数据
+    apiTodoAll(function(r) {
+        // console.log('load all', r)
+        // 解析为 数组
+        var todos = JSON.parse(r)
+        // 循环添加到页面中
+        for(var i = 0; i < todos.length; i++) {
+            var todo = todos[i]
+            insertTodo(todo)
+        }
+    })
+}
+
+var bindEventTodoAdd = function() {
+    //通过函数 e 抓取到 <button id='id-button-add'>add</button> 中的 id-button-add
+    var b = e('#id-button-add')
+    // 注意, 第二个参数可以直接给出定义函数
+    b.addEventListener('click', function(){
+        ////通过函数 e 抓取到 <input id='id-input-todo'> 中的 id-input-todo
+        var input = e('#id-input-todo')
+        //拿到input框中用户输入的数据字段
+        var title = input.value
+        //打印出用户输入的数据字段
+        log('click add', title)
+        //设置form表单
+        var form = {
+            'title': title,
+        }
+        //调用 apiTodoAdd 函数异步加载数据
+        apiTodoAdd(form, function(r) {
+            // 收到返回的数据, 插入到页面中
+            var todo = JSON.parse(r)
+            //调用 insertTodo 函数插入todo数据
+            insertTodo(todo)
+        })
+    })
+}
+
+var bindEventTodoDelete = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-delete')){
+            // 删除这个 todo
+            var todoCell = self.parentElement
+            var todo_id = todoCell.dataset.id
+            apiTodoDelete(todo_id, function(r){
+                log('删除成功', todo_id)
+                todoCell.remove()
+            })
+        }
+    })
+}
+
+var bindEventTodoEdit = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-edit')){
+            // 删除这个 todo
+            var todoCell = self.parentElement
+            insertEditForm(todoCell)
+        }
+    })
+}
+
+
+var bindEventTodoUpdate = function() {
+    var todoList = e('.todo-list')
+    // 注意, 第二个参数可以直接给出定义函数
+    todoList.addEventListener('click', function(event){
+        var self = event.target
+        if(self.classList.contains('todo-update')){
+            log('点击了 update ')
+            //
+            var editForm = self.parentElement
+            // querySelector 是 DOM 元素的方法
+            // document.querySelector 中的 document 是所有元素的祖先元素
+            var input = editForm.querySelector('.todo-edit-input')
+            var title = input.value
+            // 用 closest 方法可以找到最近的直系父节点
+            var todoCell = self.closest('.todo-cell')
+            var todo_id = todoCell.dataset.id
+            var form = {
+                'id': todo_id,
+                'title': title,
+            }
+            log('form', form)
+            apiTodoUpdate(form, function(r){
+                log('更新成功', todo_id)
+                var todo = JSON.parse(r)
+                var selector = '#todo-' + todo.id
+                log('selector', selector)
+                var todoCell = e(selector)
+                log('todoCell', todoCell)
+                var titleSpan = todoCell.querySelector('.todo-title')
+                log('titleSpan', titleSpan)
+                titleSpan.innerHTML = todo.title
+//                todoCell.remove()
+            })
+        }
+    })
+}
+
+var bindEvents = function() {
+    //增加一条todo
+    bindEventTodoAdd()
+    //删除一条todo
+    bindEventTodoDelete()
+    //编辑一条tudo
+    bindEventTodoEdit()
+    //更新一条todo
+    bindEventTodoUpdate()
+}
+
+var __main = function() {
+    //绑定事件的函数
+    bindEvents()
+    //加载todo数据的函数
+    loadTodos()
+}
+
+//函数主入口
+__main()
+
+
+
+
+
+
+/*
+给 删除 按钮绑定删除的事件
+1, 绑定事件
+2, 删除整个 todo-cell 元素
+*/
+// var todoList = e('.todo-list')
+// // 事件响应函数会被传入一个参数, 就是事件本身
+// todoList.addEventListener('click', function(event){
+//     // log('click todolist', event)
+//     // 我们可以通过 event.target 来得到被点击的元素
+//     var self = event.target
+//     // log('被点击的元素是', self)
+//     // 通过比较被点击元素的 class 来判断元素是否是我们想要的
+//     // classList 属性保存了元素的所有 class
+//     // 在 HTML 中, 一个元素可以有多个 class, 用空格分开
+//     // log(self.classList)
+//     // 判断是否拥有某个 class 的方法如下
+//     if (self.classList.contains('todo-delete')) {
+//         log('点到了 删除按钮')
+//         // 删除 self 的父节点
+//         // parentElement 可以访问到元素的父节点
+//         self.parentElement.remove()
+//     } else {
+//         // log('点击的不是删除按钮******')
+//     }
+// })
+22:11:51 完整请求
+22:11:51 请求结束
+22:11:51 cookie ['user=9dr2le3kaskef8gr']
+22:11:51 path and query /api/todo/all {} 
+22:11:51 响应
+ HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 13,
+    "title": "sadasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513051075,
+    "ut": 1513155403
+  },
+  {
+    "id": 14,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135841,
+    "ut": 1513135841
+  },
+  {
+    "id": 15,
+    "title": "dwqd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513135843,
+    "ut": 1513135843
+  },
+  {
+    "id": 18,
+    "title": "",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513150649,
+    "ut": 1513150649
+  },
+  {
+    "id": 19,
+    "title": "asdasd",
+    "user_id": -1,
+    "completed": false,
+    "ct": 1513157048,
+    "ut": 1513157048
+  }
+]
+22:12:50 完整请求
+22:12:50 请求结束
+22:12:50 cookie ['user=9dr2le3kaskef8gr']
+22:12:50 path and query / {} 
+22:12:50 响应
+ HTTP/1.1 302 VERY OK
+location: /login
+Content-Type: text/html
+
+
+22:12:50 完整请求
+22:12:50 请求结束
+22:12:50 cookie ['user=9dr2le3kaskef8gr']
+22:12:50 path and query /login {} 
+22:12:50 login, cookies {'user': '9dr2le3kaskef8gr'}
+22:12:50 响应
+ HTTP/1.1 200 VERY OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 游客</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
+    </form>
+    <h3></h3>
+</body>
+</html>
+22:12:54 完整请求
+22:12:54 请求结束
+22:12:54 cookie ['user=9dr2le3kaskef8gr']
+22:12:54 完整请求
+22:12:54 请求结束
+22:12:54 cookie ['user=9dr2le3kaskef8gr']
+22:13:22 完整请求
+22:13:22 请求结束
+22:13:22 cookie ['user=9dr2le3kaskef8gr']
+22:13:22 path and query /login {} 
+22:13:22 login, cookies {'user': '9dr2le3kaskef8gr'}
+22:13:22 响应
+ HTTP/1.1 200 VERY OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 游客</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <form method="get" action="/register">
+        <button type="submit">注册</button>
+    </form>
+    <h3></h3>
+</body>
+</html>
+22:13:24 完整请求
+22:13:24 请求结束
+22:13:24 cookie ['user=9dr2le3kaskef8gr']
+22:13:24 完整请求
+22:13:24 请求结束
+22:13:24 cookie ['user=9dr2le3kaskef8gr']
+22:14:23 完整请求
+22:14:23 请求结束
+22:14:23 cookie ['user=9dr2le3kaskef8gr']
+22:14:23 path and query /login {} 
+22:14:23 login, cookies {'user': '9dr2le3kaskef8gr'}
+22:14:23 响应
+ HTTP/1.1 200 VERY OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录页面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <h2>你好 游客</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">登录</button>
+    </form>
+    <form action="/register" method="get">
+        <button type="submit">注册</button>
+    </form>
+    <h3></h3>
+</body>
+</html>
