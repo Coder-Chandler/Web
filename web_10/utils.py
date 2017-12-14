@@ -58,15 +58,17 @@ def response_with_headers(headers, code=200):
 def redirect(location, headers=None):
     print('未登录不能add')
     if headers is None:
+
         headers = {
-            'location': location,
             'Content-Type': 'text/html',
         }
+    headers['Location'] = location
     # 302 状态码的含义, Location 的作用
     header = response_with_headers(headers, 302)
-    r = header + '\r\n'
+    body = template('login.html')
+    r = header + '\r\n' + body
     print('重定向的header', r)
-    return r.encode('utf-8')
+    return r.encode(encoding='utf-8')
 
 
 def error(request, code=404):

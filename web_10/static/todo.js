@@ -34,7 +34,6 @@ var todoTemplate = function(todo) {
 }
 
 var insertTodo = function(todo) {
-    log('todo', todo)
     //
     var todoCell = todoTemplate(todo)
     // 插入 todo-list
@@ -83,10 +82,16 @@ var bindEventTodoAdd = function() {
         }
         //调用 apiTodoAdd 函数异步加载数据
         apiTodoAdd(form, function(r) {
+            log('form 表单 ', form)
             // 收到返回的数据, 插入到页面中
             var todo = JSON.parse(r)
-            //调用 insertTodo 函数插入todo数据
-            insertTodo(todo)
+            log('todo ', todo)
+            log('todo的用户id ', todo.user_id)
+            if (todo.user_id > -1){
+                //调用 insertTodo 函数插入todo数据
+                insertTodo(todo)
+            }
+
         })
     })
 }

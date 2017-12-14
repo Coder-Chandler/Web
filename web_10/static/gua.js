@@ -57,34 +57,3 @@ var apiTodoUpdate = function(form, callback) {
     //    post(path, form, callback)
 }
 
-// load weibo all
-var apiWeiboAll = function(callback) {
-    var path = '/api/weibo/all'
-    ajax('GET', path, '', callback)
-}
-
-// 增加一个 weibo
-var apiWeiboAdd = function(form, callback) {
-    var path = '/api/weibo/add'
-    ajax('POST', path, form, callback)
-}
-
-// 删除一个 weibo
-var apiWeiboDelete = function(id, callback) {
-    var path = '/api/weibo/delete?id=' + id
-    ajax('GET', path, '', callback)
-    //    get(path, callback)
-}
-
-// 更新一个 weibo
-var apiWeiboUpdate = function(form, callback) {
-    var path = '/api/weibo/update'
-    ajax('POST', path, form, callback)
-    //    post(path, form, callback)
-}
-
-// 增加一个 comment
-var apiCommentAdd = function(form, callback) {
-    var path = '/api/comment/add'
-    ajax('POST', path, form, callback)
-}

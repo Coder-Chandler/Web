@@ -62,3 +62,6 @@ class User(Model):
             if t.user_id == self.id:
                 ts.append(t)
         return ts
+
+    def __repr__(self):
+        return self.username

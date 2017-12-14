@@ -9,9 +9,6 @@ from utils import (
 
 
 def main_index(request):
-    username = current_user(request)
-    if username == '游客':
-        return redirect('/login')
     return redirect('/todo/index')
 
 
