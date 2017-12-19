@@ -14,7 +14,7 @@ class HashTable(object):
     # 这个魔法方法是用来实现 in  not in 语法的
     def __contains__(self, item):
         return self.has_key(item)
-        
+
     def has_key(self, key):
         """
         检查一个 key 是否存在, 时间很短, 是 O(1)
@@ -82,6 +82,7 @@ class HashTable(object):
         """
         下划线开始的函数被我们视为私有函数
         但实际上还是可以在外部调用, 这只是一个给自己看的标记
+        ord函数计算一个字符对应的ascii值，比如a -> 97, b -> 98, c -> 99
         """
         n = 1
         f = 1

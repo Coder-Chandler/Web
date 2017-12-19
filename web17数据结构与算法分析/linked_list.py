@@ -4,11 +4,7 @@ class Node(object):
         self.next = None
 
 
-"""
-不完整的链表实现, 自行补全
-"""
-
-
+# 链表实现
 class LinkedList(object):
     def __init__(self):
         self.head = None
@@ -19,12 +15,7 @@ class LinkedList(object):
         return self.head is None
 
     def length(self):
-        index = 0
-        node = self.head
-        while node is not None:
-            index += 1
-            node = node.next
-        return index
+        return self.size
 
     def find(self, element):
         node = self.head
@@ -33,6 +24,16 @@ class LinkedList(object):
                 break
             node = node.next
         return node
+
+    def index_at_element(self, element):
+        index = 0
+        this_node = self.head
+        while this_node is not None:
+            if self.element_at_index(index) == element:
+                return index
+            index += 1
+            this_node = this_node.next
+        return index
 
     def _node_at_index(self, index):
         i = 0
@@ -67,12 +68,13 @@ class LinkedList(object):
         self.size += 1
 
         # O(1)
+
     def first_object(self):
         return self.head.next
 
     # O(n)
     def last_object(self):
-        index = self.size-1
+        index = self.size - 1
         last_node = self._node_at_index(index)
         return last_node
 
@@ -108,10 +110,11 @@ def log_list():
         s += (str(linklist.element_at_index(i)) + ' -> ')
         this_node = this_node.next
         i += 1
-    print(linklist.length())
-    print(s)
+    print('链表是否为空:', linklist.is_empty())
+    print('链表长度:', linklist.length())
+    print('打印链表', s)
+    print('数值在链表中的index:', linklist.index_at_element(2000))
 
 
 if __name__ == '__main__':
     log_list()
-
