@@ -69,7 +69,7 @@ class HashTable(object):
             # 检查是否包含我们要找的 key
             for kv in v:
                 if kv[0] == key:
-                    return kv[1]
+                    return kv
         # 如果得到的是 int 0 说明没找到, 返回 default_value
         # 如果得到的是 list 但是遍历结果没有我们要找的 key 也是没找到
         return default_value

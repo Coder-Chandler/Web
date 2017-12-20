@@ -4,17 +4,40 @@ class Tree(object):
         self.left = None
         self.right = None
 
-    def traversal(self):
+    def fro_traversal(self):
         """
-        树的遍历, 是一个递归操作
+        树的前序遍历, 是一个递归操作
         """
         print(self.element)
         if self.left is not None:
-            self.left.traversal()
+            self.left.fro_traversal()
         if self.right is not None:
-            self.right.traversal()
+            self.right.fro_traversal()
+
+    def mid_traversal(self):
+        """
+        树的中序遍历, 是一个递归操作
+        """
+        if self.left is not None:
+            self.left.mid_traversal()
+        print(self.element)
+        if self.right is not None:
+            self.right.mid_traversal()
+
+    def bac_traversal(self):
+        """
+        树的后序遍历, 是一个递归操作
+        """
+        if self.left is not None:
+            self.left.bac_traversal()
+        if self.right is not None:
+            self.right.bac_traversal()
+        print(self.element)
 
     def reverse(self):
+        """
+        反转二叉树
+        """
         self.left, self.right = self.right, self.left
         if self.left is not None:
             self.left.reverse()
@@ -32,7 +55,14 @@ def test():
     t.left = left
     t.right = right
     # 遍历
-    t.traversal()
+    t.fro_traversal()
+    t.mid_traversal()
+    t.bac_traversal()
+    print('反转二叉树')
+    t.reverse()
+    t.fro_traversal()
+    t.mid_traversal()
+    t.bac_traversal()
 
 
 if __name__ == '__main__':
