@@ -6,7 +6,7 @@ class HashTable(object):
     def __init__(self):
         # table 是用来存储数据的数组
         # 先让它有 10007 个格子好了
-        # 上课的时候说过, 这个尺寸最好选素数
+        # 这个尺寸最好选素数
         # 这样可以得到更为合理的下标分布
         self.table_size = 10007
         self.table = [0] * self.table_size
